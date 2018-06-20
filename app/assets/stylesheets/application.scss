@@ -1,2 +1,27 @@
 
+$gray: #1A1A1A;
+$green: #00FF00;
+$blue: #3B5D8D;
+
+@font-face {
+  font-family: Gotham-Medium;
+  src: asset-url("Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Gotham-Thin;
+  src: asset-url("Gotham-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Gotham-XLight;
+  src: asset-url("Gotham-XLight.otf") format("opentype");
+}
+
+$got-med: Gotham-Medium;
+$got-thi: Gotham-Thin;
+$got-xli: Gotham-XLight;
+
 @import "bootstrap";
+@import 'slick';
+@import "static_pages";

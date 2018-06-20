@@ -1,0 +1,64 @@
+
+#banner{
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .item-container{
+    position: relative;
+
+    .item-title{
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 28%;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+  
+  .slider-arrows{
+    position: absolute;
+    top: 45%;
+    width: 20px;
+    height: auto;
+  }
+
+  #left-arrow{
+    left: 10%;
+  }
+
+  #right-arrow{
+    right: 10%;
+  }
+
+  #dots-container{
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+
+    &>ul{
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .dot{
+      width: 9px;
+      height: 9px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin: 10px;
+
+      &.active{
+        background-color: $green;
+        border: 1px solid $green;
+      }
+    }
+  }
+}
+
