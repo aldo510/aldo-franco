@@ -1,8 +1,12 @@
 
 #banner{
   width: 100%;
-  height: auto;
+  height: fit-content;
   position: relative;
+
+  .banner-slider div{
+    height: auto;
+  }
 
   .item-container{
     position: relative;
@@ -62,3 +66,69 @@
   }
 }
 
+#abount-us{
+  background-color: $gray;
+  margin-top: -10px;
+
+  .abount-us-title{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+    &>span{
+      font-weight: bold;
+    }
+  }
+}
+
+#work{
+  background-color: $gray;
+
+  #work-title{
+    text-align: center;
+    color: white;
+  }
+
+  #vertical-line{
+    width: 1px;
+    border-right: 1px solid white;
+    height: 25px;
+    margin: 5px auto;
+  }
+
+  #work-description{
+    color: white;
+    text-align: center;
+    margin: 4% auto;
+
+    &>span{
+      font-weight: bold;
+    }
+  }
+
+  #all-proyects{
+    background-color: white;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    margin: 2% auto;
+    width: fit-content;
+    display: block;
+    color: black;
+  }
+
+  #categories-background{
+    background-image: image-url('static_pages/home/work_background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category{
+    border: thin solid white;
+
+    h4{
+      color: white;
+      text-align: center;
+      margin: 23% auto;
+    }
+  }
+}
