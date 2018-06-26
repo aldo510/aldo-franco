@@ -15,13 +15,13 @@ $blue: #3B5D8D;
 }
 
 @font-face {
-  font-family: Gotham-XLight;
-  src: asset-url("Gotham-XLight.otf") format("opentype");
+  font-family: Futura;
+  src: asset-url("Futura-Light-Regular.otf") format("opentype");
 }
 
 $got-med: Gotham-Medium;
 $got-thi: Gotham-Thin;
-$got-xli: Gotham-XLight;
+$futura: Futura;
 
 @import "bootstrap";
 @import 'slick';

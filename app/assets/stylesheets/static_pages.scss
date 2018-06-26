@@ -20,6 +20,11 @@ nav{
 
   .nav-link{
     color: $text-gray !important;
+    font-family: $futura;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+
     &:hover:before{
       content: "";
       position: absolute;
@@ -66,9 +71,12 @@ nav{
       text-align: center;
       left: 0;
       right: 0;
-      bottom: 28%;
+      bottom: 22%;
       color: white;
       text-transform: uppercase;
+      font-family: $futura;
+      font-size: 2rem;
+      letter-spacing: 10px;
     }
   }
   
