@@ -132,9 +132,11 @@ nav{
     color: white;
     text-align: center;
     text-transform: uppercase;
+    font-family: $got-thi;
 
     &>span{
-      font-weight: bold;
+      // font-weight: bold;
+      font-family: $got-med;
     }
   }
 }
@@ -145,6 +147,9 @@ nav{
   #work-title{
     text-align: center;
     color: white;
+    font-family: $futura;
+    text-transform: uppercase;
+    font-size: 2.5rem;
   }
 
   #vertical-line{
@@ -158,6 +163,8 @@ nav{
     color: white;
     text-align: center;
     margin: 4% auto;
+    color: $text-gray;
+    font-size: 1.2rem;
 
     &>span{
       font-weight: bold;
@@ -172,6 +179,7 @@ nav{
     width: fit-content;
     display: block;
     color: black;
+    font-family: $futura;
   }
 
   #categories-background{
@@ -187,6 +195,8 @@ nav{
       color: white;
       text-align: center;
       margin: 23% auto;
+      font-family: $futura;
+      font-size: 1.8rem;
     }
   }
 }
@@ -201,6 +211,9 @@ nav{
     text-align: center;
     color: white;
     text-transform: uppercase;
+    font-family: $futura;
+    font-size: 2.5rem;
+    margin-bottom: 2%;
   }
 
   .contact-icons{
@@ -212,11 +225,16 @@ nav{
     margin: 0 auto;
   }
 
+  .contact-texts{
+    font-family: $got-thi;
+  }
+
   .contact-inputs{
     background-color: $gray;
     border: none;
     border-radius: 0;
     color: white;
+    font-family: $got-thi;
   }
 
   .contact-comments{
@@ -225,5 +243,6 @@ nav{
     border-radius: 0;
     resize: none;
     color: white;
+    font-family: $got-thi;
   }
 }
