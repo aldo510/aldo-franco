@@ -1,4 +1,3 @@
-
 $gray: #1A1A1A;
 $text-gray: #666666;
 $green: #00FF00;
@@ -25,5 +24,6 @@ $futura: Futura;
 
 @import "bootstrap";
 @import 'slick';
+@import 'animate';
 @import "static_pages";
 @import "buildings";

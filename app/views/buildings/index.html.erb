@@ -42,7 +42,9 @@
           <%= content_tag :div, class: "row kind-row kind-#{kind} my-4" do %>
             <% arr.each do |building| %>
               <div class="col-4">
-                <%= image_tag building.images.first, class: 'img-fluid w-100' %>
+                <%= link_to building_path(building) do %>
+                  <%= image_tag building.images.first, class: 'img-fluid w-100' %>
+                <% end %>
               </div>
             <% end %>
           <% end %>

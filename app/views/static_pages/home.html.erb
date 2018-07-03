@@ -105,6 +105,10 @@
 
 <%= render partial: 'layouts/contact' %>
 
+<% if @first_time %>
+  <%= render partial: 'intro' %>
+<% end %>
+
 <%= javascript_tag defer: 'defer' do -%>
 
   var numslider = $(".item-container").length;

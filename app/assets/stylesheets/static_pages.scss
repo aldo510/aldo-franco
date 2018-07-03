@@ -276,3 +276,51 @@ nav{
     }
   }
 }
+
+
+#intro{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: $gray;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  #intro-video{
+    position: absolute;
+    margin: auto;
+    width: 40%;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 22%;
+  }
+
+  #click-here{
+    position: absolute;
+    margin: auto;
+    top: 35%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $green;
+    height: fit-content;
+    text-transform: uppercase;
+  }
+
+  #click-icon{
+    position: absolute;
+    margin: auto;
+    top: 54%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 30px;
+    height: auto;
+  }
+}
