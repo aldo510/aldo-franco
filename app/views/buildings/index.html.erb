@@ -29,7 +29,7 @@
         <div class="row">
           <% Building.kinds.keys.each do |key| %>
             <div class="col">
-              <%= content_tag :h4, key.singularize, class: "text-center kinds-titles kind-#{key}" %>
+              <%= content_tag :h4, key.singularize, class: "text-center kinds-titles kind-#{key}", data: {target: key} %>
             </div>
           <% end %>
         </div>
