@@ -9,7 +9,7 @@
     </div>
 
     <div class="row">
-      
+      <div class="col vertical-line"></div>
     </div>
 
     <div class="row">
@@ -21,3 +21,36 @@
     </div>
   </div>
 </section>
+
+<section id="kinds">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-9 mx-auto">
+        <div class="row">
+          <% Building.kinds.keys.each do |key| %>
+            <div class="col">
+              <%= content_tag :h4, key.singularize, class: "text-center kinds-titles kind-#{key}" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-11 mx-auto">
+        <% Building.all.group_by(&:kind).each do |kind, arr| %>
+          <%= content_tag :div, class: "row kind-row kind-#{kind} my-4" do %>
+            <% arr.each do |building| %>
+              <div class="col-4">
+                <%= image_tag building.images.first, class: 'img-fluid w-100' %>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render partial: 'layouts/contact' %>
+

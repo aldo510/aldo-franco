@@ -64,7 +64,7 @@
 
     <div class="row">
       <div class="col mx-auto">
-        <%= link_to 'todos los proyectos', proyects_path, id: 'all-proyects' %>
+        <%= link_to 'todos los proyectos', buildings_path, id: 'all-proyects' %>
       </div>
     </div>
 
@@ -97,83 +97,7 @@
   </div>
 </section>
 
-<section id="contact">
-  <div class="container-fluid">
-    
-    <div class="row">
-      <div class="col-12">
-        <h2 id="contact-title">contact</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3 offset-1">
-        <div class="row">
-          <div class="col">
-            <%= image_tag 'icons/arroba.svg', id: 'contact-arroba', class: 'contact-icons' %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p class="text-center text-white contact-texts">franco@ruitecto.mx</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 offset-3">
-            <%= image_tag 'icons/face.svg', class: 'contact-icons' %>
-          </div>
-          <div class="col-2">
-            <%= image_tag 'icons/instagram.svg', class: 'contact-icons' %>
-          </div>
-          <div class="col-2">
-            <%= image_tag 'icons/linkedin.svg', class: 'contact-icons' %>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-10 offset-1 col-md-4 offset-md-0">
-        <%= form_tag contact_path, method: :post do %>
-          <div class="row border-bottom">
-            <div class="col border-ri">
-              <%= text_field_tag 'name', nil, class: 'form-control contact-inputs', placeholder: 'Name' %>
-            </div>
-            <div class="col">
-              <%= text_field_tag 'email', nil, class: 'form-control contact-inputs', placeholder: 'Email' %>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <%= text_area_tag 'comments', nil, class: 'form-control contact-comments', placeholder: 'Comments' %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <%= button_tag type: 'submit', id: 'send-button' do %>
-                <%= image_tag 'icons/send.svg' %>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      
-      <div class="col-md-3">
-        <div class="row">
-          <div class="col">
-            <%= image_tag 'icons/phone.svg', id: 'contact-arroba', class: 'contact-icons' %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <p class="text-center text-white contact-texts">917-345-8352</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+<%= render partial: 'layouts/contact' %>
 
 <%= javascript_tag defer: 'defer' do -%>
 

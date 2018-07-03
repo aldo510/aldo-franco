@@ -1,7 +1,76 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Commercial'
+Building.create(name: 'be concept store', kind: 1,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                images: ['buildings/be-concept-store/BECONCEPT1.jpg',
+                         'buildings/be-concept-store/BECONCEPT2.jpg',
+                         'buildings/be-concept-store/BECONCEPT3.jpg',
+                         'buildings/be-concept-store/BECONCEPT4.jpg',
+                         'buildings/be-concept-store/BECONCEPT5.jpg',
+                         'buildings/be-concept-store/BECONCEPT6.jpg',
+                         'buildings/be-concept-store/BECONCEPT7.jpg',
+                         'buildings/be-concept-store/BECONCEPT8.jpg',
+                         'buildings/be-concept-store/BECONCEPT9.jpg'])
+
+Building.create(name: 'raw republic', kind: 1,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                images: ['buildings/raw-republic/RAWREPUBLIC1.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC2.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC3.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC4.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC5.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC6.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC7.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC8.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC9.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC10.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC11.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC12.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC13.jpg',
+                         'buildings/raw-republic/RAWREPUBLIC14.jpg'])
+
+
+Building.create(name: 'ten tei', kind: 1,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                images: ['buildings/ten-tei/TENTEI1.jpg',
+                         'buildings/ten-tei/TENTEI2.jpg',
+                         'buildings/ten-tei/TENTEI3.jpg',
+                         'buildings/ten-tei/TENTEI4.jpg',
+                         'buildings/ten-tei/TENTEI5.jpg',
+                         'buildings/ten-tei/TENTEI6.jpg',
+                         'buildings/ten-tei/TENTEI7.jpg',
+                         'buildings/ten-tei/TENTEI8.jpg',
+                         'buildings/ten-tei/TENTEI9.jpg',
+                         'buildings/ten-tei/TENTEI10.jpg',
+                         'buildings/ten-tei/TENTEI11.jpg',
+                         'buildings/ten-tei/TENTEI12.jpg'])
+
+
+puts 'office'
+Building.create(name: 'winsor headquarters', kind: 2,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                images: ['buildings/winsor-headquarters/windsor1.jpg',
+                         'buildings/winsor-headquarters/windsor2.jpg',
+                         'buildings/winsor-headquarters/windsor3.jpg',
+                         'buildings/winsor-headquarters/windsor4.jpg',
+                         'buildings/winsor-headquarters/windsor5.jpg',
+                         'buildings/winsor-headquarters/windsor6.jpg',
+                         'buildings/winsor-headquarters/windsor7.jpg',
+                         'buildings/winsor-headquarters/windsor8.jpg',
+                         'buildings/winsor-headquarters/windsor9.jpg',
+                         'buildings/winsor-headquarters/windsor10.jpg',
+                         'buildings/winsor-headquarters/windsor11.jpg',
+                         'buildings/winsor-headquarters/windsor12.jpg'])
+

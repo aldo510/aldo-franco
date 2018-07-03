@@ -1,3 +1,61 @@
-// Place all the styles related to the buildings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#proyects-description{
+  background-color: $gray;
+  padding-top: 8%;
+  padding-bottom: 4%;
+
+  #all-proyects-title{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #all-proyects-description{
+    color: white;
+    text-align: center;
+  }
+
+  .vertical-line{
+    position: relative;
+    margin-top: 3%;
+    margin-bottom: 5%;
+
+    &:before{
+      content: "";
+      position: absolute;
+      margin: auto;
+      height: 30px;
+      width: 1px;
+      background-color: white;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+
+#kinds{
+  background-color: $gray;
+  
+  .kinds-titles{
+    color: $text-gray;
+    text-transform: uppercase;
+    margin-bottom: 20%;
+    font-size: 1.2rem;
+    position: relative;
+
+    &.active:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 3px;
+      border: thin solid $green;
+    }
+  }
+}
