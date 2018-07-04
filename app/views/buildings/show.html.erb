@@ -1,0 +1,39 @@
+
+<%= render partial: 'layouts/navbar_transparent' %>
+
+<section id="main-slider">
+  <div class="slider-fullscreen">
+
+    <% @building.images.each do |link| %>
+      <div class="item-container">
+        <%= image_tag link, class: 'slider-img' %>
+      </div>
+    <% end %>
+
+  </div>
+</section>
+
+<section id="similar-proyects">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col offset-1">
+        <h4 id="similar-proyects-title">other <%= @building.kind.singularize %> proyects</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-1">
+        <div class="row">
+          <% @similar.each do |building| %>
+            <div class="col-4">
+              <%= image_tag building.images.first, class: 'w-100 img-fluid' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<%= render partial: 'layouts/contact' %>

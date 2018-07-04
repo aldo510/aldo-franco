@@ -17,5 +17,23 @@ $( document ).on('turbolinks:load', function() {
 
   });
 
+  var banerSlider = $('.slider-fullscreen').bxSlider({
+    infiniteLoop: true,
+    controls: false,
+    pager: false,
+    onSliderResize: function() {
+      adjustSliderHeight();      
+    }
+  });
+
+  function adjustSliderHeight() {
+    var currentSlide = banerSlider.getCurrentSlide();
+    var currentHeight = $('.slider-img').get(0).height;
+    console.log(currentHeight);
+    $('.bx-viewport').height(currentHeight);
+  }
+
+  adjustSliderHeight();
+
 })
 

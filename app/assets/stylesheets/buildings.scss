@@ -60,3 +60,27 @@
     }
   }
 }
+
+
+
+#main-slider{
+  width: 100%;
+  height: auto;
+
+  .bx-wrapper{
+    border: 0;
+  }
+}
+
+#similar-proyects{
+  background-color: $gray;
+  padding: 8% 0;
+
+  #similar-proyects-title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 3%;
+    font-size: 1rem;
+  }
+}

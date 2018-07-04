@@ -1,5 +1,60 @@
+nav#transparent-navbar{
+  background-color: rgba(0, 0, 0, 0.2) !important;
 
-nav{
+  .navbar-brand{
+    margin-right: 0;
+    margin-left: 4rem;
+  }
+
+  #logo-navbar{
+    width: 200px;
+    height: auto;
+  }
+
+  .nav-item{
+    border-bottom: thin solid white;
+    position: relative;
+    padding: 0 15px;
+  }
+
+  .nav-link{
+    color: white !important;
+    font-family: $futura;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    &:hover:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  #nav-social{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 0;
+    margin-right: 5%;
+    margin-left: 5%;
+
+    img{
+      width: 15px;
+      height: auto;
+      max-width: 15px;
+      max-height: 15px;
+      margin: 0 10px;
+    }
+  }
+}
+
+
+nav#white-navbar{
   background-color: white;
 
   .navbar-brand{
@@ -61,22 +116,22 @@ nav{
 
   .banner-slider div{
     height: auto;
-  }
 
-  .item-container{
-    position: relative;
+    .item-container{
+      position: relative;
 
-    .item-title{
-      position: absolute;
-      text-align: center;
-      left: 0;
-      right: 0;
-      bottom: 22%;
-      color: white;
-      text-transform: uppercase;
-      font-family: $futura;
-      font-size: 2rem;
-      letter-spacing: 10px;
+      .item-title{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 22%;
+        color: white;
+        text-transform: uppercase;
+        font-family: $futura;
+        font-size: 2rem;
+        letter-spacing: 10px;
+      }
     }
   }
   
