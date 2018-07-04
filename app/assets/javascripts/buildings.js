@@ -34,7 +34,9 @@ $( document ).on('turbolinks:load', function() {
     $('.bx-viewport').height(currentHeight);
   }
 
-  adjustSliderHeight();
+  if($('.slider-fullscreen').lenght > 0){
+    adjustSliderHeight();
+  }
 
 })
 
