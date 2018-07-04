@@ -19,6 +19,7 @@ $( document ).on('turbolinks:load', function() {
 
   var banerSlider = $('.slider-fullscreen').bxSlider({
     infiniteLoop: true,
+    auto: true,
     controls: false,
     pager: false,
     onSliderResize: function() {

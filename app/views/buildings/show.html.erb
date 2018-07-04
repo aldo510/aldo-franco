@@ -26,7 +26,9 @@
         <div class="row">
           <% @similar.each do |building| %>
             <div class="col-4">
-              <%= image_tag building.images.first, class: 'w-100 img-fluid' %>
+              <%= link_to building_path(building) do %>
+                <%= image_tag building.images.first, class: 'w-100 img-fluid' %>
+              <% end %>
             </div>
           <% end %>
         </div>
