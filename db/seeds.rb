@@ -43,6 +43,18 @@ Building.create(name: 'departamento ppg', kind: 0,
                          'buildings/departamento-ppg/PPG5.jpg'])
 
 
+Building.create(name: 'tamarindos 902', kind: 0,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                images: ['buildings/tamarindos-902/TAMARINDOS-902-1.jpg',
+                         'buildings/tamarindos-902/TAMARINDOS-902-2.jpg',
+                         'buildings/tamarindos-902/TAMARINDOS-902-3.jpg',
+                         'buildings/tamarindos-902/TAMARINDOS-902-4.jpg',
+                         'buildings/tamarindos-902/TAMARINDOS-902-5.jpg'])
+
+
 
 
 
