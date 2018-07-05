@@ -54,6 +54,28 @@ Building.create(name: 'ten tei', kind: 1,
                          'buildings/ten-tei/TENTEI11.jpg',
                          'buildings/ten-tei/TENTEI12.jpg'])
 
+Building.create(name: 'in the mix', kind: 1,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                images: ['buildings/in-the-mix/INTHEMIX1.jpg',
+                         'buildings/in-the-mix/INTHEMIX2.jpg',
+                         'buildings/in-the-mix/INTHEMIX3.jpg',
+                         'buildings/in-the-mix/INTHEMIX4.jpg',
+                         'buildings/in-the-mix/INTHEMIX5.jpg',
+                         'buildings/in-the-mix/INTHEMIX6.jpg'])
+
+Building.create(name: 'plaza polanquito', kind: 1,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                images: ['buildings/plaza-polanquito/polanquito1.jpg',
+                         'buildings/plaza-polanquito/polanquito2.jpg',
+                         'buildings/plaza-polanquito/polanquito3.jpg',
+                         'buildings/plaza-polanquito/polanquito4.jpg'])
+
 
 puts 'office'
 Building.create(name: 'winsor headquarters', kind: 2,
