@@ -22,6 +22,7 @@ $( document ).on('turbolinks:load', function() {
     auto: true,
     controls: false,
     pager: false,
+    adaptiveHeight: true,
     onSliderResize: function() {
       adjustSliderHeight();      
     }

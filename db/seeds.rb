@@ -1,4 +1,52 @@
 
+puts 'Residential'
+Building.create(name: 'ahuehuetes 2105', kind: 0,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                images: ['buildings/ahuehuetes-2105/AHUEHUETES-2105-1.jpg',
+                         'buildings/ahuehuetes-2105/AHUEHUETES-2105-2.jpg',
+                         'buildings/ahuehuetes-2105/AHUEHUETES-2105-3.jpg',
+                         'buildings/ahuehuetes-2105/AHUEHUETES-2105-4.jpg',
+                         'buildings/ahuehuetes-2105/AHUEHUETES-2105-5.jpg',
+                         'buildings/ahuehuetes-2105/AHUEHUETES-2105-6.jpg'])
+
+Building.create(name: 'bosque de canelos', kind: 0,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                images: ['buildings/bosque-de-canelos/CANELOS1.jpg',
+                         'buildings/bosque-de-canelos/CANELOS2.jpg',
+                         'buildings/bosque-de-canelos/CANELOS3.jpg',
+                         'buildings/bosque-de-canelos/CANELOS4.jpg',
+                         'buildings/bosque-de-canelos/CANELOS5.jpg',
+                         'buildings/bosque-de-canelos/CANELOS6.jpg',
+                         'buildings/bosque-de-canelos/CANELOS7.jpg',
+                         'buildings/bosque-de-canelos/CANELOS8.jpg',
+                         'buildings/bosque-de-canelos/CANELOS9.jpg',
+                         'buildings/bosque-de-canelos/CANELOS10.jpg',
+                         'buildings/bosque-de-canelos/CANELOS11.jpg',
+                         'buildings/bosque-de-canelos/CANELOS12.jpg'])
+
+
+Building.create(name: 'departamento ppg', kind: 0,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                images: ['buildings/departamento-ppg/PPG1.jpg',
+                         'buildings/departamento-ppg/PPG2.jpg',
+                         'buildings/departamento-ppg/PPG3.jpg',
+                         'buildings/departamento-ppg/PPG4.jpg',
+                         'buildings/departamento-ppg/PPG5.jpg'])
+
+
+
+
+
+# -----------------------------------------------------------------------------
 puts 'Commercial'
 Building.create(name: 'be concept store', kind: 1,
                 description: '',
@@ -77,6 +125,9 @@ Building.create(name: 'plaza polanquito', kind: 1,
                          'buildings/plaza-polanquito/polanquito4.jpg'])
 
 
+
+
+# -----------------------------------------------------------------------------
 puts 'office'
 Building.create(name: 'winsor headquarters', kind: 2,
                 description: '',
