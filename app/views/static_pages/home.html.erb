@@ -39,18 +39,18 @@
 
     <div class="row align-items-end d-flex">
       <div class="col-10 mx-auto">
-        <div class="row pad-bot-5">
+        <div class="row pad-bot-5 d-none d-sm-block">
           <div class="col-5" id="logo-puntos">
             <%= image_tag "static_pages/home/logo_points.svg", class: "img-fluid" %>
           </div>
         </div>
         <div class="row">
-          <div class="col-5">
+          <div class="col-10 mx-auto col-sm-5">
             <h3 class="text-uppercase text-white">about us</h3>
             <br>
-            <p class=" pad-bot-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat voluptatibus et recusandae quos ab doloribus dolores quasi veniam delectus officiis culpa totam, molestiae veritatis blanditiis numquam dicta est nostrum.</p>
+            <p class=" pad-bot-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat voluptatibus et recusandae quos ab doloribus dolores quasi veniam delectus officiis culpa totam, molestiae veritatis blanditiis numquam dicta est nostrum.</p>
             <div class="row">
-              <div class="col-5 border-top pad-top-5">
+              <div class="col-7 col-sm-5 border-top pad-top-5">
                 <ul class="lista">
                   <li>1</li>
                   <li>2</li>
@@ -59,7 +59,7 @@
               </div>
             </div>
           </div>
-          <div class="col-7" id="img-about">
+          <div class="col-sm-7 col-5 d-none d-sm-block" id="img-about">
             <%= image_tag "static_pages/home/OFFICE.jpg", class: "img-fluid"%>
           </div>
         </div>
@@ -84,7 +84,7 @@
     </div>
 
     <div class="row">
-      <div class="col-6 mx-auto">
+      <div class="col-10 col-sm-6 mx-auto">
         <p id="work-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut sodales metus, et aliquet erat. Suspendisse sed est rutrum, semper magna quis, tristique ex. <span>Nunc tristique commodo finibus</span>
         </p>
@@ -98,39 +98,44 @@
     </div>
 
     <script>
-      $( document ).on('turbolinks:load', function() {
+      $( document ).ready(function() {
         $('.cat-1').hover(function(){
           $('#categories-background').css({'background-image': "image-url(static_pages/home/RESIDENCIAL.jpg);"})
         });
         $('.cat-2').hover(function(){
           $('#categories-background').css({'background-image': "image-url(static_pages/home/OFFICE.jpg);"})
         });
+        $('.cat-1').on('mouseenter mouseleave', function(e) {
+          var image = e.type == 'mouseenter' ? 'new' : 'original';
+          console.log("asdasd");
+          $(this).parent().css('background-image', 'image-url(static_pages/home/OFFICE.jpg);');
+        });
       });
 
     </script>
     <div class="row" id="categories-background">
-      <div class="col-4 category cat-1">
+      <div class="col-6 col-sm-4 category cat-1">
         <h4>Residencial</h4>
       </div>
-      <div class="col-4 category cat-2">
+      <div class="col-6 col-sm-4 category cat-2">
         <h4>Comercial</h4>
       </div>
-      <div class="col-4 category cat-3">
+      <div class="col-6 col-sm-4 category cat-3">
         <h4>Corporativo</h4>
       </div>
-      <div class="col-4 category cat-4">
+      <div class="col-6 col-sm-4 category cat-4">
         <h4>Residencial</h4>
       </div>
-      <div class="col-4 category cat-5">
+      <div class="col-6 col-sm-4 category cat-5">
         <h4>Comercial</h4>
       </div>
-      <div class="col-4 category cat-6">
+      <div class="col-6 col-sm-4 category cat-6">
         <h4>Residencial</h4>
       </div>
-      <div class="col-4 category cat-7">
+      <div class="col-6 col-sm-4 category cat-7">
         <h4>Comercial</h4>
       </div>
-      <div class="col-4 category cat-8">
+      <div class="col-6 col-sm-4 category cat-8">
         <h4>Corporativo</h4>
       </div>
     </div>

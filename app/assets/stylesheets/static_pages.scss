@@ -464,7 +464,13 @@ nav#white-navbar{
   list-style: none;
   display: inline-flex;
   li{
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &:hover{
+      background-color: white;
+      color: black;
+      cursor: pointer;  
+    }
   }
 }
 #logo-puntos{:
@@ -546,4 +552,25 @@ nav#white-navbar{
   #aldo-description{
     color: white;
   }
+}
+
+// media querys
+
+@include media-breakpoint-only(xs) {
+  #footer{
+    height: auto;
+    padding-top:5%;
+  }
+}
+@include media-breakpoint-only(sm) {
+
+}
+@include media-breakpoint-only(md) {
+
+}
+@include media-breakpoint-only(lg) {
+
+}
+@include media-breakpoint-only(xl) {
+
 }
