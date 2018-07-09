@@ -1,6 +1,6 @@
 
 <% content_for :head do %>
-  <meta name="turbolinks-cache-control" content="no-cache">
+<meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
 
 
@@ -31,15 +31,38 @@
 <section id="abount-us">
   <div class="container-fluid">
     <div class="row">
-      <div class="col">
+      <div class="col pad-top-5 pad-bot-5">
         <h2 class="abount-us-title"><span>we design</span> spaces</h2>
         <h2 class="abount-us-title">creating <span>unique experiences</span></h2>
       </div>
     </div>
 
     <div class="row align-items-end d-flex">
-      <div class="col-6">
-        <h3>about us</h3>
+      <div class="col-10 mx-auto">
+        <div class="row pad-bot-5">
+          <div class="col-5" id="logo-puntos">
+            <%= image_tag "static_pages/home/logo_points.svg", class: "img-fluid" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <h3 class="text-uppercase text-white">about us</h3>
+            <br>
+            <p class=" pad-bot-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat voluptatibus et recusandae quos ab doloribus dolores quasi veniam delectus officiis culpa totam, molestiae veritatis blanditiis numquam dicta est nostrum.</p>
+            <div class="row">
+              <div class="col-5 border-top pad-top-5">
+                <ul class="lista">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-7" id="img-about">
+            <%= image_tag "static_pages/home/OFFICE.jpg", class: "img-fluid"%>
+          </div>
+        </div>
       </div>
       <div class="col-6"></div>
     </div>
@@ -49,7 +72,7 @@
 <section id="work">
   <div class="container-fluid">
     <div class="row">
-      <div class="col">
+      <div class="col pad-top-5">
         <h2 id="work-title">work</h2>
       </div>
     </div>
@@ -74,29 +97,40 @@
       </div>
     </div>
 
+    <script>
+      $( document ).on('turbolinks:load', function() {
+        $('.cat-1').hover(function(){
+          $('#categories-background').css({'background-image': "image-url(static_pages/home/RESIDENCIAL.jpg);"})
+        });
+        $('.cat-2').hover(function(){
+          $('#categories-background').css({'background-image': "image-url(static_pages/home/OFFICE.jpg);"})
+        });
+      });
+
+    </script>
     <div class="row" id="categories-background">
-      <div class="col-4 category">
+      <div class="col-4 category cat-1">
         <h4>Residencial</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-2">
         <h4>Comercial</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-3">
         <h4>Corporativo</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-4">
         <h4>Residencial</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-5">
         <h4>Comercial</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-6">
         <h4>Residencial</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-7">
         <h4>Comercial</h4>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category cat-8">
         <h4>Corporativo</h4>
       </div>
     </div>
@@ -106,7 +140,7 @@
 <%= render partial: 'layouts/contact' %>
 
 <% if @first_time %>
-  <%= render partial: 'intro' %>
+<%= render partial: 'intro' %>
 <% end %>
 
 <%= javascript_tag defer: 'defer' do -%>
@@ -116,12 +150,12 @@
 //    $('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
 //  }
 
-  $('.banner-slider').slick({
-    autoplay: false,
-    infinite: true,
-    dots: false,
-    arrows: false
-  });
+$('.banner-slider').slick({
+autoplay: false,
+infinite: true,
+dots: false,
+arrows: false
+});
 
 //  $('#left-arrow').click(function() {
 //    $('.banner-slider').slick('slickPrev');
@@ -141,4 +175,4 @@
 //  });
 
 <% end -%>
-  
+

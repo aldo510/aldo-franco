@@ -447,7 +447,99 @@ nav#white-navbar{
     text-align: center;
   }
 }
-
+.pad-top-10{
+  padding-top:10%;
+}
+.pad-top-5{
+  padding-top:5%;
+}
+.pad-bot-5{
+  padding-bottom: 5%;
+}
+#img-about{
+  position: relative;
+  top:-20%;
+}
+.lista{
+  list-style: none;
+  display: inline-flex;
+  li{
+    padding-right: 20px;
+  }
+}
+#logo-puntos{:
+  position: relative;
+  &:after{
+    content: " ";
+    display: block;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    position: absolute;
+    bottom: -29px;
+    left: 190px;
+  }
+}
+#img-about{
+  position: relative;
+  top: -70px;
+  img{
+    z-index: 3;
+    position: relative;
+  }
+  &:after{
+    z-index: 1;
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 90%;
+    border: 10px solid #80808075;
+    position: absolute;
+    bottom: -29px;
+    left: 90px;
+  }
+}
+.cat-1:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-2:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-3:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-4:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-5:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-6:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-7:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
+.cat-8:hover{
+  #work #categories-background{
+    content: image-url('static_pages/home/RESIDENCIAL.jpg')!important;
+  }
+}
 #aldo{
   background-color: $gray;
 
