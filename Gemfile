@@ -39,6 +39,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'bootstrap', '~> 4.1.1'
 
 gem "jquery-slick-rails"
+gem 'bxslider-rails'
 
 gem "animate-rails"
 

@@ -6,6 +6,9 @@ class StaticPagesController < ApplicationController
     @first_time = first_time?
   end
 
+  def about    
+  end
+
   def contact
   end
 

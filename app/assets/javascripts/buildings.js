@@ -17,5 +17,27 @@ $( document ).on('turbolinks:load', function() {
 
   });
 
+  var banerSlider = $('.slider-fullscreen').bxSlider({
+    infiniteLoop: true,
+    auto: true,
+    controls: false,
+    pager: false,
+    adaptiveHeight: true,
+    onSliderResize: function() {
+      adjustSliderHeight();      
+    }
+  });
+
+  function adjustSliderHeight() {
+    var currentSlide = banerSlider.getCurrentSlide();
+    var currentHeight = $('.slider-img').get(0).height;
+    console.log(currentHeight);
+    $('.bx-viewport').height(currentHeight);
+  }
+
+  if($('.slider-fullscreen').lenght > 0){
+    adjustSliderHeight();
+  }
+
 })
 

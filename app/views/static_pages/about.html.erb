@@ -1,0 +1,45 @@
+
+<%= render partial: 'layouts/navbar' %>
+
+<section id="logo-about">
+  <%= image_tag 'logo-white.svg', id: 'mega-logo' %>
+</section>
+
+<section id="about-description">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 id="about-description-title">team</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col line"></div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p id="about-description-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis vestibulum mauris sit amet tristique. Sed congue ultrices nulla at laoreet. Ut id nunc dolor. Ut elementum metus vel augue luctus sollicitudin. Ut dignissim tortor eu pretium pharetra. Duis sed sapien sit amet libero condimentum sollicitudin. Vivamus non sollicitudin lorem.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aldo">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 offset-lg-2">
+        <%= image_tag 'static_pages/about/aldofranco.jpg', class: 'img-fluid w-100' %>
+      </div>
+      <div class="col-lg-5">
+        <p id="aldo-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis vestibulum mauris sit amet tristique. Sed congue ultrices nulla at laoreet. Ut id nunc dolor. Ut elementum metus vel augue luctus sollicitudin. Ut dignissim tortor eu pretium pharetra. Duis sed sapien sit amet libero condimentum sollicitudin. Vivamus non sollicitudin lorem.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render partial: 'layouts/contact' %>
