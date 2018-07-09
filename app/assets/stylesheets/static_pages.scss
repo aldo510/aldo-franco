@@ -276,7 +276,22 @@ nav{
     }
   }
 }
-
+.inherit{
+  height:inherit;
+}
+#footer{
+  height: 20vh;
+  background-color: $gray;
+  -webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  .text-footer{
+  }
+  p:hover{
+    color: $green;
+    text-decoration: underline;
+  }
+}
 
 #intro{
   width: 100vw;
