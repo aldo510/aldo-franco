@@ -339,14 +339,18 @@ nav#white-navbar{
 #footer{
   height: 20vh;
   background-color: $gray;
-  -webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.35);
   .text-footer{
   }
-  p:hover{
+  .footer-menu p:hover{
     color: $green;
     text-decoration: underline;
+  }
+
+  *{
+    color: $text-gray;
   }
 }
 

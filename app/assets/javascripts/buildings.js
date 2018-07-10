@@ -5,7 +5,7 @@ $( document ).on('turbolinks:load', function() {
   $(".kinds-titles").first().addClass('active');
 
   $(".kind-row").hide();
-  $(".kind-row").first().hide();
+  $(".kind-row").first().show();
 
   $(".kinds-titles").click(function() {
 
