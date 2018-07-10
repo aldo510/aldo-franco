@@ -1,6 +1,7 @@
 
 $( document ).on('turbolinks:load', function() {
   //
+  console.log("execute");
   $(".kinds-titles").first().addClass('active');
 
   $(".kind-row").hide();
