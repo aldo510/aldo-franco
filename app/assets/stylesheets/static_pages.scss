@@ -331,7 +331,22 @@ nav#white-navbar{
     }
   }
 }
-
+.inherit{
+  height:inherit;
+}
+#footer{
+  height: 20vh;
+  background-color: $gray;
+  -webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.75);
+  .text-footer{
+  }
+  p:hover{
+    color: $green;
+    text-decoration: underline;
+  }
+}
 
 #intro{
   width: 100vw;
@@ -438,5 +453,56 @@ nav#white-navbar{
 
   #aldo-description{
     color: white;
+  }
+}
+
+#team{
+  background-color: $gray;
+  padding-top: 5%;
+
+  .line{
+    position: relative;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: $text-gray;
+      height: 20px;
+      margin: auto;
+    }
+  }
+
+  #team-title{
+    color: white;
+    text-align: center;
+  }
+
+  #team-description{
+    color: $text-gray;
+    text-align: center;
+  }
+
+  .arch-name{
+    color: $text-gray;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .arch-title{
+    color: $text-gray;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .arch-col{
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 }
