@@ -1,10 +1,11 @@
 
-puts 'Residential'
+puts 'Residential --> 0'
 Building.create(name: 'ahuehuetes 2105', kind: 0,
                 description: '',
                 year: '',
                 location: '',
                 area: '' ,
+                thumbnail: 'thumbnail/residential/ahuehuetes.jpg',
                 images: ['buildings/ahuehuetes-2105/AHUEHUETES-2105-1.jpg',
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-2.jpg',
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-3.jpg',
@@ -12,11 +13,12 @@ Building.create(name: 'ahuehuetes 2105', kind: 0,
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-5.jpg',
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-6.jpg'])
 
-Building.create(name: 'bosque de canelos', kind: 0,
+Building.create(name: 'u house bosque de canelos', kind: 0,
                 description: '',
                 year: '',
                 location: '',
                 area: '' ,
+                thumbnail: 'thumbnail/residential/bosquedecanelos.jpg',
                 images: ['buildings/bosque-de-canelos/CANELOS1.jpg',
                          'buildings/bosque-de-canelos/CANELOS2.jpg',
                          'buildings/bosque-de-canelos/CANELOS3.jpg',
@@ -36,6 +38,7 @@ Building.create(name: 'departamento ppg', kind: 0,
                 year: '',
                 location: '',
                 area: '' ,
+                thumbnail: 'thumbnail/residential/ppg.jpg',
                 images: ['buildings/departamento-ppg/PPG1.jpg',
                          'buildings/departamento-ppg/PPG2.jpg',
                          'buildings/departamento-ppg/PPG3.jpg',
@@ -48,6 +51,7 @@ Building.create(name: 'tamarindos 902', kind: 0,
                 year: '',
                 location: '',
                 area: '' ,
+                thumbnail: 'thumbnail/residential/tamarindos.jpg',
                 images: ['buildings/tamarindos-902/TAMARINDOS-902-1.jpg',
                          'buildings/tamarindos-902/TAMARINDOS-902-2.jpg',
                          'buildings/tamarindos-902/TAMARINDOS-902-3.jpg',
@@ -56,15 +60,31 @@ Building.create(name: 'tamarindos 902', kind: 0,
 
 
 
+Building.create(name: 'u house bosque de canelos', kind: 0,
+                description: '',
+                year: '',
+                location: '',
+                area: '' ,
+                thumbnail: 'thumbnail/residential/uhouse.jpg',
+                images: ['buildings/u-house-bosque-de-canelos/U-HOUSE1.jpg',
+                         'buildings/u-house-bosque-de-canelos/U-HOUSE2.jpg',
+                         'buildings/u-house-bosque-de-canelos/U-HOUSE3.jpg',
+                         'buildings/u-house-bosque-de-canelos/U-HOUSE4.jpg',
+                         'buildings/u-house-bosque-de-canelos/U-HOUSE5.jpg',
+                         'buildings/u-house-bosque-de-canelos/U-HOUSE6.jpg'])
+
+
+
 
 
 # -----------------------------------------------------------------------------
-puts 'Commercial'
+puts 'Commercial --> 1'
 Building.create(name: 'be concept store', kind: 1,
                 description: '',
                 year: '',
                 location: '',
                 area: '' ,
+                thumbnail: 'thumbnail/commercial/beconceptm.jpg',
                 images: ['buildings/be-concept-store/BECONCEPT1.jpg',
                          'buildings/be-concept-store/BECONCEPT2.jpg',
                          'buildings/be-concept-store/BECONCEPT3.jpg',
@@ -80,6 +100,7 @@ Building.create(name: 'raw republic', kind: 1,
                 year: '',
                 location: '',
                 area: '' ,
+                thumbnail: 'thumbnail/commercial/rawrepublicm.jpg',
                 images: ['buildings/raw-republic/RAWREPUBLIC1.jpg',
                          'buildings/raw-republic/RAWREPUBLIC2.jpg',
                          'buildings/raw-republic/RAWREPUBLIC3.jpg',
@@ -101,6 +122,7 @@ Building.create(name: 'ten tei', kind: 1,
                 year: '',
                 location: '',
                 area: '',
+                thumbnail: 'thumbnail/commercial/tenteim.jpg',
                 images: ['buildings/ten-tei/TENTEI1.jpg',
                          'buildings/ten-tei/TENTEI2.jpg',
                          'buildings/ten-tei/TENTEI3.jpg',
@@ -119,6 +141,7 @@ Building.create(name: 'in the mix', kind: 1,
                 year: '',
                 location: '',
                 area: '',
+                thumbnail: 'thumbnail/commercial/inthemixm.jpg',
                 images: ['buildings/in-the-mix/INTHEMIX1.jpg',
                          'buildings/in-the-mix/INTHEMIX2.jpg',
                          'buildings/in-the-mix/INTHEMIX3.jpg',
@@ -131,6 +154,7 @@ Building.create(name: 'plaza polanquito', kind: 1,
                 year: '',
                 location: '',
                 area: '',
+                thumbnail: 'thumbnail/commercial/polanquitom.jpg',
                 images: ['buildings/plaza-polanquito/polanquito1.jpg',
                          'buildings/plaza-polanquito/polanquito2.jpg',
                          'buildings/plaza-polanquito/polanquito3.jpg',
@@ -140,12 +164,52 @@ Building.create(name: 'plaza polanquito', kind: 1,
 
 
 # -----------------------------------------------------------------------------
-puts 'office'
+puts 'office --> 2'
+Building.create(name: '​jz offices', kind: 2,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/office/jzofficesm.jpg',
+                images: ['buildings/​jz-offices/JZOFFICES1.jpg',
+                         'buildings/​jz-offices/JZOFFICES2.jpg',
+                         'buildings/​jz-offices/JZOFFICES3.jpg',
+                         'buildings/​jz-offices/JZOFFICES4.jpg',
+                         'buildings/​jz-offices/JZOFFICES5.jpg'])
+
+
+Building.create(name: '​max mix', kind: 2,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/office/maxmixm.jpg',
+                images: ['buildings/max-mix/MAXMIX1.jpg',
+                         'buildings/max-mix/MAXMIX2.jpg',
+                         'buildings/max-mix/MAXMIX3.jpg',
+                         'buildings/max-mix/MAXMIX4.jpg',
+                         'buildings/max-mix/MAXMIX5.jpg'])
+
+
+Building.create(name: 'reforma 341', kind: 2,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/office/reformam.jpg',
+                images: ['buildings/reforma-341/REFORMA-341-1.jpg',
+                         'buildings/reforma-341/REFORMA-341-2.jpg',
+                         'buildings/reforma-341/REFORMA-341-3.jpg',
+                         'buildings/reforma-341/REFORMA-341-4.jpg'])
+
+
+
 Building.create(name: 'winsor headquarters', kind: 2,
                 description: '',
                 year: '',
                 location: '',
                 area: '',
+                thumbnail: 'thumbnail/office/winsorm.jpg',
                 images: ['buildings/winsor-headquarters/windsor1.jpg',
                          'buildings/winsor-headquarters/windsor2.jpg',
                          'buildings/winsor-headquarters/windsor3.jpg',
@@ -159,3 +223,74 @@ Building.create(name: 'winsor headquarters', kind: 2,
                          'buildings/winsor-headquarters/windsor11.jpg',
                          'buildings/winsor-headquarters/windsor12.jpg'])
 
+
+
+# -----------------------------------------------------------------------------
+puts 'health --> 3'
+
+
+# -----------------------------------------------------------------------------
+puts 'education --> 4'
+Building.create(name: 'cuajimalpa community center', kind: 4,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/education/cuajimalpa.jpg',
+                images: ['buildings/cuajimalpa-community-center/CUAJIMALPACC1.jpg',
+                         'buildings/cuajimalpa-community-center/CUAJIMALPACC2.jpg',
+                         'buildings/cuajimalpa-community-center/CUAJIMALPACC3.jpg',
+                         'buildings/cuajimalpa-community-center/CUAJIMALPACC4.jpg',
+                         'buildings/cuajimalpa-community-center/CUAJIMALPACC5.jpg',
+                         'buildings/cuajimalpa-community-center/CUAJIMALPACC6.jpg'])
+
+
+
+# -----------------------------------------------------------------------------
+puts 'cultural --> 5'
+Building.create(name: 'chapultepec library', kind: 5,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/cultural/chapultepecm.jpg',
+                images: ['buildings/chapultepec-library/CHAPULTEPEC-LIBRARY1.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY2.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY3.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY4.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY5.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY6.jpg'])
+
+
+Building.create(name: 'minm museum', kind: 5,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/cultural/minimm.jpg',
+                images: ['buildings/minm-museum/MINM-MUSEUM1.jpg',
+                         'buildings/minm-museum/MINM-MUSEUM2.jpg',
+                         'buildings/minm-museum/MINM-MUSEUM3.jpg',
+                         'buildings/minm-museum/MINM-MUSEUM4.jpg',
+                         'buildings/minm-museum/MINM-MUSEUM5.jpg',
+                         'buildings/minm-museum/MINM-MUSEUM6.jpg'])
+
+
+
+
+# -----------------------------------------------------------------------------
+puts 'publics --> 6'
+Building.create(name: 'toluca-convention-center', kind: 6,
+                description: '',
+                year: '',
+                location: '',
+                area: '',
+                thumbnail: 'thumbnail/public/toluca.jpg',
+                images: ['buildings/toluca-convention-center/TOLUCACC1.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC2.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC3.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC4.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC5.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC6.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC7.jpg',
+                         'buildings/toluca-convention-center/TOLUCACC8.jpg'])

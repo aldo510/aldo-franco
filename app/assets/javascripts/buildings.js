@@ -1,7 +1,6 @@
 
 $( document ).on('turbolinks:load', function() {
   //
-  console.log("execute");
   $(".kinds-titles").first().addClass('active');
 
   $(".kind-row").hide();
@@ -10,7 +9,6 @@ $( document ).on('turbolinks:load', function() {
   $(".kinds-titles").click(function() {
 
       var target = $(this).data('target');
-      console.log(target);
       $(".kinds-titles").removeClass('active');
       $('h4.kind-' + target).addClass('active');
       $('.kind-row').hide();
@@ -20,7 +18,7 @@ $( document ).on('turbolinks:load', function() {
 
   var banerSlider = $('.slider-fullscreen').bxSlider({
     infiniteLoop: true,
-    auto: true,
+    auto: false,
     controls: false,
     pager: false,
     adaptiveHeight: true,
