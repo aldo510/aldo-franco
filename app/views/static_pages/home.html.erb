@@ -95,43 +95,43 @@
     <script>
       $( document ).ready(function() {
         $('.cat-1').hover(function(){
-          $('#categories-background').css({'background-image': "image-url(static_pages/home/RESIDENCIAL.jpg);"})
+          actual = 1;
+          console.log("hover 1 : " + actual);
+          $('#categories-background').css({'background-image': "image-url(static_pages/home/RESIDENCIAL.jpg)"});
         });
         $('.cat-2').hover(function(){
-          $('#categories-background').css({'background-image': "image-url(static_pages/home/OFFICE.jpg);"})
+          actual = 2;
+          console.log("hover 2 : " + 2);
+          $('#categories-background').css('background-image': "url(<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>)");
         });
-        $('.cat-1').on('mouseenter mouseleave', function(e) {
-          var image = e.type == 'mouseenter' ? 'new' : 'original';
-          console.log("asdasd");
-          $(this).parent().css('background-image', 'image-url(static_pages/home/OFFICE.jpg);');
-        });
+
       });
 
     </script>
     <div class="row" id="categories-background">
       <div class="col-6 col-sm-4 category cat-1">
-        <h4>Residencial</h4>
+        <h4>Residential</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-2">
-        <h4>Comercial</h4>
+        <h4>Commercial</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-3">
-        <h4>Corporativo</h4>
+        <h4>Office</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-4">
-        <h4>Residencial</h4>
+        <h4>Health</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-5">
-        <h4>Comercial</h4>
+        <h4>Education</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-6">
-        <h4>Residencial</h4>
+        <h4>Cultural</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-7">
-        <h4>Comercial</h4>
+        <h4>Public</h4>
       </div>
       <div class="col-6 col-sm-4 category cat-8">
-        <h4>Corporativo</h4>
+        <h4>All</h4>
       </div>
     </div>
   </div>
@@ -145,34 +145,34 @@
 
 <%= javascript_tag defer: 'defer' do -%>
 
-  var numslider = $(".item-container").length;
-  for(var i = 0; i< numslider;i++){
-    $('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
-  }
+var numslider = $(".item-container").length;
+for(var i = 0; i< numslider;i++){
+$('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
+}
 
-  $('.banner-slider').slick({
-  autoplay: false,
-  infinite: true,
-  dots: false,
-  arrows: false
-  });
+$('.banner-slider').slick({
+autoplay: false,
+infinite: true,
+dots: false,
+arrows: false
+});
 
-  $('#left-arrow').click(function() {
-    $('.banner-slider').slick('slickPrev');
-  });
+$('#left-arrow').click(function() {
+$('.banner-slider').slick('slickPrev');
+});
 
-  $('#right-arrow').click(function() {
-    $('.banner-slider').slick('slickNext');
-  });
+$('#right-arrow').click(function() {
+$('.banner-slider').slick('slickNext');
+});
 
-  var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
+var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
 
-  $('#dot-'+currentSlide).addClass('active');
+$('#dot-'+currentSlide).addClass('active');
 
-  $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    $('.dot').removeClass('active');
-    $('#dot-'+currentSlide).addClass('active');
-  });
+$('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+$('.dot').removeClass('active');
+$('#dot-'+currentSlide).addClass('active');
+});
 
 <% end -%>
 
