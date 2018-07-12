@@ -11,6 +11,14 @@
     <% end %>
 
   </div>
+
+  <div id="slider-text">
+    <p id="slider-kind"><%= @building.kind.singularize %> | <%= @building.year %></p>
+    <h1 id="building-name"><%= @building.name %></h1>
+    <p id="slider-description">
+      <%= @building.description %>
+    </p>
+  </div>
 </section>
 
 <section id="similar-proyects">
@@ -27,7 +35,7 @@
           <% @similar.each do |building| %>
             <div class="col-4">
               <%= link_to building_path(building) do %>
-                <%= image_tag building.images.first, class: 'img-fluid w-100 slider-img' %>
+                <%= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-4' %>
               <% end %>
             </div>
           <% end %>
