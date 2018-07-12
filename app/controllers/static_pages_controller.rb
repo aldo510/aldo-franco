@@ -10,6 +10,8 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    ContactMailer.contact(params[:name], params[:email], params[:comments]).deliver_now
+    redirect_to root_path
   end
 
 end
