@@ -41,7 +41,7 @@
         <% Building.all.group_by(&:kind).each do |kind, arr| %>
           <%= content_tag :div, class: "row kind-row kind-#{kind} my-4" do %>
             <% arr.each do |building| %>
-              <div class="col-4">
+              <div class="col-sm-4 col-12">
                 <%= link_to building_path(building) do %>
                   <%= image_tag building.thumbnail, class: 'img-fluid w-100  mx-md-4 my-4' %>
                 <% end %>

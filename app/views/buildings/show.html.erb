@@ -30,10 +30,10 @@
     </div>
 
     <div class="row">
-      <div class="col-10 offset-1">
+      <div class="col-10 offset-sm-1 offset-0">
         <div class="row">
           <% @similar.each do |building| %>
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
               <%= link_to building_path(building) do %>
                 <%= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-4' %>
               <% end %>
