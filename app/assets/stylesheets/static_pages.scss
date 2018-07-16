@@ -1,5 +1,10 @@
+.navbar-dark .navbar-toggler-icon{
+  background-image: image-url('icons/menu-button.svg');
+}
+
 nav#transparent-navbar{
   background-color: rgba(0, 0, 0, 0.2) !important;
+
 
   .navbar-brand{
     margin-right: 0;
