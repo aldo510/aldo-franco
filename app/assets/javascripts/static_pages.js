@@ -10,7 +10,11 @@ $( document ).on('turbolinks:load', function() {
 	$('.work-content').hover(function () {
 		$("#work-div").fadeIn();
 	});
-	 $("#work-div").mouseleave(function(){
-      $("#work-div").fadeOut();
-  });
+	$("#work-div").mouseleave(function(){
+		$("#work-div").fadeOut();
+	});
+	$('.sections').hover(function () {
+		// body...
+		console.log("hola si entre al hover alv");
+	})
 });

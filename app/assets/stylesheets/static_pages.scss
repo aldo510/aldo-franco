@@ -58,7 +58,15 @@ nav{
     }
   }
 }
-
+#work-div{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
 @include media-breakpoint-down(md) {
   nav#transparent-navbar{
     .navbar-brand{
