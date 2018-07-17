@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="white-navbar">
   <!-- <a class="navbar-brand" href="#">Navbar</a> -->
   <%= link_to root_path, class: 'navbar-brand' do %>
-    <%= image_tag 'logo-black.svg', id: 'logo-navbar' %>
+  <%= image_tag 'logo-black.svg', id: 'logo-navbar' %>
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,13 +12,22 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link work-content" href="#">Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Year</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
   </div>
@@ -40,5 +49,14 @@
       </a>
     </li>
   </ul>
-
 </nav>
+<div class="col-8 mx-auto" id="work-div" style="display: none;">
+  <ul class="work-ul">
+    <li class="text-uppercase col-2">All</li>
+    <li class="text-uppercase col-2">Comercial</li>
+    <li class="text-uppercase col-2">Residencial</li>
+    <li class="text-uppercase col-2">Publico</li>
+    <li class="text-uppercase col-2">privado</li>
+    <li class="text-uppercase col-2">Corporativo</li>
+  </ul>
+</div>
