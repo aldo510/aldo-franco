@@ -7,4 +7,10 @@ $( document ).on('turbolinks:load', function() {
 	$('.cat-1').hover(function(){
 		$('#parent-div').css({'background-image': "image-url(static_pages/home/RESIDENCIAL.jpg);"})
 	});
+	$('.work-content').hover(function () {
+		$("#work-div").fadeIn();
+	});
+	 $("#work-div").mouseleave(function(){
+      $("#work-div").fadeOut();
+  });
 });
