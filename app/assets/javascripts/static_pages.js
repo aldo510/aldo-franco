@@ -13,4 +13,11 @@ $( document ).on('turbolinks:load', function() {
 	 $("#work-div").mouseleave(function(){
       $("#work-div").fadeOut();
   });
+
+	 $(".lista > li").click(function() {
+	 	var text = $(this).data('text');
+	 	$(".about-text").hide();
+	 	$("#" + text).show();
+	 });
+
 });
