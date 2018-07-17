@@ -8,11 +8,13 @@
     color: white;
     text-align: center;
     text-transform: uppercase;
+    font-family: $futura;
   }
 
   #all-proyects-description{
     color: white;
     text-align: center;
+    font-family: $got-thi;
   }
 
   .vertical-line{
@@ -46,6 +48,7 @@
     font-size: 1.2rem;
     position: relative;
     cursor: pointer;
+    font-family: $got-thi;
 
     &.active:after{
       content: "";
@@ -83,6 +86,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
     z-index: 20;
     padding-left: 3%;
+    font-family: $got-thi;
 
     p, h1{
       color: white;
@@ -110,6 +114,8 @@
     font-weight: normal;
     margin-bottom: 3%;
     font-size: 1rem;
+    font-family: $got-thi;
+    font-size: 1.3rem;
   }
 }
 

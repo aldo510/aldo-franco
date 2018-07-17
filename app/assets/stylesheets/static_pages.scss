@@ -236,8 +236,13 @@ nav#white-navbar{
     }
   }
 
+  #about-title{
+    font-family: $futura;
+  }
+
   .about-text{
     color: $text-gray;
+    font-family: $got-thi;
   }
 }
 
@@ -265,6 +270,7 @@ nav#white-navbar{
     margin: 4% auto;
     color: $text-gray;
     font-size: 1.2rem;
+    font-family: $got-thi;
 
     &>span{
       font-weight: bold;
@@ -394,6 +400,7 @@ nav#white-navbar{
 
   *{
     color: $text-gray;
+    font-family: $got-thi;
   }
 }
 
@@ -431,6 +438,7 @@ nav#white-navbar{
     height: fit-content;
     text-transform: uppercase;
     cursor: pointer;
+    font-family: $got-thi;
   }
 
   #click-icon{
@@ -470,6 +478,9 @@ nav#white-navbar{
     color: white;
     text-align: center;
     text-transform: uppercase;
+    font-family: $futura;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
   }
 
   .line{
@@ -492,8 +503,11 @@ nav#white-navbar{
   }
 
   #about-description-text{
-    color: white;
+    color: $text-gray;
     text-align: center;
+    font-family: $got-thi;
+    line-height: 1.7rem;
+    font-size:  1rem;
   }
 }
 .pad-top-10{
@@ -516,7 +530,8 @@ nav#white-navbar{
     padding-right: 10px;
     padding-left: 10px;
     color: $text-gray;
-    
+    font-family: $got-thi;
+
     &:hover{
       background-color: white;
       color: black;
@@ -600,8 +615,28 @@ nav#white-navbar{
 #aldo{
   background-color: $gray;
 
-  #aldo-description{
+  #aldo-franco-name{
     color: white;
+    font-family: $got-med;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    position: relative;
+
+    &:after{
+      content: '';
+      width: 40px;
+      height: 2px;
+      background-color: $green;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  #aldo-description{
+    color: $text-gray;
+    font-family: $got-thi;
   }
 }
 
@@ -631,23 +666,30 @@ nav#white-navbar{
   #team-title{
     color: white;
     text-align: center;
+    text-trnasform: uppercase;
+    font-family: $futura;
   }
 
   #team-description{
     color: $text-gray;
     text-align: center;
+    font-family: $got-thi;
+    line-height: 1.7rem;
+    font-size: 1rem;
   }
 
   .arch-name{
     color: $text-gray;
     text-align: center;
     text-transform: uppercase;
+    font-family: $got-med;
   }
 
   .arch-title{
     color: $text-gray;
     text-align: center;
     text-transform: uppercase;
+    font-family: $got-thi;
   }
 
   .arch-col{
