@@ -17,4 +17,11 @@ $( document ).on('turbolinks:load', function() {
 		// body...
 		console.log("hola si entre al hover alv");
 	})
+
+	 $(".lista > li").click(function() {
+	 	var text = $(this).data('text');
+	 	$(".about-text").hide();
+	 	$("#" + text).show();
+	 });
+
 });
