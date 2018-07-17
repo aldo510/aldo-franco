@@ -1,15 +1,16 @@
+.navbar-dark .navbar-toggler-icon{
+  background-image: image-url('icons/menu-button.svg');
+}
 nav{
   position: absolute;
   z-index: 1;
   width: 100%;
   #transparent-navbar{
     background-color: rgba(0, 0, 0, 0.2) !important;
-
     .navbar-brand{
       margin-right: 0;
       margin-left: 4rem;
     }
-
     #logo-navbar{
       width: 200px;
       height: auto;
@@ -54,6 +55,20 @@ nav{
         max-height: 15px;
         margin: 0 10px;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  nav#transparent-navbar{
+    .navbar-brand{
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    #logo-navbar{
+      width: 100px;
+      height: auto;
     }
   }
 }
