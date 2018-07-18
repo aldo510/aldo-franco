@@ -14,8 +14,14 @@ $( document ).on('turbolinks:load', function() {
 		$("#work-div").fadeOut();
 	});
 	$('.sections').hover(function () {
+		var id = $(this).data('target');
 		// body...
-		console.log("hola si entre al hover alv");
+		console.log("hola si entre al hover de: " + id);
+		$('.sections-content').hide();
+		$('.'+id).fadeIn();
+		$('.'+id).mouseleave(function () {
+			$('.'+id).hide();
+		});
 	})
 
 	 $(".lista > li").click(function() {

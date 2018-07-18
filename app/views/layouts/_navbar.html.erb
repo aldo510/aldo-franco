@@ -62,8 +62,69 @@
         <li class="text-uppercase col-2 sections" data-target="cor-div">Corporativo</li>
       </ul>
     </div>
-    <div class="col-8 mx-auto all-div" style="display: none;">
-       All buildings
+    <div class="col-6 mx-auto all-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <div class="col-3">
+          <p><%= b.name %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto comer-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "commercial" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto res-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "residential" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto pub-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "public" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto pri-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "private" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto cor-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "corporative" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
