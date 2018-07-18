@@ -11,13 +11,22 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link work-content" href="#">Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Year</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
   </div>
@@ -39,5 +48,82 @@
       </a>
     </li>
   </ul>
-
+<div class="col-12 mx-auto text-white" id="work-div" style="display: none;">
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <ul class="work-ul">
+        <li class="text-uppercase col-2 sections" data-target="all-div">All</li>
+        <li class="text-uppercase col-2 sections" data-target="comer-div">Comercial</li>
+        <li class="text-uppercase col-2 sections" data-target="res-div">Residencial</li>
+        <li class="text-uppercase col-2 sections" data-target="pub-div">Publico</li>
+        <li class="text-uppercase col-2 sections" data-target="pri-div">privado</li>
+        <li class="text-uppercase col-2 sections" data-target="cor-div">Corporativo</li>
+      </ul>
+    </div>
+    <div class="col-6 mx-auto all-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <div class="col-3">
+          <p><%= b.name %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto comer-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "commercial" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto res-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "residential" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto pub-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "public" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto pri-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "private" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6 mx-auto cor-div sections-content" style="display: none;">
+      <div class="row">  
+        <% @all.each do | b | %>
+        <% if b.kind == "corporative" %>
+            <div class="col-3">
+              <p><%= b.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 </nav>

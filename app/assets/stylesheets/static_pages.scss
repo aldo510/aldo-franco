@@ -114,7 +114,8 @@ nav{
   position: absolute;
   z-index: 1;
   width: 100%;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  top: 100%;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -190,7 +191,7 @@ nav#white-navbar{
   display: inline-flex;
   width:100%;
   list-style-type: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   padding-bottom: 15px;
   li{
     text-align: center;
