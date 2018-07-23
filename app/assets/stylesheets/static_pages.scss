@@ -347,6 +347,9 @@ nav#white-navbar{
     display: block;
     color: black;
     font-family: $futura;
+    &:hover{
+      text-decoration: none;
+    }
   }
 
   #categories-background{
@@ -357,13 +360,15 @@ nav#white-navbar{
 
   .category{
     border: thin solid #ffffff30;
-
-    h4{
+    a:hover{
+      text-decoration: none;
+    }
+    h5{
       color: white;
       text-align: center;
       margin: 23% auto;
       font-family: $futura;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -758,6 +763,9 @@ nav#white-navbar{
     margin-bottom: 30px;
   }
 }
+.direction-foo{
+    font-size: 14px;
+  }
 // media querys
 
 @include media-breakpoint-only(xs) {
@@ -770,11 +778,23 @@ nav#white-navbar{
 
 }
 @include media-breakpoint-only(md) {
-
+  .derechos{
+    font-size: 10px;
+  }
+  .direction-foo{
+    font-size: 14px;
+  }
 }
 @include media-breakpoint-only(lg) {
-
+  .derechos{
+    font-size: 10px;
+  }
+  .direction-foo{
+    font-size: 14px;
+  }
 }
 @include media-breakpoint-only(xl) {
-
+  .derechos{
+    font-size: 10px;
+  }
 }

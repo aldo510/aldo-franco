@@ -134,42 +134,42 @@
     <div class="row" id="categories-background">
       <div class="col-6 col-sm-4 category cat-1">
         <%= link_to buildings_path(target: 'residential') do %>
-          <h4>Residential</h4>
+          <h5>Residential</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-2">
         <%= link_to buildings_path(target: 'commercial') do %>
-          <h4>Commercial</h4>
+          <h5>Commercial</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-3">
         <%= link_to buildings_path(target: 'office') do %>
-          <h4>Office</h4>
+          <h5>Office</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-4">
         <%= link_to buildings_path(target: 'health') do %>
-          <h4>Health</h4>
+          <h5>Health</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-5">
         <%= link_to buildings_path(target: 'education') do %>
-          <h4>Education</h4>
+          <h5>Education</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-6">
         <%= link_to buildings_path(target: 'cultural') do %>
-          <h4>Cultural</h4>
+          <h5>Cultural</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-7">
         <%= link_to buildings_path(target: 'publics') do %>
-          <h4>Public</h4>
+          <h5>Public</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-8">
         <%= link_to buildings_path do %>
-          <h4>All</h4>
+          <h5>All</h5>
         <% end %>
       </div>
     </div>
@@ -190,7 +190,7 @@ $('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
 }
 
 $('.banner-slider').slick({
-autoplay: false,
+autoplay: true,
 infinite: true,
 dots: false,
 arrows: false
