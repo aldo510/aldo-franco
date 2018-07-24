@@ -40,6 +40,8 @@ $( document ).on('turbolinks:load', function() {
 		var text = $(this).data('text');
 		$(".about-text").hide();
 		$("#" + text).show();
+		$(".lista > li").removeClass('active-item-li');
+		$(this).addClass('active-item-li');
 	});
 
 });
