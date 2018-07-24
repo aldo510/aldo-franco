@@ -23,11 +23,14 @@ $( document ).on('turbolinks:load', function() {
 			$('.'+id).hide();
 		});
 	})
-
-	 $(".lista > li").click(function() {
-	 	var text = $(this).data('text');
-	 	$(".about-text").hide();
-	 	$("#" + text).show();
-	 });
+	$('.white-navbar').click(function () {
+		var id = $(this).data('target');
+		$('html, body').animate({scrollTop: $('#' + id).offset().top}, 'slow');
+	});
+	$(".lista > li").click(function() {
+		var text = $(this).data('text');
+		$(".about-text").hide();
+		$("#" + text).show();
+	});
 
 });

@@ -1,7 +1,7 @@
 
 
 <section id="banner">
-<%= render partial: 'layouts/navbar' %>
+  <%= render partial: 'layouts/navbar' %>
   <div class="banner-slider">
     <div class="item-container">
       <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid' %>
@@ -86,9 +86,9 @@
             <div class="row">
               <div class="col-7 col-sm-5 border-top pad-top-5">
                 <ul class="lista">
-                  <li data-text="t1">1</li>
-                  <li data-text="t2">2</li>
-                  <li data-text="t3">3</li>
+                  <li class="active-item-li" data-text="t1">1</li>
+                  <li class="" data-text="t2">2</li>
+                  <li class="" data-text="t3">3</li>
                 </ul>
               </div>
             </div>
@@ -134,42 +134,42 @@
     <div class="row" id="categories-background">
       <div class="col-6 col-sm-4 category cat-1">
         <%= link_to buildings_path(target: 'residential') do %>
-          <h5>Residential</h5>
+        <h5>Residential</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-2">
         <%= link_to buildings_path(target: 'commercial') do %>
-          <h5>Commercial</h5>
+        <h5>Commercial</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-3">
         <%= link_to buildings_path(target: 'office') do %>
-          <h5>Office</h5>
+        <h5>Office</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-4">
         <%= link_to buildings_path(target: 'health') do %>
-          <h5>Health</h5>
+        <h5>Health</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-5">
         <%= link_to buildings_path(target: 'education') do %>
-          <h5>Education</h5>
+        <h5>Education</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-6">
         <%= link_to buildings_path(target: 'cultural') do %>
-          <h5>Cultural</h5>
+        <h5>Cultural</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-7">
         <%= link_to buildings_path(target: 'publics') do %>
-          <h5>Public</h5>
+        <h5>Public</h5>
         <% end %>
       </div>
       <div class="col-6 col-sm-4 category cat-8">
         <%= link_to buildings_path do %>
-          <h5>All</h5>
+        <h5>All</h5>
         <% end %>
       </div>
     </div>
@@ -217,10 +217,19 @@ $('#dot-'+currentSlide).addClass('active');
 
 <script>
   $( document ).ready(function() {
-    $('.cat-1').hover(function(){
+    $('.caat-1').hover(function(){
       var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
+
+    $('.cat-1').fadeTo('slow', 0.3, function()
+    {
+      var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $("#categories-background").css('background-image', 'url(' + imagePath + ')');
+      console.log("hover")
+    }).fadeTo('slow', 1);
+
     $('.cat-2').hover(function(){
       var imagePath = "<%= asset_url   "static_pages/home/COMMERCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");

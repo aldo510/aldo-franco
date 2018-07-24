@@ -215,11 +215,11 @@ Building.create(name: '​max mix', kind: 2,
                 location: 'Mexico City',
                 area: '14,500.00sqm',
                 thumbnail: 'thumbnail/office/maxmixm.jpg',
-                images: ['buildings/max-mix/MAXMIX1.jpg',
-                         'buildings/max-mix/MAXMIX2.jpg',
+                images: ['buildings/max-mix/MAXMIX2.jpg',
                          'buildings/max-mix/MAXMIX3.jpg',
                          'buildings/max-mix/MAXMIX4.jpg',
-                         'buildings/max-mix/MAXMIX5.jpg'])
+                         'buildings/max-mix/MAXMIX5.jpg',
+                         'buildings/max-mix/MAXMIX1.jpg'])
 
 
 Building.create(name: 'reforma 341', kind: 2,
@@ -287,9 +287,9 @@ Building.create(name: 'chapultepec library', kind: 5,
                 thumbnail: 'thumbnail/cultural/chapultepecm.jpg',
                 images: ['buildings/chapultepec-library/CHAPULTEPEC-LIBRARY1.jpg',
                          'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY2.jpg',
-                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY3.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY3.JPG',
                          'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY4.jpg',
-                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY5.jpg',
+                         'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY5.JPG',
                          'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY6.jpg'])
 
 
@@ -302,9 +302,7 @@ Building.create(name: 'minm museum', kind: 5,
                 images: ['buildings/minm-museum/MINM-MUSEUM1.jpg',
                          'buildings/minm-museum/MINM-MUSEUM2.jpg',
                          'buildings/minm-museum/MINM-MUSEUM3.jpg',
-                         'buildings/minm-museum/MINM-MUSEUM4.jpg',
-                         'buildings/minm-museum/MINM-MUSEUM5.jpg',
-                         'buildings/minm-museum/MINM-MUSEUM6.jpg'])
+                         'buildings/minm-museum/MINM-MUSEUM4.jpg'])
 
 
 
