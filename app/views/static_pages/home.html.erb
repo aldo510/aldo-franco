@@ -35,10 +35,10 @@
     </div>
   </div>
 
-  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows' %>
-  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows' %>
+  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows d-none d-lg-block' %>
+  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows d-none d-lg-block' %>
 
-  <div id="dots-container">
+  <div id="dots-container" class="d-none d-lg-block">
     <ul id="dot-list">
     </ul>
   </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="row">
           <div class="col-10 mx-auto col-sm-5">
-            <h3 class="text-uppercase text-white" id="about-title">about us</h3>
+            <h3 class="text-uppercase text-white text-center text-lg-left" id="about-title">about us</h3>
             <br>
             
             <p class="pad-bot-5 text-justify about-text" id="t1">
@@ -120,7 +120,7 @@
     </div>
 
     <div class="row">
-      <div class="col-10 col-sm-6 mx-auto">
+      <div class="col-9 col-sm-6 mx-auto">
         <p id="work-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut sodales metus, et aliquet erat. Suspendisse sed est rutrum, semper magna quis, tristique ex. <span>Nunc tristique commodo finibus</span>
         </p>
