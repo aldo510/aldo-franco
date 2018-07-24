@@ -1,4 +1,6 @@
-
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
 
 <section id="banner">
   <%= render partial: 'layouts/navbar' %>
@@ -127,7 +129,7 @@
 
     <div class="row">
       <div class="col mx-auto">
-        <%= link_to 'todos los proyectos', buildings_path, id: 'all-proyects' %>
+        <%= link_to 'todos los proyectos', buildings_path, id: 'all-projects' %>
       </div>
     </div>
 
@@ -182,41 +184,39 @@
 <%= render partial: 'intro' %>
 <% end %>
 
-<%= javascript_tag defer: 'defer' do -%>
-
-var numslider = $(".item-container").length;
-for(var i = 0; i< numslider;i++){
-$('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
-}
-
-$('.banner-slider').slick({
-autoplay: true,
-infinite: true,
-dots: false,
-arrows: false
-});
-
-$('#left-arrow').click(function() {
-$('.banner-slider').slick('slickPrev');
-});
-
-$('#right-arrow').click(function() {
-$('.banner-slider').slick('slickNext');
-});
-
-var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
-
-$('#dot-'+currentSlide).addClass('active');
-
-$('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-$('.dot').removeClass('active');
-$('#dot-'+currentSlide).addClass('active');
-});
-
-<% end -%>
-
 <script>
   $( document ).ready(function() {
+
+    var numslider = $(".item-container").length;
+    for(var i = 0; i< numslider;i++){
+      $('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
+    }
+
+    $('.banner-slider').slick({
+      autoplay: true,
+      infinite: true,
+      dots: false,
+      arrows: false
+    });
+
+    $('#left-arrow').click(function() {
+      $('.banner-slider').slick('slickPrev');
+    });
+
+    $('#right-arrow').click(function() {
+      $('.banner-slider').slick('slickNext');
+    });
+
+    var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
+
+    $('#dot-'+currentSlide).addClass('active');
+
+    $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      $('.dot').removeClass('active');
+      $('#dot-'+currentSlide).addClass('active');
+      console.log(currentSlide);
+    });
+
     $('.cat-1').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
