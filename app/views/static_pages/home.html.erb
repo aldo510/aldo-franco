@@ -217,50 +217,41 @@ $('#dot-'+currentSlide).addClass('active');
 
 <script>
   $( document ).ready(function() {
-    $('.caat-1').hover(function(){
+    $('.cat-1').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-
-    $('.cat-1').fadeTo('slow', 0.3, function()
-    {
-      var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
-      $('#categories-background').css('background-image', "url(" + imagePath + ")");
-      $("#categories-background").css('background-image', 'url(' + imagePath + ')');
-      console.log("hover")
-    }).fadeTo('slow', 1);
-
-    $('.cat-2').hover(function(){
-      var imagePath = "<%= asset_url   "static_pages/home/COMMERCIAL.jpg" %>";
+    $('.cat-2').hover(function () {
+      var imagePath = "<%= asset_url   "static_pages/home/work_background.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-3').hover(function(){
+    $('.cat-3').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/OFFICE.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-4').hover(function(){
-      var imagePath = "<%= asset_url   "static_pages/home/COMMERCIAL.jpg" %>";
+    $('.cat-4').hover(function () {
+      var imagePath = "<%= asset_url   "static_pages/home/work_background.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-5').hover(function(){
+    $('.cat-5').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/EDUCATION.jpg" %>";
-      $('#categories-background').css('background-image', "url(" + imagePath + ")");
+       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-6').hover(function(){
+    $('.cat-6').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/CULTURAL.jpg" %>";
-      $('#categories-background').css('background-image', "url(" + imagePath + ")");
+       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-7').hover(function(){
-      var imagePath = "<%= asset_url   "static_pages/home/PUBLIC.jpg" %>";
-      $('#categories-background').css('background-image', "url(" + imagePath + ")");
+    $('.cat-7').hover(function () {
+       var imagePath = "<%= asset_url   "static_pages/home/PUBLIC.jpg" %>";
+       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-8').hover(function(){
+    $('.cat-8').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
-    $('.cat-9').hover(function(){
-      var imagePath = "<%= asset_url   "static_pages/home/COMMERCIAL.jpg" %>";
-      $('#categories-background').css('background-image', "url(" + imagePath + ")");
+    $('.cat-9').hover(function () {
+      var imagePath = "<%= asset_url   "static_pages/home/work_background.jpg" %>";
+       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
 
   });

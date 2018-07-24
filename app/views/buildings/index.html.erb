@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-9 mx-auto">
         <div class="row">
-          <% Building.kinds.keys.each do |key| %>
+          <% Building.kinds.keys.insert(0, "all").each do |key| %>
             <div class="col">
               <%= content_tag :h4, key.singularize, class: "text-center kinds-titles kind-#{key}", data: {target: key} %>
             </div>
@@ -38,12 +38,12 @@
 
     <div class="row">
       <div class="col-11 mx-auto">
-        <% Building.all.group_by(&:kind).each do |kind, arr| %>
+        <% @build_hash.each do |kind, arr| %>
           <%= content_tag :div, class: "row kind-row kind-#{kind} my-4" do %>
             <% arr.each do |building| %>
               <div class="col-sm-4 col-12">
                 <%= link_to building_path(building) do %>
-                  <%= image_tag building.thumbnail, class: 'img-fluid w-100  mx-md-4 my-4' %>
+                  <%= image_tag building.thumbnail, class: 'img-fluid w-100  mx-md-4 my-3' %>
                 <% end %>
               </div>
             <% end %>
