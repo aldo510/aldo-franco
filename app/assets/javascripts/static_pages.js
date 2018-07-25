@@ -28,7 +28,7 @@ $( document ).on('turbolinks:load', function() {
 		});
 	})
 
-	$('.white-navbar').click(function () {
+	$('.white-navbar, .footer-nav-link').click(function () {
 		var id = $(this).data('target');
 		var section = $('#' + id);
 		if (section.length > 0){

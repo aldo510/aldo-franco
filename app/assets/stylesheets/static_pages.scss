@@ -124,9 +124,10 @@ nav{
 }
 
 @include media-breakpoint-down(sm){
-  .bx-wrapper{
-    margin-bottom: 0;
-  }
+}
+
+.bx-wrapper{
+  margin-bottom: 0;
 }
 
 @include media-breakpoint-down(md) {
