@@ -118,7 +118,28 @@
     font-size: 1.3rem;
   }
 }
+.build-text{
+  display: none;
+  position: absolute;
+  top: 45%;
+  margin: auto 0;
+  left: 45%;
+  color: white;
+  padding: 10px;
+  border-bottom: 2px solid;
+}
+.img-build{
+  &:hover{
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    .build-text{
+      opacity: 1;
+      display: flex;
+      text-transform: uppercase;
+    }
+  } 
 
+}
 
 #building-name, #slider-kind{
   text-transform: uppercase;

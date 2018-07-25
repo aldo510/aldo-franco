@@ -21,7 +21,15 @@ $blue: #3B5D8D;
 $got-med: Gotham-Medium;
 $got-thi: Gotham-Thin;
 $futura: Futura;
-
+.got-thi{
+	font-family: $got-thi!important;
+}
+.got-med{
+	font-family: $got-med!important;
+}
+.futura{
+	font-family: $futura!important;
+}
 @import "bootstrap";
 @import 'slick';
 @import 'bxslider';

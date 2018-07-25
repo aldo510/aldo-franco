@@ -1,8 +1,12 @@
 .navbar-dark .navbar-toggler-icon{
   background-image: image-url('icons/menu-button.svg');
 }
+.back-black{
+  background-color: black!important;
+}
 #transparent-navbar{
-  background-color: rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
   .navbar-brand{
     margin-right: 0;
     margin-left: 4rem;
@@ -393,6 +397,7 @@ nav#white-navbar{
   .about-text{
     color: $text-gray;
     font-family: $got-thi;
+    height: 150px;
   }
 }
 

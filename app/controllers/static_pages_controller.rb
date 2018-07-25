@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   include StaticPagesHelper
 
   def home
-    @first_time = first_time?
+    @first_time = true#first_time?
     @all = Building.all
   end
 
