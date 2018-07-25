@@ -1,8 +1,12 @@
 .navbar-dark .navbar-toggler-icon{
   background-image: image-url('icons/menu-button.svg');
 }
+.back-black{
+  background-color: black!important;
+}
 #transparent-navbar{
-  background-color: rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
   .navbar-brand{
     margin-right: 0;
     margin-left: 4rem;
@@ -393,6 +397,7 @@ nav#white-navbar{
   .about-text{
     color: $text-gray;
     font-family: $got-thi;
+    height: 150px;
   }
 }
 
@@ -563,7 +568,7 @@ nav#white-navbar{
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: $gray;
+  background-color: #1d1a1d;
   z-index: 9999;
   top: 0;
   left: 0;
@@ -573,7 +578,7 @@ nav#white-navbar{
   #intro-video{
     position: absolute;
     margin: auto;
-    width: 40%;
+    width: 100%;
     height: auto;
     left: 0;
     right: 0;
@@ -584,8 +589,7 @@ nav#white-navbar{
   #click-here{
     position: absolute;
     margin: auto;
-    top: 35%;
-    bottom: 0;
+    bottom: 18%;
     left: 0;
     right: 0;
     text-align: center;
@@ -888,10 +892,15 @@ nav#white-navbar{
   }
   .direction-foo{
     font-size: 14px;
+  }#intro-video{
+    bottom:30%;
   }
 }
 @include media-breakpoint-only(xl) {
   .derechos{
     font-size: 10px;
+  }
+  #intro-video{
+    bottom:35%;
   }
 }

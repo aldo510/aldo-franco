@@ -1,7 +1,10 @@
 <section id="intro">
   <%#= video_tag 'intro.mp4', autoplay: true, id: 'intro-video' %>
-  <%= video_tag 'LOGO_ALDO_FRANCO.mp4', autoplay: true, id: 'intro-video' %>
+  <%= video_tag 'HOME_ALDO_FRANCO.mp4', autoplay: true, id: 'intro-video', type: "video/mp4", muted: true, loop: true %>
   <%#= image_tag 'ALDO_FRANCO_LOGO_2.gif', id: 'intro-video' %>
-  <h5 id="click-here">click aqui</h5>
-  <%= image_tag 'icons/FLECHA.png', id: 'click-icon', class: 'animated infinite bounce' %>
+  <h5 id="click-here">clic aqui</h5>
+  <%#= image_tag 'icons/FLECHA.png', id: 'click-icon', class: 'animated infinite bounce' %>
 </section>
+<script>
+    document.getElementById('intro-video').play();
+</script>

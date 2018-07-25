@@ -44,4 +44,15 @@ $( document ).on('turbolinks:load', function() {
 		$(this).addClass('active-item-li');
 	});
 
+	$( window ).resize(function() {
+
+	});
+	$('.navbar-toggler').click(function () {
+		if ($('#transparent-navbar').hasClass('back-black')) {
+			$('#transparent-navbar').removeClass('back-black');
+		}else{
+			$('#transparent-navbar').addClass('back-black');
+		}
+	});
+
 });

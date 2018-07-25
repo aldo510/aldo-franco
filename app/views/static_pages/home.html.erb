@@ -1,5 +1,5 @@
 <% content_for :head do %>
-  <meta name="turbolinks-cache-control" content="no-cache">
+<meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
 
 <section id="banner">
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-10 mx-auto col-sm-5">
+          <div class="col-12 mx-auto col-sm-5">
             <h3 class="text-uppercase text-white text-center text-lg-left" id="about-title">about us</h3>
             <br>
             
@@ -120,7 +120,7 @@
     </div>
 
     <div class="row">
-      <div class="col-9 col-sm-6 mx-auto">
+      <div class="col-sm-9 col-10 col-sm-6 mx-auto">
         <p id="work-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut sodales metus, et aliquet erat. Suspendisse sed est rutrum, semper magna quis, tristique ex. <span>Nunc tristique commodo finibus</span>
         </p>
@@ -209,12 +209,15 @@
 
     var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
 
+    $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      $('.dot').removeClass('active');
+      $('#dot-'+currentSlide).addClass('active');
+    });
     $('#dot-'+currentSlide).addClass('active');
 
     $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
       $('.dot').removeClass('active');
       $('#dot-'+currentSlide).addClass('active');
-      console.log(currentSlide);
     });
 
     $('.cat-1').hover(function () {
@@ -235,23 +238,23 @@
     });
     $('.cat-5').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/EDUCATION.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
     $('.cat-6').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/CULTURAL.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
     $('.cat-7').hover(function () {
-       var imagePath = "<%= asset_url   "static_pages/home/PUBLIC.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
-    });
+     var imagePath = "<%= asset_url   "static_pages/home/PUBLIC.jpg" %>";
+     $('#categories-background').css('background-image', "url(" + imagePath + ")");
+   });
     $('.cat-8').hover(function () {
-      var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
+      var imagePath = "<%= asset_url   "static_pages/home/ALL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
     $('.cat-9').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/work_background.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
 
   });
