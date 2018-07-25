@@ -1,6 +1,15 @@
 
 puts 'Residential --> 0'
-Building.create(name: 'ahuehuetes 2105', kind: 0,
+residential = Kind.create(name: 'residential')
+commercial = Kind.create(name: 'commercial')
+office = Kind.create(name: 'office')
+health = Kind.create(name: 'health')
+education = Kind.create(name: 'education')
+cultural = Kind.create(name: 'cultural')
+cultural = Kind.create(name: 'cultural')
+publics = Kind.create(name: 'publics')
+
+residential.buildings << Building.create(name: 'ahuehuetes 2105',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -12,7 +21,7 @@ Building.create(name: 'ahuehuetes 2105', kind: 0,
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-4.jpg',
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-5.jpg',
                          'buildings/ahuehuetes-2105/AHUEHUETES-2105-6.jpg'])
-Building.create(name: 'Sauces 902', kind: 0,
+residential.buildings << Building.create(name: 'Sauces 902',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -22,7 +31,7 @@ Building.create(name: 'Sauces 902', kind: 0,
                          'buildings/sauces/SAUSES2.jpg',
                          'buildings/sauces/SAUSES3.jpg',
                          'buildings/sauces/SAUSES4.jpg'])
-Building.create(name: 'Carso AP', kind: 0,
+residential.buildings << Building.create(name: 'Carso AP',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -44,7 +53,7 @@ Building.create(name: 'Carso AP', kind: 0,
                          'buildings/carso/CARSOAP14.jpg',
                          'buildings/carso/CARSOAP15.jpg'])
 
-Building.create(name: 'bosque de canelos', kind: 0,
+residential.buildings << Building.create(name: 'bosque de canelos',
                 description: '',
                 year: '2015',
                 location: 'Mexico City',
@@ -64,7 +73,7 @@ Building.create(name: 'bosque de canelos', kind: 0,
                          'buildings/bosque-de-canelos/CANELOS12.jpg'])
 
 
-Building.create(name: 'departamento ppg', kind: 0,
+residential.buildings << Building.create(name: 'departamento ppg',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
@@ -77,7 +86,7 @@ Building.create(name: 'departamento ppg', kind: 0,
                          'buildings/departamento-ppg/PPG5.jpg'])
 
 
-Building.create(name: 'tamarindos 902', kind: 0,
+residential.buildings << Building.create(name: 'tamarindos 902',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -91,7 +100,7 @@ Building.create(name: 'tamarindos 902', kind: 0,
 
 
 
-Building.create(name: 'u house bosque de canelos', kind: 0,
+residential.buildings << Building.create(name: 'u house bosque de canelos',
                 description: '',
                 year: '2017',
                 location: 'Valle de Bravo',
@@ -110,7 +119,7 @@ Building.create(name: 'u house bosque de canelos', kind: 0,
 
 # -----------------------------------------------------------------------------
 puts 'Commercial --> 1'
-Building.create(name: 'be concept store', kind: 1,
+commercial.buildings << Building.create(name: 'be concept store',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -126,7 +135,7 @@ Building.create(name: 'be concept store', kind: 1,
                          'buildings/be-concept-store/BECONCEPT8.jpg',
                          'buildings/be-concept-store/BECONCEPT9.jpg'])
 
-Building.create(name: 'raw republic', kind: 1,
+commercial.buildings << Building.create(name: 'raw republic',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -148,7 +157,7 @@ Building.create(name: 'raw republic', kind: 1,
                          'buildings/raw-republic/RAWREPUBLIC14.jpg'])
 
 
-Building.create(name: 'ten tei', kind: 1,
+commercial.buildings << Building.create(name: 'ten tei',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
@@ -167,7 +176,7 @@ Building.create(name: 'ten tei', kind: 1,
                          'buildings/ten-tei/TENTEI11.jpg',
                          'buildings/ten-tei/TENTEI12.jpg'])
 
-Building.create(name: 'in the mix', kind: 1,
+commercial.buildings << Building.create(name: 'in the mix',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -180,7 +189,7 @@ Building.create(name: 'in the mix', kind: 1,
                          'buildings/in-the-mix/INTHEMIX5.jpg',
                          'buildings/in-the-mix/INTHEMIX6.jpg'])
 
-Building.create(name: 'plaza polanquito', kind: 1,
+commercial.buildings << Building.create(name: 'plaza polanquito',
                 description: '',
                 year: '2014',
                 location: 'Mexico City',
@@ -196,7 +205,7 @@ Building.create(name: 'plaza polanquito', kind: 1,
 
 # -----------------------------------------------------------------------------
 puts 'office --> 2'
-Building.create(name: '​jz offices', kind: 2,
+office.buildings << Building.create(name: '​jz offices',
                 description: '',
                 year: '',
                 location: '',
@@ -209,7 +218,7 @@ Building.create(name: '​jz offices', kind: 2,
                          'buildings/​jz-offices/JZOFFICES5.jpg'])
 
 
-Building.create(name: '​max mix', kind: 2,
+building = Building.create(name: '​max mix',
                 description: '',
                 year: '2012',
                 location: 'Mexico City',
@@ -221,8 +230,12 @@ Building.create(name: '​max mix', kind: 2,
                          'buildings/max-mix/MAXMIX5.jpg',
                          'buildings/max-mix/MAXMIX1.jpg'])
 
+office.buildings << building
+commercial.buildings << building
 
-Building.create(name: 'reforma 341', kind: 2,
+
+
+building = Building.create(name: 'reforma 341',
                 description: '',
                 year: '2008',
                 location: 'Mexico City',
@@ -233,9 +246,14 @@ Building.create(name: 'reforma 341', kind: 2,
                          'buildings/reforma-341/REFORMA-341-3.jpg',
                          'buildings/reforma-341/REFORMA-341-4.jpg'])
 
+commercial.buildings << building
+residential.buildings << building
+office.buildings << building
 
 
-Building.create(name: 'winsor headquarters', kind: 2,
+
+
+office.buildings << Building.create(name: 'winsor headquarters',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -262,7 +280,7 @@ puts 'health --> 3'
 
 # -----------------------------------------------------------------------------
 puts 'education --> 4'
-Building.create(name: 'cuajimalpa community center', kind: 4,
+education.buildings << Building.create(name: 'cuajimalpa community center',
                 description: '',
                 year: '2011',
                 location: 'Mexico City',
@@ -279,7 +297,7 @@ Building.create(name: 'cuajimalpa community center', kind: 4,
 
 # -----------------------------------------------------------------------------
 puts 'cultural --> 5'
-Building.create(name: 'chapultepec library', kind: 5,
+building = Building.create(name: 'chapultepec library',
                 description: '',
                 year: '2010',
                 location: 'Mexico City',
@@ -292,8 +310,11 @@ Building.create(name: 'chapultepec library', kind: 5,
                          'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY5.JPG',
                          'buildings/chapultepec-library/CHAPULTEPEC-LIBRARY6.jpg'])
 
+cultural.buildings << building
+publics.buildings << building
 
-Building.create(name: 'minm museum', kind: 5,
+
+building = Building.create(name: 'minm museum',
                 description: '',
                 year: '2009',
                 location: 'Mexico City',
@@ -304,12 +325,14 @@ Building.create(name: 'minm museum', kind: 5,
                          'buildings/minm-museum/MINM-MUSEUM3.jpg',
                          'buildings/minm-museum/MINM-MUSEUM4.jpg'])
 
+cultural.buildings << building
+publics.buildings << building
 
 
 
 # -----------------------------------------------------------------------------
 puts 'publics --> 6'
-Building.create(name: 'toluca-convention-center', kind: 6,
+building = Building.create(name: 'toluca-convention-center',
                 description: '',
                 year: '2012',
                 location: 'Toluca, Estado de Mexico',
@@ -323,3 +346,6 @@ Building.create(name: 'toluca-convention-center', kind: 6,
                          'buildings/toluca-convention-center/TOLUCACC6.jpg',
                          'buildings/toluca-convention-center/TOLUCACC7.jpg',
                          'buildings/toluca-convention-center/TOLUCACC8.jpg'])
+
+publics.buildings << building
+commercial.buildings << building

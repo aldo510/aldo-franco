@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-9 mx-auto">
         <div class="row">
-          <% Building.kinds.keys.insert(0, "all").each do |key| %>
+          <% @build_hash.keys.each do |key| %>
             <div class="col-12 col-md">
               <%= content_tag :h4, key.singularize, class: "text-center kinds-titles kind-#{key}", data: {target: key} %>
             </div>

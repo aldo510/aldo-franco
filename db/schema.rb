@@ -10,20 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180702185620) do
+ActiveRecord::Schema.define(version: 20180725192001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "buildings", force: :cascade do |t|
     t.string "name"
-    t.integer "kind"
     t.string "description"
     t.string "year"
     t.string "location"
     t.string "area"
     t.string "thumbnail"
     t.text "images", default: [], array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "buildings_kinds", force: :cascade do |t|
+    t.bigint "kind_id"
+    t.bigint "building_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["building_id"], name: "index_buildings_kinds_on_building_id"
+    t.index ["kind_id"], name: "index_buildings_kinds_on_kind_id"
+  end
+
+  create_table "kinds", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -13,7 +13,7 @@
   </div>
 
   <div id="slider-text">
-    <p id="slider-kind"><%= @building.kind.singularize %> | <%= @building.year %></p>
+    <p id="slider-kind"><%= @building.kinds.map { |kind| kind.name.singularize }.join('|') %> | <%= @building.year %></p>
     <h1 id="building-name"><%= @building.name %></h1>
     <p id="slider-description">
       <%= @building.description %>
@@ -28,7 +28,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col offset-1">
-        <h4 id="similar-projects-title">other <%= @building.kind.singularize %> projects</h4>
+        <!-- <h4 id="similar-projects-title">other <%#= @building.kind.singularize %> projects</h4> -->
+        <h4 id="similar-projects-title">other similar projects</h4>
       </div>
     </div>
 
