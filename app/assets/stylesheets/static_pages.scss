@@ -589,7 +589,6 @@ nav#white-navbar{
   #click-here{
     position: absolute;
     margin: auto;
-    top: 0;
     bottom: 18%;
     left: 0;
     right: 0;
@@ -893,10 +892,15 @@ nav#white-navbar{
   }
   .direction-foo{
     font-size: 14px;
+  }#intro-video{
+    bottom:30%;
   }
 }
 @include media-breakpoint-only(xl) {
   .derechos{
     font-size: 10px;
+  }
+  #intro-video{
+    bottom:35%;
   }
 }
