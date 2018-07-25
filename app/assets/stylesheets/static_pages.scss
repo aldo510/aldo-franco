@@ -122,19 +122,103 @@ nav{
   left: 0;
   right: 0;
 }
+
+@include media-breakpoint-down(sm){
+}
+
+.bx-wrapper{
+  margin-bottom: 0;
+}
+
 @include media-breakpoint-down(md) {
   nav#transparent-navbar{
     .navbar-brand{
       margin-right: 0;
       margin-left: 0;
     }
+  }
 
-    #logo-navbar{
-      width: 100px;
-      height: auto;
+  #logo-navbar{
+    width: 100px !important;
+    height: auto !important;
+  }
+
+  .navbar-brand{
+    margin-left: 0rem !important;
+  }
+
+  #banner{
+    .item-title{
+      font-size: 1rem !important;
+      bottom: 5% !important;
     }
   }
+
+  .abount-us-title{
+    font-size: 1rem;
+  }
+
+  .pad-top-5{
+    padding-top: 10% !important;
+  }
+
+  .pad-bot-5{
+    padding-bottom: 10% !important;
+  }
+
+  #about-title, #work-title, #contact-title, #similar-projects-title{
+    font-size: 1.2rem !important;
+  }
+
+  .about-text, #work-description{
+    font-size: 0.8rem !important;
+  }
+
+  #all-projects{
+    padding: 10px 15px !important;
+    font-size: 0.8rem;
+    margin-bottom: 10% !important;
+    margin-top: 5% !important;
+  }
+
+  #contact .border-ri:after{
+    display: none;
+  }
+
+  .direction-foo, .derechos{
+    font-size: 10px !important;
+  }
+
+  .derechos{
+    margin-bottom: 4%;
+  }
+
+  #kinds .kinds-titles{
+    margin-bottom: 5% !important;
+    font-size: 0.8rem !important;
+  }
+
+  #kinds .kinds-titles.active:after{
+    width: 50% !important;
+  }
+
+  .bx-has-controls-direction{
+    display: none;
+  }
+
+  #main-slider #slider-text p{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  #main-slider #slider-text h1{
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
 }
+
+
+
 nav#white-navbar{
   background-color: white;
 
@@ -343,7 +427,7 @@ nav#white-navbar{
     }
   }
 
-  #all-proyects{
+  #all-projects{
     background-color: white;
     padding: 20px 25px;
     text-transform: uppercase;

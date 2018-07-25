@@ -35,10 +35,10 @@
       <div class="col-10 offset-1 col-md-4 offset-md-0 mt-4 mt-lg-0">
         <%= form_tag contact_path, method: :post do %>
           <div class="row border-bottom">
-            <div class="col border-ri">
+            <div class="col-md-6 border-ri">
               <%= text_field_tag 'name', nil, class: 'form-control contact-inputs', placeholder: 'Name' %>
             </div>
-            <div class="col">
+            <div class="col-md-6">
               <%= text_field_tag 'email', nil, class: 'form-control contact-inputs', placeholder: 'Email' %>
             </div>
           </div>

@@ -3,7 +3,7 @@
 		<div class="row align-items-center inherit">
 			<div class="col-11 mx-auto">
 				<div class="row align-items-center text-center text-footer">
-					<div class="col-6 mx-auto col-sm-1">
+					<div class="col-6 mx-auto col-sm-1 d-none d-md-block">
 						<%= image_tag "logo-white.svg", class: "img-fluid" %>
 					</div>
 					<div class="col-12 col-sm-4 text-center">
@@ -17,22 +17,22 @@
 					<div class="col-12 d-none d-lg-block col-sm-5">
 						<div class="row footer-menu ">
 							<div class="col-2">
-								<p>Home</p>
+								<p><%= link_to 'Home', root_path %></p>
 							</div>
 							<div class="col-2">
-								<p>About</p>
+								<p><a class="footer-nav-link" data-target="abount-us" href="#">About</a></p>
 							</div>
 							<div class="col-2">
-								<p>Work</p>
+								<p><a class="footer-nav-link" data-target="work" href="#">Work</a></p>
 							</div>
 							<div class="col-2">
-								<p>Jobs</p>
+								<p><a class="footer-nav-link" data-target="contact" href="#">Jobs</a></p>
 							</div>
 							<div class="col-2">
-								<p>Team</p>
+								<p><%= link_to "Team", about_path, class: "footer-nav-link" %></p>
 							</div>
 							<div class="col-2">
-								<p>Contact</p>
+								<p><a class="footer-nav-link" data-target="contact" href="#">Contact</a></p>
 							</div>
 						</div>
 					</div>

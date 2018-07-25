@@ -1,4 +1,6 @@
-
+<% content_for :head do %>
+<meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
 
 <section id="banner">
   <%= render partial: 'layouts/navbar' %>
@@ -29,14 +31,14 @@
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/7TolucaConventionCenter.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">Portada 7</h3>
+      <h3 class="item-title">Toluca Convention Center</h3>
     </div>
   </div>
 
-  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows' %>
-  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows' %>
+  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows d-none d-lg-block' %>
+  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows d-none d-lg-block' %>
 
-  <div id="dots-container">
+  <div id="dots-container" class="d-none d-lg-block">
     <ul id="dot-list">
     </ul>
   </div>
@@ -61,7 +63,7 @@
         </div>
         <div class="row">
           <div class="col-10 mx-auto col-sm-5">
-            <h3 class="text-uppercase text-white" id="about-title">about us</h3>
+            <h3 class="text-uppercase text-white text-center text-lg-left" id="about-title">about us</h3>
             <br>
             
             <p class="pad-bot-5 text-justify about-text" id="t1">
@@ -118,7 +120,7 @@
     </div>
 
     <div class="row">
-      <div class="col-10 col-sm-6 mx-auto">
+      <div class="col-9 col-sm-6 mx-auto">
         <p id="work-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut sodales metus, et aliquet erat. Suspendisse sed est rutrum, semper magna quis, tristique ex. <span>Nunc tristique commodo finibus</span>
         </p>
@@ -127,7 +129,7 @@
 
     <div class="row">
       <div class="col mx-auto">
-        <%= link_to 'todos los proyectos', buildings_path, id: 'all-proyects' %>
+        <%= link_to 'todos los proyectos', buildings_path, id: 'all-projects' %>
       </div>
     </div>
 
@@ -182,42 +184,43 @@
 <%= render partial: 'intro' %>
 <% end %>
 
-<%= javascript_tag defer: 'defer' do -%>
-
-var numslider = $(".item-container").length;
-for(var i = 0; i< numslider;i++){
-$('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
-}
-
-$('.banner-slider').slick({
-autoplay: true,
-infinite: true,
-dots: false,
-arrows: false
-});
-
-$('#left-arrow').click(function() {
-$('.banner-slider').slick('slickPrev');
-});
-
-$('#right-arrow').click(function() {
-$('.banner-slider').slick('slickNext');
-});
-
-var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
-
-$('#dot-'+currentSlide).addClass('active');
-
-$('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-$('.dot').removeClass('active');
-$('#dot-'+currentSlide).addClass('active');
-console.log(currentSlide);
-});
-
-<% end -%>
-
 <script>
   $( document ).ready(function() {
+
+    var numslider = $(".item-container").length;
+    for(var i = 0; i< numslider;i++){
+      $('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
+    }
+
+    $('.banner-slider').slick({
+      autoplay: true,
+      infinite: true,
+      dots: false,
+      arrows: false
+    });
+
+    $('#left-arrow').click(function() {
+      $('.banner-slider').slick('slickPrev');
+    });
+
+    $('#right-arrow').click(function() {
+      $('.banner-slider').slick('slickNext');
+    });
+
+    var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
+
+    $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      $('.dot').removeClass('active');
+      $('#dot-'+currentSlide).addClass('active');
+    });
+    $('#dot-'+currentSlide).addClass('active');
+
+    $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      $('.dot').removeClass('active');
+      $('#dot-'+currentSlide).addClass('active');
+      console.log(currentSlide);
+    });
+
     $('.cat-1').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
@@ -236,23 +239,23 @@ console.log(currentSlide);
     });
     $('.cat-5').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/EDUCATION.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
     $('.cat-6').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/CULTURAL.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
     $('.cat-7').hover(function () {
-       var imagePath = "<%= asset_url   "static_pages/home/PUBLIC.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
-    });
+     var imagePath = "<%= asset_url   "static_pages/home/PUBLIC.jpg" %>";
+     $('#categories-background').css('background-image', "url(" + imagePath + ")");
+   });
     $('.cat-8').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/RESIDENCIAL.jpg" %>";
       $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
     $('.cat-9').hover(function () {
       var imagePath = "<%= asset_url   "static_pages/home/work_background.jpg" %>";
-       $('#categories-background').css('background-image', "url(" + imagePath + ")");
+      $('#categories-background').css('background-image', "url(" + imagePath + ")");
     });
 
   });
