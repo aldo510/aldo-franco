@@ -15,7 +15,7 @@
         <a class="nav-link got-thi white-navbar" data-target="abount-us" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link got-thi white-navbar" data-target="work" href="#">Work</a>
+        <a class="nav-link got-thi white-navbar work-content-2" data-target="work" href="#">Work</a>
       </li>
       <li class="nav-item">
         <a class="nav-link got-thi white-navbar" data-target="contact" href="#">Jobs</a>
@@ -47,6 +47,30 @@
     </li>
   </ul>
 </nav>
+<div class="col-12 mx-auto text-white" id="work-div-2" style="display: none;">
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <ul class="work-ul-2">
+        <% @build_hash.keys.each do |key| %>
+          <%= content_tag :li, key.capitalize, class: 'text-uppercase text-black col sections-2', data: { target: "#{key[0..2]}-div" } %>
+        <% end %>
+      </ul>
+    </div>
+
+    <% @build_hash.each do |key, buildings| %>
+      <%= content_tag :div, class: "col-6 mx-auto #{key[0..2]}-div sections-content-2", style: 'display: none;' do  %>
+       <div class="row">
+          <% buildings.each do | b | %>
+            <div class="col-3">
+              <%= link_to b.name.capitalize, building_path(b), class: "text-black menu-li" %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+    
+  </div>
+</div>
 <!-- <div class="col-12 mx-auto" id="work-div" style="display: none;">
   <div class="row">
     <div class="col-8 mx-auto">

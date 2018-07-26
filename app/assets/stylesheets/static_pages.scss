@@ -300,7 +300,54 @@ nav#white-navbar{
       border: thin solid #00FF00;
     }
   }
-
+}
+.footer-nav-link{
+  &:hover{
+    color: $green!important;
+    text-decoration:none!important;
+  }
+}
+.sections-content{
+  padding-bottom: 1%;
+}
+.sections-content-2{
+  padding-bottom: 1%;
+}
+.sections{
+  font-size: 14px;
+}
+.sections-2{
+  font-size: 14px;
+}
+.menu-li{
+  font-size: 14px;
+  &:hover{
+    padding-bottom: 2%;
+    border-bottom: 1px solid $green;
+    text-decoration: none;
+  }
+}
+.work-ul-2{
+  display: inline-flex;
+  width:100%;
+  list-style-type: none;
+  border-bottom: 1px solid $gray;
+  padding-bottom: 15px;
+  li{
+    text-align: center;
+    cursor: pointer;
+    &:hover:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: -18px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 5px;
+      border: thin solid #00FF00;
+    }
+  }
 }
 #banner{
   width: 100%;
@@ -555,7 +602,6 @@ nav#white-navbar{
   }
   .footer-menu p:hover{
     color: $green;
-    text-decoration: underline;
   }
 
   *{
@@ -867,6 +913,11 @@ nav#white-navbar{
 .direction-foo{
   font-size: 14px;
 }
+.text-black{
+  color: $gray!important; 
+  font-family: $got-thi;
+}
+
 // media querys
 
 @include media-breakpoint-only(xs) {
@@ -885,6 +936,10 @@ nav#white-navbar{
   .direction-foo{
     font-size: 14px;
   }
+  .redes-sociales{
+    padding-top:10%;
+
+  }
 }
 @include media-breakpoint-only(lg) {
   .derechos{
@@ -895,6 +950,10 @@ nav#white-navbar{
   }#intro-video{
     bottom:30%;
   }
+  .redes-sociales{
+    padding-top:10%;
+    
+  }
 }
 @include media-breakpoint-only(xl) {
   .derechos{
@@ -902,5 +961,9 @@ nav#white-navbar{
   }
   #intro-video{
     bottom:35%;
+  }
+  .redes-sociales{
+    padding-top:10%;
+    
   }
 }

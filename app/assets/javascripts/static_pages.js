@@ -16,17 +16,30 @@ $( document ).on('turbolinks:load', function() {
 	$("#work-div").mouseleave(function(){
 		$("#work-div").fadeOut();
 	});
+	$('.work-content-2').hover(function () {
+		$("#work-div-2").fadeIn();
+	});
+	
+	$("#work-div-2").mouseleave(function(){
+		$("#work-div-2").fadeOut();
+	});
 	
 	$('.sections').hover(function () {
 		var id = $(this).data('target');
-		// body...
-		console.log("hola si entre al hover de: " + id);
 		$('.sections-content').hide();
-		$('.'+id).fadeIn();
+		$('.'+id).show();
 		$('.'+id).mouseleave(function () {
 			$('.'+id).hide();
 		});
-	})
+	});
+	$('.sections-2').hover(function () {
+		var id = $(this).data('target');
+		$('.sections-content-2').hide();
+		$('.'+id).show();
+		$('.'+id).mouseleave(function () {
+			$('.'+id).hide();
+		});
+	});
 
 	$('.white-navbar, .footer-nav-link').click(function () {
 		var id = $(this).data('target');

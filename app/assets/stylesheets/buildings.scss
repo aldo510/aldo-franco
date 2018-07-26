@@ -122,8 +122,10 @@
   display: none;
   position: absolute;
   top: 45%;
-  margin: auto 0;
-  left: 45%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: fit-content;
   color: white;
   padding: 10px;
   border-bottom: 2px solid;

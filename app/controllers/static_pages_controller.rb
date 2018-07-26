@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   def home
     @first_time = first_time?
     @all = Building.all
+    @build_hash = Kind.all_by_kinds
   end
 
   def about    
