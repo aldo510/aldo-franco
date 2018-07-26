@@ -6,7 +6,6 @@ office = Kind.create(name: 'office')
 health = Kind.create(name: 'health')
 education = Kind.create(name: 'education')
 cultural = Kind.create(name: 'cultural')
-cultural = Kind.create(name: 'cultural')
 publics = Kind.create(name: 'publics')
 
 residential.buildings << Building.create(name: 'ahuehuetes 2105',
@@ -271,6 +270,31 @@ office.buildings << Building.create(name: 'winsor headquarters',
                          'buildings/winsor-headquarters/windsor10.jpg',
                          'buildings/winsor-headquarters/windsor11.jpg',
                          'buildings/winsor-headquarters/windsor12.jpg'])
+
+
+
+office.buildings << Building.create(name: 'eg headquarters',
+                description: '',
+                year: '2014',
+                location: 'Mexico City',
+                area: '410m²',
+                thumbnail: 'thumbnail/office/winsorm.jpg',
+                images: ['buildings/eg-headquarters/EGHEADQUARTERS1.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS2.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS3.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS4.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS5.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS6.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS7.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS8.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS9.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS10.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS11.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS12.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS13.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS14.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS15.jpg',
+                         'buildings/eg-headquarters/EGHEADQUARTERS16.jpg'])
 
 
 

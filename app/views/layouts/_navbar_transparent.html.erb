@@ -49,78 +49,24 @@
   <div class="row">
     <div class="col-8 mx-auto">
       <ul class="work-ul">
-        <li class="text-uppercase col-2 sections" data-target="all-div">All</li>
-        <li class="text-uppercase col-2 sections" data-target="comer-div">Comercial</li>
-        <li class="text-uppercase col-2 sections" data-target="res-div">Residencial</li>
-        <li class="text-uppercase col-2 sections" data-target="pub-div">Publico</li>
-        <li class="text-uppercase col-2 sections" data-target="pri-div">privado</li>
-        <li class="text-uppercase col-2 sections" data-target="cor-div">Corporativo</li>
+        <% @build_hash.keys.each do |key| %>
+          <%= content_tag :li, key.capitalize, class: 'text-uppercase col-2 sections', data: { target: "#{key[0..2]}-div" } %>
+        <% end %>
       </ul>
     </div>
-    <div class="col-6 mx-auto all-div sections-content" style="display: none;">
-      <div class="row">  
-        <% @all.each do | b | %>
-        <div class="col-3">
-          <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
+
+    <% @build_hash.each do |key, buildings| %>
+      <%= content_tag :div, class: "col-6 mx-auto #{key[0..2]}-div sections-content", style: 'display: none;' do  %>
+        <div class="row">
+          <% buildings.each do | b | %>
+            <div class="col-3">
+              <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
+            </div>
+          <% end %>
         </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto comer-div sections-content" style="display: none;">
-      <div class="row">  
-        <% @all.each do | b | %>
-        <% if b.kind == "commercial" %>
-            <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto res-div sections-content" style="display: none;">
-      <div class="row">  
-        <% @all.each do | b | %>
-        <% if b.kind == "residential" %>
-            <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto pub-div sections-content" style="display: none;">
-      <div class="row">  
-        <% @all.each do | b | %>
-        <% if b.kind == "public" %>
-            <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto pri-div sections-content" style="display: none;">
-      <div class="row">  
-        <% @all.each do | b | %>
-        <% if b.kind == "private" %>
-            <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto cor-div sections-content" style="display: none;">
-      <div class="row">  
-        <% @all.each do | b | %>
-        <% if b.kind == "corporative" %>
-            <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-white" %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
+      <% end %>
+    <% end %>
+    
   </div>
 </div>
 </nav>
