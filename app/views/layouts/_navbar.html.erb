@@ -62,7 +62,7 @@
        <div class="row">
           <% buildings.each do | b | %>
             <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-black menu-li" %>
+              <%= link_to b.name.capitalize, building_path(b), class: "text-black menu-li text-capitalize" %>
             </div>
           <% end %>
         </div>
