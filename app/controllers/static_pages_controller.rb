@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
   end
 
   def about    
+    @build_hash = Kind.all_by_kinds
   end
 
   def contact
