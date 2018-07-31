@@ -1,6 +1,14 @@
 .navbar-dark .navbar-toggler-icon{
   background-image: image-url('icons/menu-button.svg');
 }
+#mini-fotos{
+  position: absolute;
+  margin: 0;
+  bottom: 5%;
+  width: 30%;
+  right: 5%;
+  height: 35%;
+}
 .back-black{
   background-color: black!important;
 }
@@ -722,8 +730,8 @@ nav#white-navbar{
   padding-top:5%;
 }
 *:focus {
-    outline: none!important;
-    box-shadow: none!important;
+  outline: none!important;
+  box-shadow: none!important;
 }
 .pad-bot-5{
   padding-bottom: 5%;
@@ -950,23 +958,23 @@ nav#white-navbar{
   }
   .direction-foo{
     font-size: 14px;
-  }#intro-video{
-    bottom:30%;
+    }#intro-video{
+      bottom:30%;
+    }
+    .redes-sociales{
+      padding-top:10%;
+
+    }
   }
-  .redes-sociales{
-    padding-top:10%;
-    
+  @include media-breakpoint-only(xl) {
+    .derechos{
+      font-size: 10px;
+    }
+    #intro-video{
+      bottom:35%;
+    }
+    .redes-sociales{
+      padding-top:10%;
+
+    }
   }
-}
-@include media-breakpoint-only(xl) {
-  .derechos{
-    font-size: 10px;
-  }
-  #intro-video{
-    bottom:35%;
-  }
-  .redes-sociales{
-    padding-top:10%;
-    
-  }
-}

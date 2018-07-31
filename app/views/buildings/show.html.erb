@@ -1,3 +1,6 @@
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
 
 <%= render partial: 'layouts/navbar_transparent' %>
 
@@ -5,9 +8,9 @@
   <div class="slider-fullscreen">
 
     <% @building.images.each do |link| %>
-      <div class="item-container">
-        <%= image_tag link, class: 'slider-img' %>
-      </div>
+    <div class="item-container">
+      <%= image_tag link, class: 'slider-img' %>
+    </div>
     <% end %>
 
   </div>
@@ -22,6 +25,13 @@
       <%= @building.area %>
     </p>
   </div>
+  <!-- <div id="mini-fotos" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+    <%# @building.images.each do |link| %>
+    <div class="item-container">
+      <%#= image_tag link, class: 'img-fluid' %>
+    </div>
+    <%# end %>
+  </div> -->
 </section>
 
 <section id="similar-projects">
@@ -37,11 +47,11 @@
       <div class="col-10 offset-1">
         <div class="row">
           <% @similar.each do |building| %>
-            <div class="col-4">
-              <%= link_to building_path(building) do %>
-                <%= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-md-4' %>
-              <% end %>
-            </div>
+          <div class="col-4">
+            <%= link_to building_path(building) do %>
+            <%= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-md-4' %>
+            <% end %>
+          </div>
           <% end %>
         </div>
       </div>
