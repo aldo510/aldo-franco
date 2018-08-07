@@ -12,19 +12,31 @@
         <%= link_to "home", root_path, class: "nav-link got-thi white-navbar", data:{target: "banner"} %>
       </li>
       <li class="nav-item">
-        <a class="nav-link got-thi white-navbar" data-target="abount-us" href="#">About</a>
+        <% if controller.action_name == "about" %>
+          <%= link_to "About", root_path + "#abount-us", class: "nav-link got-thi white-navbar work-content-2" %>
+        <% else %>
+          <p class="nav-link got-thi white-navbar work-content-2" data-target="work">About</p>
+        <% end %>
       </li>
       <li class="nav-item">
-        <a class="nav-link got-thi white-navbar work-content-2" data-target="work" href="#">Work</a>
+        <% if controller.action_name == "about" %>
+          <%= link_to "Work", root_path + "#work", class: "nav-link got-thi white-navbar work-content-2" %>
+        <% else %>
+          <p class="nav-link got-thi white-navbar work-content-2" data-target="work">Work</p>
+        <% end %>
       </li>
       <li class="nav-item">
-        <a class="nav-link got-thi white-navbar" data-target="contact" href="#">Jobs</a>
+        <% if controller.action_name == "about" %>
+          <%= link_to "Jobs", root_path + "#contact", class: "nav-link got-thi white-navbar work-content-2" %>
+        <% else %>
+          <p class="nav-link got-thi white-navbar work-content-2" data-target="work">Jobs</p>
+        <% end %>
       </li>
       <li class="nav-item">
         <%= link_to "Team", about_path, class: "nav-link got-thi white-navbar" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link got-thi white-navbar" data-target="contact" href="#">Contact</a>
+        <a class="nav-link got-thi white-navbar" data-target="contact">Contact</a>
       </li>
     </ul>
   </div>

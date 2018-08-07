@@ -9,7 +9,7 @@ $( document ).on('turbolinks:load', function() {
     $('h4.kind-' + target).addClass('active');
     $('.kind-row').hide();
     $('div.kind-' + target).show();
-
+    
   });
   
   $(".kind-row").hide();
