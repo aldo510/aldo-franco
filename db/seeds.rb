@@ -3,7 +3,7 @@ puts 'Residential --> 0'
 residential = Kind.create(name: 'residential')
 commercial = Kind.create(name: 'commercial')
 office = Kind.create(name: 'office')
-health = Kind.create(name: 'health')
+# health = Kind.create(name: 'health')
 education = Kind.create(name: 'education')
 cultural = Kind.create(name: 'cultural')
 publics = Kind.create(name: 'publics')
@@ -99,7 +99,7 @@ residential.buildings << Building.create(name: 'tamarindos 902',
 
 
 
-residential.buildings << Building.create(name: 'u house bosque de canelos',
+residential.buildings << Building.create(name: 'u house',
                 description: '',
                 year: '2017',
                 location: 'Valle de Bravo',
@@ -234,20 +234,20 @@ commercial.buildings << building
 
 
 
-building = Building.create(name: 'reforma 341',
-                description: '',
-                year: '2008',
-                location: 'Mexico City',
-                area: '250,000.00sqm',
-                thumbnail: 'thumbnail/office/reformam.jpg',
-                images: ['buildings/reforma-341/REFORMA-341-1.jpg',
-                         'buildings/reforma-341/REFORMA-341-2.jpg',
-                         'buildings/reforma-341/REFORMA-341-3.jpg',
-                         'buildings/reforma-341/REFORMA-341-4.jpg'])
+# building = Building.create(name: 'reforma 341',
+#                 description: '',
+#                 year: '2008',
+#                 location: 'Mexico City',
+#                 area: '250,000.00sqm',
+#                 thumbnail: 'thumbnail/office/reformam.jpg',
+#                 images: ['buildings/reforma-341/REFORMA-341-1.jpg',
+#                          'buildings/reforma-341/REFORMA-341-2.jpg',
+#                          'buildings/reforma-341/REFORMA-341-3.jpg',
+#                          'buildings/reforma-341/REFORMA-341-4.jpg'])
 
-commercial.buildings << building
-residential.buildings << building
-office.buildings << building
+# commercial.buildings << building
+# residential.buildings << building
+# office.buildings << building
 
 
 
