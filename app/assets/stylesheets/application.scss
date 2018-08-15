@@ -31,7 +31,7 @@ $futura: Futura;
 	font-family: $futura!important;
 }
 .bx-wrapper .bx-next{
-	background: image-url('icons/derecha.svg') no-repeat!important ;
+	background: image-url('static_pages/home/right_arrow.svg') no-repeat!important ;
 	right: 3%!important;
 }
 .bx-wrapper .bx-controls-auto{
@@ -39,7 +39,7 @@ $futura: Futura;
 }
 
 .bx-wrapper .bx-prev {
-    background: image-url('icons/izquierda.svg') no-repeat!important ;
+    background: image-url('static_pages/home/left_arrow.svg') no-repeat!important ;
     left: 4%!important;
 }
 @import "bootstrap";

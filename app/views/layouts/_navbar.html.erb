@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="white-navbar">
+<nav class="navbar navbar-expand-lg navbar-light " id="white-navbar">
   <!-- <a class="navbar-brand" href="#">Navbar</a> -->
   <%= link_to root_path, class: 'navbar-brand' do %>
-  <%= image_tag 'logo-black.svg', id: 'logo-navbar' %>
+  <%= image_tag 'icons/logoblanco.svg', id: 'logo-navbar' %>
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -44,22 +44,22 @@
   <ul id="nav-social" class="d-none d-lg-flex">
     <li>
       <a href="">
-        <%= image_tag 'icons/face.svg' %>
+        <%= image_tag 'icons/facebookv.svg' %>
       </a>
     </li>
     <li>
       <a href="">
-        <%= image_tag 'icons/instagram.svg' %>
+        <%= image_tag 'icons/instagramv.svg' %>
       </a>
     </li>
     <li>
       <a href="">
-        <%= image_tag 'icons/linkedin.svg' %>
+        <%= image_tag 'icons/linkedinv.svg' %>
       </a>
     </li>
   </ul>
 </nav>
-<div class="col-12 mx-auto text-white" id="work-div-2" style="display: none;">
+<div class="col-12 mx-auto text-white" id="work-div-2" style="/*display: none;*/;position: fixed; z-index: 3; background-color: #383838 !important">
   <div class="row">
     <div class="col-8 mx-auto">
       <ul class="work-ul-2">
@@ -83,81 +83,3 @@
     
   </div>
 </div>
-<!-- <div class="col-12 mx-auto" id="work-div" style="display: none;">
-  <div class="row">
-    <div class="col-8 mx-auto">
-      <ul class="work-ul">
-        <li class="text-uppercase col-2 sections" data-target="all-div">All</li>
-        <li class="text-uppercase col-2 sections" data-target="comer-div">Comercial</li>
-        <li class="text-uppercase col-2 sections" data-target="res-div">Residencial</li>
-        <li class="text-uppercase col-2 sections" data-target="pub-div">Publico</li>
-        <li class="text-uppercase col-2 sections" data-target="pri-div">privado</li>
-        <li class="text-uppercase col-2 sections" data-target="cor-div">Corporativo</li>
-      </ul>
-    </div>
-    <div class="col-6 mx-auto all-div sections-content" style="display: none;">
-      <div class="row">  
-        <%# @all.each do | b | %>
-        <div class="col-3">
-          <p><%#= b.name %></p>
-        </div>
-        <%# end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto comer-div sections-content" style="display: none;">
-      <div class="row">  
-        <%# @all.each do | b | %>
-        <%# if b.kind == "commercial" %>
-            <div class="col-3">
-              <p><%#= b.name %></p>
-            </div>
-          <%# end %>
-        <%# end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto res-div sections-content" style="display: none;">
-      <div class="row">  
-        <%# @all.each do | b | %>
-        <%# if b.kind == "residential" %>
-            <div class="col-3">
-              <p><%#= b.name %></p>
-            </div>
-          <%# end %>
-        <%# end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto pub-div sections-content" style="display: none;">
-      <div class="row">  
-        <%# @all.each do | b | %>
-        <%# if b.kind == "public" %>
-            <div class="col-3">
-              <p><%#= b.name %></p>
-            </div>
-          <%# end %>
-        <%# end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto pri-div sections-content" style="display: none;">
-      <div class="row">  
-        <%# @all.each do | b | %>
-        <%# if b.kind == "private" %>
-            <div class="col-3">
-              <p><%#= b.name %></p>
-            </div>
-          <%# end %>
-        <%# end %>
-      </div>
-    </div>
-    <div class="col-6 mx-auto cor-div sections-content" style="display: none;">
-      <div class="row">  
-        <%# @all.each do | b | %>
-        <%# if b.kind == "corporative" %>
-            <div class="col-3">
-              <p><%#= b.name %></p>
-            </div>
-          <%# end %>
-        <%# end %>
-      </div>
-    </div>
-  </div>
-</div> -->

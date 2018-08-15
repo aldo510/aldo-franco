@@ -44,7 +44,9 @@
     <div class="row">
       <div class="col offset-1">
         <!-- <h4 id="similar-projects-title">other <%#= @building.kind.singularize %> projects</h4> -->
-        <h4 id="similar-projects-title">other similar projects</h4>
+        <% if @similar.length > 0  %>
+          <h4 id="similar-projects-title">other similar projects</h4>
+        <% end  %>
       </div>
     </div>
 
