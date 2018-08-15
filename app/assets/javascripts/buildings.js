@@ -27,13 +27,27 @@ $( document ).on('turbolinks:load', function() {
   var banerSlider = $('.slider-fullscreen').bxSlider({
     infiniteLoop: true,
     auto: true,
+    autoControls: true,
     controls: true,
     pager: false,
-    adaptiveHeight: true,
+    adaptiveHeight: true, 
     onSliderResize: function() {
       adjustSliderHeight();      
     }
+
   });
+  $(document).keydown(function(e){
+    if (e.keyCode == 39) // Right arrow 
+    {
+      banerSlider.goToNextSlide();
+      return false;
+    }
+    else if (e.keyCode == 37) // left arrow
+    {
+     banerSlider.goToPrevSlide();
+     return false;
+   }
+ });
 
   function adjustSliderHeight() {
     var currentSlide = banerSlider.getCurrentSlide();

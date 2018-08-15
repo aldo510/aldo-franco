@@ -1,6 +1,6 @@
 $gray: #1A1A1A;
 $text-gray: #666666;
-$green: #00FF00;
+$green: #dafa50;
 $blue: #3B5D8D;
 
 @font-face {
@@ -29,6 +29,18 @@ $futura: Futura;
 }
 .futura{
 	font-family: $futura!important;
+}
+.bx-wrapper .bx-next{
+	background: image-url('icons/derecha.svg') no-repeat!important ;
+	right: 3%!important;
+}
+.bx-wrapper .bx-controls-auto{
+	display: none!important;
+}
+
+.bx-wrapper .bx-prev {
+    background: image-url('icons/izquierda.svg') no-repeat!important ;
+    left: 4%!important;
 }
 @import "bootstrap";
 @import 'slick';
