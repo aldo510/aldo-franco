@@ -356,7 +356,7 @@ publics.buildings << building
 
 # -----------------------------------------------------------------------------
 puts 'publics --> 6'
-building = Building.create(name: 'toluca-convention-center',
+building = Building.create(name: 'toluca convention center',
                 description: '',
                 year: '2012',
                 location: 'Toluca, Estado de Mexico',
