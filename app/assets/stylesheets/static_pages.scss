@@ -249,8 +249,18 @@ nav{
     margin-bottom: 0;
   }
 }
-
-
+.text-green{
+  color: $green;
+}
+#logo-footer{
+  max-width:62%;
+}
+.item-title{
+  &:hover{
+    text-decoration:none;
+    color: $green!important;
+  }
+}
 
 nav#white-navbar{
   background-color: white;

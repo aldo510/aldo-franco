@@ -7,57 +7,46 @@
   <div class="banner-slider" id="home-slider">
     <div class="item-container">
       <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
+      <%= link_to "Raw Republic", building_path(id: 9), class: "item-title" %>
+      <!-- <h3 class="item-title">
           Raw Republic
-      </h3>
+      </h3> -->
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/3BosquedeCanelos.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
-          Bosque de Canelos
-      </h3>
+      <%= link_to "Bosque de Canelos", building_path(id: 4), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/5UHouseBosquedeCanelos.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
-          U House
-      </h3>
+      <%= link_to "U House", building_path(id: 7), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/4WinsorHeadquarters.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
-          Winsor Headquarters
-      </h3>
+      <%= link_to "Winsor Headquarters", building_path(id: 15), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/2BeConceptStore.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
-          Be Concept Store
-      </h3>
+      <%= link_to "Be Concept Store", building_path(id: 8), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/6CARSOAP.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
-          Carso AP
-      </h3>
+      <%= link_to "Carso AP", building_path(id: 3), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/7TolucaConventionCenter.jpg', class: 'w-100 img-fluid' %>
-      <h3 class="item-title">
-          Toluca Convention Center
-      </h3>
+      <%= link_to "Toluca Convention Center", building_path(id: 20), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
@@ -176,11 +165,11 @@
         <h5>Office</h5>
         <% end %>
       </div>
-      <div class="col-6 col-sm-4 category cat-4">
-        <%= link_to buildings_path(target: 'health') do %>
+      <!-- <div class="col-6 col-sm-4 category cat-4">
+        <%#= link_to buildings_path(target: 'health') do %>
         <h5>Health</h5>
-        <% end %>
-      </div>
+        <%# end %>
+      </div> -->
       <div class="col-6 col-sm-4 category cat-5">
         <%= link_to buildings_path(target: 'education') do %>
         <h5>Education</h5>
