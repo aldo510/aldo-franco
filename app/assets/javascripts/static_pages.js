@@ -11,17 +11,21 @@ $( document ).on('turbolinks:load', function() {
 		if ($( window ).width() > 991) {
 			$('.work-content').hover(function () {
 				$("#work-div").fadeIn();
+				$('#work-div').css("zIndex", "3");
 			});
 
 			$("#work-div").mouseleave(function(){
 				$("#work-div").fadeOut();
+				$('#work-div').css("zIndex", "0");
 			});
 			$('.work-content-2').hover(function () {
 				$("#work-div-2").fadeIn();
+				$('#work-div').css("zIndex", "3");
 			});
 
 			$("#work-div-2").mouseleave(function(){
 				$("#work-div-2").fadeOut();
+				$('#work-div').css("zIndex", "0");
 			});
 
 			$('.sections').hover(function () {

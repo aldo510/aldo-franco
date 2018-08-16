@@ -20,6 +20,10 @@
   background-color: white;
   color: black;
   margin-bottom: 6%;
+  &:hover{
+    text-decoration:none;
+    background-color: $green;
+  }
 }
 .sections, .sections-2{
   text-align: center;
@@ -711,13 +715,13 @@ nav#white-navbar{
 }
 
 #logo-about{
-  padding: 20% 0;
+  padding: 15% 0;
   position: relative;
   background-color: $gray;
 
   #mega-logo{
     position: absolute;
-    width: 45%;
+    width: 28%;
     height: auto;
     left: 0;
     right: 0;
@@ -729,7 +733,7 @@ nav#white-navbar{
 
 #about-description{
   background-color: $gray;
-  padding: 5% 0;
+  // padding: 5% 0;
 
   #about-description-title{
     color: white;
