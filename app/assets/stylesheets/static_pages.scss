@@ -12,6 +12,12 @@
 .nav-link{
   cursor: pointer;
 }
+#work-div-2{
+  position: absolute;
+  z-index: 3;
+  background-color: #383838 !important;
+  // display:none;
+}
 .back-black{
   background-color: black!important;
 }
