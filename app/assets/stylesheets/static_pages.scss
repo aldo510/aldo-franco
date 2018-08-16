@@ -1,5 +1,5 @@
-.navbar-dark .navbar-toggler-icon{
-  background-image: image-url('icons/menu-button.svg');
+.navbar-toggler-icon{
+  background-image: image-url('icons/menu-button.svg') !important;
 }
 #mini-fotos{
   position: absolute;
@@ -15,11 +15,11 @@
 #work-div-2{
   position: absolute;
   z-index: 3;
-  background-color: #383838 !important;
+  background-color: white !important;
   // display:none;
 }
 .back-black{
-  background-color: black!important;
+  background-color: white !important;
 }
 .btn-white{
   padding: 10px 20px;
@@ -182,6 +182,7 @@ nav{
 }
 #work-div-2 a{
   color: #666666 !important;
+  background-color: white;
 
 }
 @include media-breakpoint-down(md) {
@@ -284,7 +285,7 @@ nav{
 }
 
 nav#white-navbar{
-  background-color: #383838 !important;
+  background-color: white !important;
 
   .navbar-brand{
     margin-right: 0;
@@ -889,6 +890,7 @@ nav#white-navbar{
 }
 #aldo{
   background-color: $gray;
+  padding-top: 5%;
 
   #aldo-franco-name{
     color: white;
@@ -1032,3 +1034,9 @@ nav#white-navbar{
 
     }
   }
+
+@include media-breakpoint-down(sm){
+  #contact{
+    padding-top: 10%;
+  }
+}
