@@ -1,5 +1,5 @@
-.navbar-dark .navbar-toggler-icon{
-  background-image: image-url('icons/menu-button.svg');
+.navbar-toggler-icon{
+  background-image: image-url('icons/menu-button.svg') !important;
 }
 #mini-fotos{
   position: absolute;
@@ -15,11 +15,11 @@
 #work-div-2{
   position: absolute;
   z-index: 3;
-  background-color: #383838 !important;
+  background-color: white !important;
   // display:none;
 }
 .back-black{
-  background-color: black!important;
+  background-color: white !important;
 }
 .btn-white{
   padding: 10px 20px;
@@ -182,6 +182,7 @@ nav{
 }
 #work-div-2 a{
   color: #666666 !important;
+  background-color: white;
 
 }
 @include media-breakpoint-down(md) {
@@ -284,7 +285,7 @@ nav{
 }
 
 nav#white-navbar{
-  background-color: #383838 !important;
+  background-color: white !important;
 
   .navbar-brand{
     margin-right: 0;
@@ -889,6 +890,7 @@ nav#white-navbar{
 }
 #aldo{
   background-color: $gray;
+  padding-top: 5%;
 
   #aldo-franco-name{
     color: white;
@@ -1026,7 +1028,23 @@ nav#white-navbar{
   }
   #main-slider #slider-text {
     background: none!important;
-}
+  }
+  .mar-top-15{
+    margin-top: 15%;
+  }
+  #contact .border-bottom {
+    border-bottom: 1px solid #dee2e61a !important;
+    padding-bottom: 15%;
+  }
+  #contact .contact-comments {
+    margin-top: 0;
+  }
+  #contact .pad-top-5{
+    padding-top: 0!important;
+  }
+  #contact .contact-inputs {
+    text-align: center;
+  }
 }
 @include media-breakpoint-only(sm) {
 
@@ -1067,5 +1085,11 @@ nav#white-navbar{
     .redes-sociales{
       padding-top:10%;
 
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    #contact{
+      padding-top: 10%;
     }
   }

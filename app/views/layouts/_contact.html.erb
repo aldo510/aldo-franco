@@ -9,7 +9,7 @@
 
     <div class="row">
       <div class="col-md-3 offset-md-1">
-        <div class="row">
+        <div class="row mar-top-15">
           <div class="col">
             <%= image_tag 'icons/arroba.svg', id: 'contact-arroba', class: 'contact-icons' %>
           </div>
@@ -19,7 +19,7 @@
             <p class="text-center text-green contact-texts">contacto@aldofranco.com</p>
           </div>
         </div>
-        <div class="row redes-sociales">
+        <div class="row redes-sociales mar-top-15">
           <div class="col-2 offset-3">
             <%= image_tag 'icons/face.svg', class: 'contact-icons' %>
           </div>
@@ -34,7 +34,7 @@
 
       <div class="col-10 offset-1 col-md-4 offset-md-0 mt-4 mt-lg-0">
         <%= form_tag contact_path, method: :post do %>
-          <div class="row border-bottom">
+          <div class="row border-bottom mar-top-15">
             <div class="col-md-6 border-ri">
               <%= text_field_tag 'name', nil, class: 'form-control contact-inputs', placeholder: 'Name' %>
             </div>
