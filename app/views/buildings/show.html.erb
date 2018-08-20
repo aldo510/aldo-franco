@@ -37,7 +37,7 @@
 <section id="similar-projects">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 mx-auto text-center" style="margin-bottom: 6%;">
+      <div class="col-sm-4 col-8 mx-auto text-center" style="margin-bottom: 6%;">
         <%= link_to "Back to All", buildings_path, class: "btn-white" %>
       </div>
     </div>
@@ -54,7 +54,7 @@
       <div class="col-10 offset-1">
         <div class="row">
           <% @similar.each do |building| %>
-          <div class="col-4 img-build">
+          <div class="col-sm-4 col-12 img-build mar-bot">
             <%= link_to building_path(building) do %>
             <%= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-md-4' %>
             <p class="build-text got-thi"><%= building.name.capitalize %></p>

@@ -990,6 +990,43 @@ nav#white-navbar{
     height: auto;
     padding-top:5%;
   }
+  .item-title-2:after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(0, 0, 0, 0.83) 250%);
+  }
+  #abount-us .about-text {
+    color: #666666;
+    font-family: Gotham-Thin;
+    height: 200px;
+  }
+  .build-text {
+    display: flex!important;
+    border-bottom: 0!important;
+  }
+  .img-build {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+  .btn-white{
+    margin-top:4%;
+  }
+  .mar-bot{
+    margin-bottom: 3%;
+  }
+  #main-slider #slider-text {
+    bottom: -40%!important;
+  }
+  #similar-projects {
+    background-color: #1A1A1A;
+    padding: 2% 0;
+    padding-top: 35%!important;
+  }
+  #similar-projects #similar-projects-title {
+    margin-top: 15%;
+    margin-bottom: 15%!important;
+  }
+  #main-slider #slider-text {
+    background: none!important;
+}
 }
 @include media-breakpoint-only(sm) {
 
