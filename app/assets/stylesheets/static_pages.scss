@@ -1003,9 +1003,10 @@ nav#white-navbar{
   .build-text {
     display: flex!important;
     border-bottom: 0!important;
+    text-transform: uppercase;
   }
   .img-build {
-    opacity: 0.6;
+    opacity: 1;
     transition: all 0.3s ease;
   }
   .btn-white{
@@ -1044,6 +1045,10 @@ nav#white-navbar{
   }
   #contact .contact-inputs {
     text-align: center;
+
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent!important;
   }
 }
 @include media-breakpoint-only(sm) {
