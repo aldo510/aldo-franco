@@ -1,16 +1,11 @@
 <% content_for :head do %>
 <meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
-
-<section id="banner">
-  <%= render partial: 'layouts/navbar' %>
-  <div class="banner-slider" id="home-slider">
+<section id="banner-clic" style="display: none;">
+  <div class="banner-slider-2" id="home-slider">
     <div class="item-container">
       <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid' %>
       <%= link_to "Raw Republic", building_path(id: 9), class: "item-title" %>
-      <!-- <h3 class="item-title">
-          Raw Republic
-      </h3> -->
       <div class="item-title-2">
       </div>
     </div>
@@ -51,10 +46,58 @@
       </div>
     </div>
   </div>
-
+  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow-2', class: 'slider-arrows ' %>
+  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow-2', class: 'slider-arrows ' %>
+  <%= image_tag 'icons/close.svg', id: 'close-arrow', class: 'slider-arrows ' %>
+</section>
+<section id="banner">
+  <%= render partial: 'layouts/navbar' %>
+  <div class="banner-slider" id="home-slider">
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "Raw Republic", building_path(id: 9), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/3BosquedeCanelos.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "Bosque de Canelos", building_path(id: 4), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/5UHouseBosquedeCanelos.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "U House", building_path(id: 7), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/4WinsorHeadquarters.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "Winsor Headquarters", building_path(id: 15), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/2BeConceptStore.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "Be Concept Store", building_path(id: 8), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/6CARSOAP.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "Carso AP", building_path(id: 3), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/7TolucaConventionCenter.jpg', class: 'w-100 img-fluid img-banner' %>
+      <%= link_to "Toluca Convention Center", building_path(id: 20), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+  </div>
   <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows  d-lg-block' %>
   <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows  d-lg-block' %>
-
   <div id="dots-container" class="d-none d-lg-block">
     <ul id="dot-list">
     </ul>
@@ -203,11 +246,10 @@
 <script>
   $( document ).ready(function() {
 
-    var numslider = $(".item-container").length;
+    var numslider = $(".banner-slider .item-container").length;
     for(var i = 0; i< numslider;i++){
       $('#dot-list').append('<li class="dot" id="dot-'+i+'"></li>');
     }
-
     $('.banner-slider').slick({
       autoplay: true,
       infinite: true,
@@ -224,7 +266,15 @@
     });
 
     var currentSlide = $('.banner-slider').slick('slickCurrentSlide');
-
+    $('.img-banner').click(function () {
+      $( '.banner-slider-2' ).slick('slickGoTo', currentSlide );
+      $('#banner-clic').show();
+      $('.banner-slider-2').fadeIn();
+      $('#banner-clic').css('z-indez', '13');
+      $('#close-arrow').show();
+      $('#left-arrow-2').show();
+      $('#right-arrow-2').show();
+    });
     $('.banner-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
       $('.dot').removeClass('active');
       $('#dot-'+currentSlide).addClass('active');
