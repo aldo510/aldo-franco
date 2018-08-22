@@ -141,7 +141,24 @@
 #categories-background{
   transition: all 0.2s linear;
 }
-
+#main-slider-2{
+  position: fixed;
+  z-index: 13;
+  #icon-close{
+    position: absolute;
+    z-index: 13;
+    top:5%;
+    right: 5%;
+    max-width: 20px;
+    cursor: pointer;
+  }
+}
+#main-slider{
+  z-index: 1;
+}
+#transparent-navbar{
+  z-index: 1;
+}
 @include media-breakpoint-up(xs){
   #back-to-all{
     margin: 0 auto;

@@ -3,13 +3,22 @@
 <% end %>
 
 <%= render partial: 'layouts/navbar_transparent' %>
-
+<section id="main-slider-2">
+  <div class="slider-fullscreen-2">
+    <% @building.images.each do |link| %>
+    <div class="item-container">
+      <%= image_tag link, class: 'slider-img ' %>
+    </div>
+    <% end %>
+  </div>
+  <%= image_tag "icons/close.svg", id: "icon-close" %>
+</section>
 <section id="main-slider">
   <div class="slider-fullscreen">
 
     <% @building.images.each do |link| %>
     <div class="item-container">
-      <%= image_tag link, class: 'slider-img' %>
+      <%= image_tag link, class: 'slider-img full-slider' %>
     </div>
     <% end %>
 
