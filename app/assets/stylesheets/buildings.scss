@@ -166,6 +166,17 @@
     margin-top: 15px;
   }
 }
+@include media-breakpoint-only(xs){
+  #main-slider-2 {
+    position: fixed;
+    z-index: 13;
+    height: 100vh;
+    background-color: black;
+    padding-top: 50%;
+    width: 100%;
+  }
+}
+
 
 @include media-breakpoint-up(md){
   .img-build{

@@ -85,6 +85,16 @@ $( document ).on('turbolinks:load', function() {
   if($('.slider-fullscreen').lenght > 0){
     adjustSliderHeight();
   }
+  function adjustSliderHeight() {
+    var currentSlide = banerSlider2.getCurrentSlide();
+    var currentHeight = $('.slider-img').get(0).height;
+    console.log(currentHeight);
+    $('.bx-viewport').height(currentHeight);
+  }
+
+  if($('.slider-fullscreen-2').lenght > 0){
+    adjustSliderHeight();
+  }
 
 })
 
