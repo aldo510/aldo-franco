@@ -144,6 +144,8 @@
 #main-slider-2{
   position: fixed;
   z-index: 13;
+  overflow:hidden;
+  -webkit-overflow-scrolling:touch;
   // display: none;
   #icon-close{
     position: absolute;
