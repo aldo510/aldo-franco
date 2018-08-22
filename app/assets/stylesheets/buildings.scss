@@ -144,6 +144,7 @@
 #main-slider-2{
   position: fixed;
   z-index: 13;
+  // display: none;
   #icon-close{
     position: absolute;
     z-index: 13;
@@ -174,6 +175,7 @@
     background-color: black;
     padding-top: 50%;
     width: 100%;
+    margin-top:-15%;
   }
 }
 
