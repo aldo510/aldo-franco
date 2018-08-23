@@ -8,6 +8,7 @@ class CreateBuildings < ActiveRecord::Migration[5.1]
       t.string      "area"
       t.string      "thumbnail"
       t.text        "images", default: [], array: true
+      t.text        "imagesori", default: [], array: true
 
       t.timestamps
     end

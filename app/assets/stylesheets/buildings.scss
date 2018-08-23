@@ -173,11 +173,14 @@
   #main-slider-2 {
     position: fixed;
     z-index: 13;
-    height: 100vh;
+    height: 105vh;
     background-color: black;
-    padding-top: 50%;
+    padding-top: 5%;
     width: 100%;
-    margin-top:-15%;
+    margin-top:-20%;
+    .bx-wrapper {
+      border: 5px solid black!important;
+    }
   }
 }
 

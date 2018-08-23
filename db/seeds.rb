@@ -20,7 +20,13 @@ residential.buildings << Building.create(name: 'ahuehuetes 2105',
                          'buildings/ahuehuetes-2105/ahuehuetes3.jpg',
                          'buildings/ahuehuetes-2105/ahuehuetes4.jpg',
                          'buildings/ahuehuetes-2105/ahuehuetes5.jpg',
-                         'buildings/ahuehuetes-2105/ahuehuetes6.jpg'])
+                         'buildings/ahuehuetes-2105/ahuehuetes6.jpg'],
+                imagesori: ['buildingsorigin/Residential/AHUEHUETES/AHUEHUETES1.jpg',
+                            'buildingsorigin/Residential/AHUEHUETES/AHUEHUETES2.jpg',
+                            'buildingsorigin/Residential/AHUEHUETES/AHUEHUETES3.jpg',
+                            'buildingsorigin/Residential/AHUEHUETES/AHUEHUETES4.jpg',
+                            'buildingsorigin/Residential/AHUEHUETES/AHUEHUETES5.jpg',
+                            'buildingsorigin/Residential/AHUEHUETES/AHUEHUETES6.jpg'])
 
 
 residential.buildings << Building.create(name: 'Sauces 902',
@@ -32,7 +38,11 @@ residential.buildings << Building.create(name: 'Sauces 902',
                 images: ['buildings/sauces/sauses1.jpg',
                          'buildings/sauces/sauses2.jpg',
                          'buildings/sauces/sauses3.jpg',
-                         'buildings/sauces/sauses4.jpg'])
+                         'buildings/sauces/sauses4.jpg'],
+                imagesori: ['buildingsorigin/Residential/SAUSES902/SAUSES1.jpg',
+                            'buildingsorigin/Residential/SAUSES902/SAUSES2.jpg',
+                            'buildingsorigin/Residential/SAUSES902/SAUSES3.jpg',
+                            'buildingsorigin/Residential/SAUSES902/SAUSES4.jpg'])
 
 
 residential.buildings << Building.create(name: 'Carso AP',
@@ -55,7 +65,22 @@ residential.buildings << Building.create(name: 'Carso AP',
                          'buildings/carso/carsoap12.jpg',
                          'buildings/carso/carsoap13.jpg',
                          'buildings/carso/carsoap14.jpg',
-                         'buildings/carso/carsoap15.jpg'])
+                         'buildings/carso/carsoap15.jpg'],
+                imagesori: ['buildingsorigin/Residential/CARSOAP/CARSOAP1.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP2.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP3.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP4.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP5.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP6.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP7.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP8.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP9.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP10.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP11.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP12.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP13.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP14.jpg',
+                            'buildingsorigin/Residential/CARSOAP/CARSOAP15.jpg'])
 
 residential.buildings << Building.create(name: 'bosque de canelos',
                 description: '',
@@ -74,7 +99,19 @@ residential.buildings << Building.create(name: 'bosque de canelos',
                          'buildings/bosque-de-canelos/canelos9.jpg',
                          'buildings/bosque-de-canelos/canelos10.jpg',
                          'buildings/bosque-de-canelos/canelos11.jpg',
-                         'buildings/bosque-de-canelos/canelos12.jpg'])
+                         'buildings/bosque-de-canelos/canelos12.jpg'],
+                imagesori: ['buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS1.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS2.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS3.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS4.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS5.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS6.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS7.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS8.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS9.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS10.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS11.jpg',
+                            'buildingsorigin/Residential/BOSQUEDECANELOS/CANELOS12.jpg'])
 
 
 residential.buildings << Building.create(name: 'departamento ppg',
@@ -87,7 +124,12 @@ residential.buildings << Building.create(name: 'departamento ppg',
                          'buildings/departamento-ppg/departamentoppg2.jpg',
                          'buildings/departamento-ppg/departamentoppg3.jpg',
                          'buildings/departamento-ppg/departamentoppg4.jpg',
-                         'buildings/departamento-ppg/departamentoppg5.jpg'])
+                         'buildings/departamento-ppg/departamentoppg5.jpg'],
+                imagesori: ['buildingsorigin/Residential/DEPARTAMENTOPPG/PPG1.jpg',
+                            'buildingsorigin/Residential/DEPARTAMENTOPPG/PPG2.jpg',
+                            'buildingsorigin/Residential/DEPARTAMENTOPPG/PPG3.jpg',
+                            'buildingsorigin/Residential/DEPARTAMENTOPPG/PPG4.jpg',
+                            'buildingsorigin/Residential/DEPARTAMENTOPPG/PPG5.jpg'])
 
 
 residential.buildings << Building.create(name: 'tamarindos 902',
@@ -100,7 +142,12 @@ residential.buildings << Building.create(name: 'tamarindos 902',
                          'buildings/tamarindos-902/TAMARINDOS-902-2.jpg',
                          'buildings/tamarindos-902/TAMARINDOS-902-3.jpg',
                          'buildings/tamarindos-902/TAMARINDOS-902-4.jpg',
-                         'buildings/tamarindos-902/TAMARINDOS-902-5.jpg'])
+                         'buildings/tamarindos-902/TAMARINDOS-902-5.jpg'],
+                imagesori: ['buildingsorigin/Residential/TAMARINDOS902/TAMARINDOS1.jpg',
+                            'buildingsorigin/Residential/TAMARINDOS902/TAMARINDOS2.jpg',
+                            'buildingsorigin/Residential/TAMARINDOS902/TAMARINDOS3.jpg',
+                            'buildingsorigin/Residential/TAMARINDOS902/TAMARINDOS4.jpg',
+                            'buildingsorigin/Residential/TAMARINDOS902/TAMARINDOS5.jpg'])
 
 
 
@@ -115,7 +162,13 @@ residential.buildings << Building.create(name: 'u house',
                          'buildings/u-house-bosque-de-canelos/uhouse3.jpg',
                          'buildings/u-house-bosque-de-canelos/uhouse4.jpg',
                          'buildings/u-house-bosque-de-canelos/uhouse5.jpg',
-                         'buildings/u-house-bosque-de-canelos/uhouse6.jpg'])
+                         'buildings/u-house-bosque-de-canelos/uhouse6.jpg'],
+                imagesori: ['buildingsorigin/Residential/UHOUSE/UHOUSE1.JPG',
+                            'buildingsorigin/Residential/UHOUSE/UHOUSE2.JPG',
+                            'buildingsorigin/Residential/UHOUSE/UHOUSE3.JPG',
+                            'buildingsorigin/Residential/UHOUSE/UHOUSE4.JPG',
+                            'buildingsorigin/Residential/UHOUSE/UHOUSE5.JPG',
+                            'buildingsorigin/Residential/UHOUSE/UHOUSE6.JPG'])
 
 
 
@@ -137,7 +190,16 @@ commercial.buildings << Building.create(name: 'be concept store',
                          'buildings/be-concept-store/beconceptstore6.jpg',
                          'buildings/be-concept-store/beconceptstore7.jpg',
                          'buildings/be-concept-store/beconceptstore8.jpg',
-                         'buildings/be-concept-store/beconceptstore9.jpg'])
+                         'buildings/be-concept-store/beconceptstore9.jpg'],
+                imagesori: ['buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore1.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore2.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore3.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore4.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore5.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore6.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore7.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore8.jpg',
+                            'buildingsorigin/Commercial/BECONCEPTSTORE/beconceptstore9.jpg'])
 
 commercial.buildings << Building.create(name: 'raw republic',
                 description: '',
@@ -158,7 +220,21 @@ commercial.buildings << Building.create(name: 'raw republic',
                          'buildings/raw-republic/rawrepublic11.jpg',
                          'buildings/raw-republic/rawrepublic12.jpg',
                          'buildings/raw-republic/rawrepublic13.jpg',
-                         'buildings/raw-republic/rawrepublic14.jpg'])
+                         'buildings/raw-republic/rawrepublic14.jpg'],
+                imagesori: ['buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC1.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC2.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC3.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC4.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC5.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC6.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC7.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC8.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC9.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC10.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC11.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC12.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC13.jpg',
+                            'buildingsorigin/Commercial/RAWREPUBLIC/RAWREPUBLIC14.jpg'])
 
 
 commercial.buildings << Building.create(name: 'ten tei',
@@ -178,7 +254,19 @@ commercial.buildings << Building.create(name: 'ten tei',
                          'buildings/ten-tei/tentei9.jpg',
                          'buildings/ten-tei/tentei10.jpg',
                          'buildings/ten-tei/tentei11.jpg',
-                         'buildings/ten-tei/tentei12.jpg'])
+                         'buildings/ten-tei/tentei12.jpg'],
+                imagesori: ['buildingsorigin/Commercial/TENTEI/TENTEI1.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI2.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI3.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI4.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI5.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI6.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI7.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI8.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI9.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI10.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI11.jpg',
+                            'buildingsorigin/Commercial/TENTEI/TENTEI12.jpg'])
 
 commercial.buildings << Building.create(name: 'in the mix',
                 description: '',
@@ -191,7 +279,13 @@ commercial.buildings << Building.create(name: 'in the mix',
                          'buildings/in-the-mix/inthemix3.jpg',
                          'buildings/in-the-mix/inthemix4.jpg',
                          'buildings/in-the-mix/inthemix5.jpg',
-                         'buildings/in-the-mix/inthemix6.jpg'])
+                         'buildings/in-the-mix/inthemix6.jpg'],
+                imagesori: ['buildingsorigin/Commercial/INTHEMIX/inthemix1.jpg',
+                            'buildingsorigin/Commercial/INTHEMIX/inthemix2.jpg',
+                            'buildingsorigin/Commercial/INTHEMIX/inthemix3.jpg',
+                            'buildingsorigin/Commercial/INTHEMIX/inthemix4.jpg',
+                            'buildingsorigin/Commercial/INTHEMIX/inthemix5.jpg',
+                            'buildingsorigin/Commercial/INTHEMIX/inthemix6.jpg'])
 
 commercial.buildings << Building.create(name: 'plaza polanquito',
                 description: '',
@@ -202,7 +296,11 @@ commercial.buildings << Building.create(name: 'plaza polanquito',
                 images: ['buildings/plaza-polanquito/polanquito1.jpg',
                          'buildings/plaza-polanquito/polanquito2.jpg',
                          'buildings/plaza-polanquito/polanquito3.jpg',
-                         'buildings/plaza-polanquito/polanquito4.jpg'])
+                         'buildings/plaza-polanquito/polanquito4.jpg'],
+                imagesori: ['buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito1.jpg',
+                            'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito2.jpg',
+                            'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito3.jpg',
+                            'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito5.jpg'])
 
 
 
@@ -219,7 +317,12 @@ office.buildings << Building.create(name: '​jz offices',
                          'buildings/​jz-offices/jz2.jpg',
                          'buildings/​jz-offices/jz3.jpg',
                          'buildings/​jz-offices/jz4.jpg',
-                         'buildings/​jz-offices/jz5.jpg'])
+                         'buildings/​jz-offices/jz5.jpg'],
+                imagesori: ['buildings/​jz-offices/jz1.jpg',
+                            'buildingsorigin/Office/JZOFFICES2.jpg',
+                            'buildingsorigin/Office/JZOFFICES3.jpg',
+                            'buildingsorigin/Office/JZOFFICES4.jpg',
+                            'buildingsorigin/Office/JZOFFICES5.jpg'])
 
 
 building = Building.create(name: '​max mix',
@@ -232,7 +335,12 @@ building = Building.create(name: '​max mix',
                          'buildings/max-mix/maxmix3.jpg',
                          'buildings/max-mix/maxmix4.jpg',
                          'buildings/max-mix/maxmix5.jpg',
-                         'buildings/max-mix/maxmix1.jpg'])
+                         'buildings/max-mix/maxmix1.jpg'],
+                imagesori: ['buildingsorigin/Office/MAXMIX/MAXMIX2.jpg',
+                            'buildingsorigin/Office/MAXMIX/MAXMIX3.jpg',
+                            'buildingsorigin/Office/MAXMIX/MAXMIX4.jpg',
+                            'buildingsorigin/Office/MAXMIX/MAXMIX5.jpg',
+                            'buildingsorigin/Office/MAXMIX/MAXMIX1.JPG'])
 
 office.buildings << building
 commercial.buildings << building
@@ -274,7 +382,19 @@ office.buildings << Building.create(name: 'winsor headquarters',
                          'buildings/winsor-headquarters/winsor9.jpg',
                          'buildings/winsor-headquarters/winsor10.jpg',
                          'buildings/winsor-headquarters/winsor11.jpg',
-                         'buildings/winsor-headquarters/winsor12.jpg'])
+                         'buildings/winsor-headquarters/winsor12.jpg'],
+                imagesori: ['buildingsorigin/Office/WINSOR/windsor1.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor2.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor3.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor4.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor5.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor6.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor7.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor8.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor9.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor10.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor11.jpg',
+                            'buildingsorigin/Office/WINSOR/windsor12.jpg'])
 
 
 
@@ -299,7 +419,23 @@ office.buildings << Building.create(name: 'eg headquarters',
                          'buildings/eg-headquarters/egheadquarters13.jpg',
                          'buildings/eg-headquarters/egheadquarters14.jpg',
                          'buildings/eg-headquarters/egheadquarters15.jpg',
-                         'buildings/eg-headquarters/egheadquarters16.jpg'])
+                         'buildings/eg-headquarters/egheadquarters16.jpg'],
+                imagesori: ['buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS1.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS2.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS3.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS4.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS5.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS6.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS7.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS8.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS9.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS10.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS11.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS12.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS13.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS14.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS15.jpg',
+                            'buildingsorigin/Office/EGHEADQUARTERS/EGHEADQUARTERS16.jpg'])
 
 
 
@@ -320,7 +456,13 @@ education.buildings << Building.create(name: 'cuajimalpa community center',
                          'buildings/cuajimalpa-community-center/cuajimalpa3.jpg',
                          'buildings/cuajimalpa-community-center/cuajimalpa4.jpg',
                          'buildings/cuajimalpa-community-center/cuajimalpa5.jpg',
-                         'buildings/cuajimalpa-community-center/cuajimalpa6.jpg'])
+                         'buildings/cuajimalpa-community-center/cuajimalpa6.jpg'],
+                imagesori: ['buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC1.jpg',
+                            'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC2.jpg',
+                            'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC3.jpg',
+                            'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC4.jpg',
+                            'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC5.jpg',
+                            'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC6.jpg'])
 
 
 
@@ -337,7 +479,13 @@ building = Building.create(name: 'chapultepec library',
                          'buildings/chapultepec-library/chapultepec3.jpg',
                          'buildings/chapultepec-library/chapultepec4.jpg',
                          'buildings/chapultepec-library/chapultepec5.jpg',
-                         'buildings/chapultepec-library/chapultepec6.jpg'])
+                         'buildings/chapultepec-library/chapultepec6.jpg'],
+                imagesori: ['buildingsorigin/Cultural/CHAPULTEPECLIBRARY/CHAPULTEPEC-LIBRARY6.jpg',
+                            'buildingsorigin/Cultural/CHAPULTEPECLIBRARY/CHAPULTEPEC-LIBRARY2.jpg',
+                            'buildingsorigin/Cultural/CHAPULTEPECLIBRARY/CHAPULTEPEC-LIBRARY3.JPG',
+                            'buildingsorigin/Cultural/CHAPULTEPECLIBRARY/CHAPULTEPEC-LIBRARY4.jpg',
+                            'buildingsorigin/Cultural/CHAPULTEPECLIBRARY/CHAPULTEPEC-LIBRARY5.JPG',
+                            'buildingsorigin/Cultural/CHAPULTEPECLIBRARY/CHAPULTEPEC-LIBRARY1.jpg'])
 
 cultural.buildings << building
 publics.buildings << building
@@ -352,7 +500,11 @@ building = Building.create(name: 'minm museum',
                 images: ['buildings/minm-museum/minim1.jpg',
                          'buildings/minm-museum/minim2.jpg',
                          'buildings/minm-museum/minim3.jpg',
-                         'buildings/minm-museum/minim4.jpg'])
+                         'buildings/minm-museum/minim4.jpg'],
+                imagesori: ['buildingsorigin/Cultural/MINMMUSEUM/MINMMUSEUM1.jpg',
+                            'buildingsorigin/Cultural/MINMMUSEUM/MINMMUSEUM2.jpg',
+                            'buildingsorigin/Cultural/MINMMUSEUM/MINMMUSEUM3.jpg',
+                            'buildingsorigin/Cultural/MINMMUSEUM/MINMMUSEUM4.jpg'])
 
 cultural.buildings << building
 publics.buildings << building
@@ -374,7 +526,15 @@ building = Building.create(name: 'toluca convention center',
                          'buildings/toluca-convention-center/tolucacc5.jpg',
                          'buildings/toluca-convention-center/tolucacc6.jpg',
                          'buildings/toluca-convention-center/tolucacc7.jpg',
-                         'buildings/toluca-convention-center/tolucacc8.jpg'])
+                         'buildings/toluca-convention-center/tolucacc8.jpg'],
+                imagesori: ['buildingsorigin/PUBLIC/TOLUCA/TOLUCACC1.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC2.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC3.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC4.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC5.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC6.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC7.jpg',
+                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC8.jpg'])
 
 publics.buildings << building
 commercial.buildings << building

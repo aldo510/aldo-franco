@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180725192001) do
     t.string "area"
     t.string "thumbnail"
     t.text "images", default: [], array: true
+    t.text "imagesori", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
