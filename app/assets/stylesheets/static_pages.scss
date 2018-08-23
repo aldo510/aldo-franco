@@ -1016,6 +1016,12 @@ nav#white-navbar{
 // media querys
 
 @include media-breakpoint-only(xs) {
+  #banner{
+    .slick-slide img {
+      display: block;
+      height: 300px!important;
+    }
+  }
   #footer{
     height: auto;
     padding-top:5%;
