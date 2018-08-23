@@ -4,14 +4,18 @@
 
 <%= render partial: 'layouts/navbar_transparent' %>
 <section id="main-slider-2">
-  <div class="slider-fullscreen-2">
-    <% @building.imagesori.each do |link| %>
-    <div class="item-container">
-      <%= image_tag link, class: 'slider-img ' %>
+  <div class="container-fluid h-100">
+    <div class="row align-items-center h-100">
+      <div class="slider-fullscreen-2">
+        <% @building.imagesori.each do |link| %>
+        <div class="item-container">
+          <%= image_tag link, class: 'slider-img ' %>
+        </div>
+        <% end %>
+      </div>
+      <%= image_tag "icons/close.svg", id: "icon-close" %>
     </div>
-    <% end %>
   </div>
-  <%= image_tag "icons/close.svg", id: "icon-close" %>
 </section>
 <section id="main-slider">
   <div class="slider-fullscreen">
