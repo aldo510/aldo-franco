@@ -1127,8 +1127,22 @@ nav#white-navbar{
     }
   }
 
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-up(sm){
     #contact{
       padding-top: 10%;
+    }
+    #main-slider-2{
+      .bx-wrapper img {
+        max-width: 100%;
+        display: block;
+        width: auto;
+        height: 100vh;
+        margin: 0 auto;
+      }
+      .bx-wrapper{
+        background-color: black!important;
+        border: 0!important;
+        box-shadow: none!important;
+      }
     }
   }
