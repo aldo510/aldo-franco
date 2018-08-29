@@ -1023,6 +1023,49 @@ nav#white-navbar{
       // height: 300px!important;
     }
   }
+  #aldo #aldo-franco-name, #team #team-title {
+    font-size: 1.2rem;
+  }
+  #aldo #aldo-description {
+    font-size: 14px;
+    text-align: left!important;
+    line-height: 1.3rem;
+    text-align: left;
+  }
+  #navbarNav{
+    margin-top: 15%;
+    text-align: center;
+  }
+  .navbar-nav {
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom:15%;
+  }
+  #logo-about {
+    margin-top: 15%;
+  }
+  #projects-description #all-projects-title {
+    margin-top: 30%;
+  }
+  nav#white-navbar .nav-item {
+    border-bottom: thin solid #6666661f;
+  }
+  #about-description #about-description-title {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+  }
+  #about-description #about-description-text {
+    text-align: left;
+    padding-top:15%;
+    line-height: 1.3rem;
+    font-size: 14px;
+  }
+  #kinds .kinds-titles.active:after {
+    bottom: -4px!important;
+  }
+  #projects-description #all-projects-title {
+    font-size: 1.2rem;
+  }
   #footer{
     height: auto;
     padding-top:5%;
