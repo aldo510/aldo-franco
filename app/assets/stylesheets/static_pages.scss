@@ -1020,7 +1020,7 @@ nav#white-navbar{
   #banner{
     .slick-slide img {
       display: block;
-      height: 300px!important;
+      // height: 300px!important;
     }
   }
   #footer{
@@ -1145,5 +1145,11 @@ nav#white-navbar{
         border: 0!important;
         box-shadow: none!important;
       }
+    }
+  }
+  
+  @include media-breakpoint-down(md){
+    .banner-slider{
+      margin-top: 60px;
     }
   }
