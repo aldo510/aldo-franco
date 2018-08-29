@@ -73,9 +73,11 @@ $( document ).on('turbolinks:load', function() {
 	$('.white-navbar, .footer-nav-link').click(function () {
 		var id = $(this).data('target');
 		var section = $('#' + id);
+		
 		if (section.length > 0){
 			$('html, body').animate({scrollTop: $('#' + id).offset().top}, 'slow');
 		}
+		
 	});
 
 	$(".lista > li").click(function() {
