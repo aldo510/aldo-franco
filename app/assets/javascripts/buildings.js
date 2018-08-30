@@ -37,6 +37,7 @@ $( document ).on('turbolinks:load', function() {
     }
   });
   window.banerSlider2 = $('.slider-fullscreen-2').bxSlider({
+    mode: 'vertical',
     infiniteLoop: true,
     auto: false,
     autoControls: true,
