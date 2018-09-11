@@ -639,14 +639,14 @@ building = Building.create(name: 'toluca convention center',
                          'buildings/toluca-convention-center/TOLUCACC6.jpg',
                          'buildings/toluca-convention-center/TOLUCACC7.jpg',
                          'buildings/toluca-convention-center/TOLUCACC8.jpg'],
-                imagesori: ['buildingsorigin/PUBLIC/TOLUCA/TOLUCACC1.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC2.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC3.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC4.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC5.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC6.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC7.jpg',
-                            'buildingsorigin/PUBLIC/TOLUCA/TOLUCACC8.jpg'])
+                imagesori: ['buildingsorigin/Public/TOLUCA/TOLUCACC1.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC2.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC3.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC4.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC5.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC6.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC7.jpg',
+                            'buildingsorigin/Public/TOLUCA/TOLUCACC8.jpg'])
 
 publics.buildings << building
 commercial.buildings << building
