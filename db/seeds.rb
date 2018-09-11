@@ -357,11 +357,11 @@ building = Building.create(name: '​max mix',
                          'buildings/max-mix/MAXMIX4.jpg',
                          'buildings/max-mix/MAXMIX5.jpg',
                          'buildings/max-mix/MAXMIX1.jpg'],
-                imagesori: ['buildingsorigin/Office/MAXMIX/MAXMIX2.jpg',
-                            'buildingsorigin/Office/MAXMIX/MAXMIX3.jpg',
-                            'buildingsorigin/Office/MAXMIX/MAXMIX4.jpg',
-                            'buildingsorigin/Office/MAXMIX/MAXMIX5.jpg',
-                            'buildingsorigin/Office/MAXMIX/MAXMIX1.jpg'])
+                imagesori: ['buildingsorigin/Office/MAXMIX/maxmix2.jpg',
+                            'buildingsorigin/Office/MAXMIX/maxmix3.jpg',
+                            'buildingsorigin/Office/MAXMIX/maxmix4.jpg',
+                            'buildingsorigin/Office/MAXMIX/maxmix5.jpg',
+                            'buildingsorigin/Office/MAXMIX/maxmix1.jpg'])
 
 office.buildings << building
 commercial.buildings << building
