@@ -170,6 +170,27 @@ residential.buildings << Building.create(name: 'u house',
                             'buildingsorigin/Residential/UHOUSE/UHOUSE5.JPG',
                             'buildingsorigin/Residential/UHOUSE/UHOUSE6.JPG'])
 
+residential.buildings << Building.create(name: 're 32 house',
+                description: '',
+                year: '2012',
+                location: 'Mexico City',
+                area: '420 sqm' ,
+                thumbnail: 'thumbnail/rehouse.jpg',
+                images: ['buildings/RE32HOUSE/rehouse1.jpg',
+                         'buildings/RE32HOUSE/rehouse2.jpg',
+                         'buildings/RE32HOUSE/rehouse3.jpg',
+                         'buildings/RE32HOUSE/rehouse4.jpg',
+                         'buildings/RE32HOUSE/rehouse5.jpg',
+                         'buildings/RE32HOUSE/rehouse6.jpg',
+                         'buildings/RE32HOUSE/rehouse7.jpg'],
+                imagesori: ['buildingsorigin/Residential/RE32HOUSE/rehouse1.jpg',
+                            'buildingsorigin/Residential/RE32HOUSE/rehouse2.jpg',
+                            'buildingsorigin/Residential/RE32HOUSE/rehouse3.jpg',
+                            'buildingsorigin/Residential/RE32HOUSE/rehouse4.jpg',
+                            'buildingsorigin/Residential/RE32HOUSE/rehouse5.jpg',
+                            'buildingsorigin/Residential/RE32HOUSE/rehouse6.jpg',
+                            'buildingsorigin/Residential/RE32HOUSE/rehouse7.jpg'])
+
 
 
 
@@ -340,7 +361,7 @@ building = Building.create(name: '​max mix',
                             'buildingsorigin/Office/MAXMIX/MAXMIX3.jpg',
                             'buildingsorigin/Office/MAXMIX/MAXMIX4.jpg',
                             'buildingsorigin/Office/MAXMIX/MAXMIX5.jpg',
-                            'buildingsorigin/Office/MAXMIX/MAXMIX1.JPG'])
+                            'buildingsorigin/Office/MAXMIX/MAXMIX1.jpg'])
 
 office.buildings << building
 commercial.buildings << building
@@ -396,6 +417,75 @@ office.buildings << Building.create(name: 'winsor headquarters',
                             'buildingsorigin/Office/WINSOR/windsor11.jpg',
                             'buildingsorigin/Office/WINSOR/windsor12.jpg'])
 
+
+
+office.buildings << Building.create(name: 'Abanca México',
+                description: '',
+                year: '2017',
+                location: 'Mexico City',
+                area: '300 sqm',
+                thumbnail: 'thumbnail/abanca.jpg',
+                images: ['buildings/ABANCAMEXICO/abanca1.jpg',
+                         'buildings/ABANCAMEXICO/abanca2.jpg',
+                         'buildings/ABANCAMEXICO/abanca3.jpg',
+                         'buildings/ABANCAMEXICO/abanca4.jpg',
+                         'buildings/ABANCAMEXICO/abanca5.jpg',
+                         'buildings/ABANCAMEXICO/abanca6.jpg',
+                         'buildings/ABANCAMEXICO/abanca7.jpg',
+                         'buildings/ABANCAMEXICO/abanca8.jpg'],
+                imagesori: ['buildingsorigin/Office/ABANCAMEXICO/abanca1.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca2.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca3.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca4.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca5.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca6.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca7.jpg',
+                            'buildingsorigin/Office/ABANCAMEXICO/abanca8.jpg'])
+
+
+office.buildings << Building.create(name: 'Jacobs México',
+                description: '',
+                year: '2018',
+                location: 'Mexico City',
+                area: '450 sqm',
+                thumbnail: 'thumbnail/jacobs.jpg',
+                images: ['buildings/JACOBSMEXICO/jacobs1.jpg',
+                         'buildings/JACOBSMEXICO/jacobs2.jpg',
+                         'buildings/JACOBSMEXICO/jacobs3.jpg',
+                         'buildings/JACOBSMEXICO/jacobs4.jpg',
+                         'buildings/JACOBSMEXICO/jacobs5.jpg',
+                         'buildings/JACOBSMEXICO/jacobs6.jpg',
+                         'buildings/JACOBSMEXICO/jacobs7.jpg',
+                         'buildings/JACOBSMEXICO/jacobs8.jpg',
+                         'buildings/JACOBSMEXICO/jacobs9.jpg',
+                         'buildings/JACOBSMEXICO/jacobs10.jpg'],
+                imagesori: ['buildingsorigin/Office/JACOBSMEXICO/jacobs1.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs2.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs3.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs4.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs5.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs6.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs7.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs8.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs9.jpg',
+                            'buildingsorigin/Office/JACOBSMEXICO/jacobs10.jpg'])
+
+
+
+office.buildings << Building.create(name: 'Ethan gas oil',
+                description: '',
+                year: '2014',
+                location: 'Mexico City',
+                area: '530 sqm',
+                thumbnail: 'thumbnail/ethan.jpg',
+                images: ['buildings/ETHAN/ethan1.jpg',
+                         'buildings/ETHAN/ethan2.jpg',
+                         'buildings/ETHAN/ethan3.jpg',
+                         'buildings/ETHAN/ethan4.jpg'],
+                imagesori: ['buildingsorigin/Office/ETHAN/ethan1.jpg',
+                            'buildingsorigin/Office/ETHAN/ethan2.jpg',
+                            'buildingsorigin/Office/ETHAN/ethan3.jpg',
+                            'buildingsorigin/Office/ETHAN/ethan4.jpg'])
 
 
 office.buildings << Building.create(name: 'eg headquarters',
@@ -463,6 +553,28 @@ education.buildings << Building.create(name: 'cuajimalpa community center',
                             'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC4.jpg',
                             'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC5.jpg',
                             'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC6.jpg'])
+
+
+education.buildings << Building.create(name: 'Vasconcelos Elementary',
+                description: '',
+                year: '2011',
+                location: 'Mexico City',
+                area: '22,100.00 sqm',
+                thumbnail: 'thumbnail/vasconcelos.jpg',
+                images: ['buildings/VASCONCELOS/vasconcelos1.jpg',
+                         'buildings/VASCONCELOS/vasconcelos2.jpg',
+                         'buildings/VASCONCELOS/vasconcelos3.jpg',
+                         'buildings/VASCONCELOS/vasconcelos4.jpg',
+                         'buildings/VASCONCELOS/vasconcelos5.jpg',
+                         'buildings/VASCONCELOS/vasconcelos6.jpg',
+                         'buildings/VASCONCELOS/vasconcelos7.jpg'],
+                imagesori: ['buildingsorigin/Education/VASCONCELOS/vasconcelos1.jpg',
+                            'buildingsorigin/Education/VASCONCELOS/vasconcelos2.jpg',
+                            'buildingsorigin/Education/VASCONCELOS/vasconcelos3.jpg',
+                            'buildingsorigin/Education/VASCONCELOS/vasconcelos4.jpg',
+                            'buildingsorigin/Education/VASCONCELOS/vasconcelos5.jpg',
+                            'buildingsorigin/Education/VASCONCELOS/vasconcelos6.jpg',
+                            'buildingsorigin/Education/VASCONCELOS/vasconcelos7.jpg'])
 
 
 

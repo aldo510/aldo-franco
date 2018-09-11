@@ -1,61 +1,13 @@
 <% content_for :head do %>
 <meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
-<section id="banner-clic" style="display: none;">
-  <div class="banner-slider-2" id="home-slider">
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "Raw Republic", building_path(id: 9), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/3BosquedeCanelos.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "Bosque de Canelos", building_path(id: 4), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/5UHouseBosquedeCanelos.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "U House", building_path(id: 7), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/4WinsorHeadquarters.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "Winsor Headquarters", building_path(id: 15), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/2BeConceptStore.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "Be Concept Store", building_path(id: 8), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/6CARSOAP.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "Carso AP", building_path(id: 3), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-    <div class="item-container">
-      <%= image_tag 'static_pages/home/7TolucaConventionCenter.jpg', class: 'w-100 img-fluid' %>
-      <%= link_to "Toluca Convention Center", building_path(id: 20), class: "item-title" %>
-      <div class="item-title-2">
-      </div>
-    </div>
-  </div>
-  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow-2', class: 'slider-arrows ' %>
-  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow-2', class: 'slider-arrows ' %>
-  <%= image_tag 'icons/close.svg', id: 'close-arrow', class: 'slider-arrows ' %>
-</section>
+
 <section id="banner">
   <%= render partial: 'layouts/navbar' %>
   <div class="banner-slider" id="home-slider">
     <div class="item-container">
       <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid img-banner' %>
-      <%= link_to "Raw Republic", building_path(id: 9), class: "item-title" %>
+      <%= link_to "Raw Republic", building_path(id: 10), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
@@ -73,13 +25,13 @@
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/4WinsorHeadquarters.jpg', class: 'w-100 img-fluid img-banner' %>
-      <%= link_to "Winsor Headquarters", building_path(id: 15), class: "item-title" %>
+      <%= link_to "Winsor Headquarters", building_path(id: 16), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
       <%= image_tag 'static_pages/home/2BeConceptStore.jpg', class: 'w-100 img-fluid img-banner' %>
-      <%= link_to "Be Concept Store", building_path(id: 8), class: "item-title" %>
+      <%= link_to "Be Concept Store", building_path(id: 9), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
@@ -90,8 +42,8 @@
       </div>
     </div>
     <div class="item-container">
-      <%= image_tag 'static_pages/home/7TolucaConventionCenter.jpg', class: 'w-100 img-fluid img-banner' %>
-      <%= link_to "Toluca Convention Center", building_path(id: 20), class: "item-title" %>
+      <%= image_tag 'static_pages/home/jacobs.jpg', class: 'w-100 img-fluid' %>
+      <%= link_to "Jacobs México", building_path(id: 18), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>

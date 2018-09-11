@@ -6,6 +6,7 @@ $( document ).on('turbolinks:load', function() {
 	});
 	$('.banner-slider-2').slick({
 		autoplay: true,
+		autoplaySpeed: 4000,
 		infinite: true,
 		dots: false,
 		arrows: false

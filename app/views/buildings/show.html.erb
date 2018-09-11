@@ -18,11 +18,12 @@
   </div>
 </section>
 <section id="main-slider">
+  <%= image_tag "icons/expandir.svg", id: "expandir-icon", class: "full-slider" %>
   <div class="slider-fullscreen">
 
     <% @building.images.each do |link| %>
     <div class="item-container">
-      <%= image_tag link, class: 'slider-img full-slider' %>
+      <%= image_tag link, class: 'slider-img ' %>
     </div>
     <% end %>
 

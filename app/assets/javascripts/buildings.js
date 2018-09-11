@@ -26,7 +26,7 @@ $( document ).on('turbolinks:load', function() {
   
 
   window.banerSlider = $('.slider-fullscreen').bxSlider({
-    infiniteLoop: true,
+    infiniteLoop: false,
     auto: false,
     autoControls: true,
     controls: true,
@@ -38,7 +38,7 @@ $( document ).on('turbolinks:load', function() {
   });
   window.banerSlider2 = $('.slider-fullscreen-2').bxSlider({
     // mode: 'fade',
-    infiniteLoop: true,
+    infiniteLoop: false,
     auto: false,
     autoControls: true,
     controls: true,
@@ -61,7 +61,7 @@ $( document ).on('turbolinks:load', function() {
     window.banerSlider2.reloadSlider();
     total = window.banerSlider.getCurrentSlide();
     console.log(total);
-    window.banerSlider2.goToSlide(total );
+    window.banerSlider2.goToSlide(total);
   });
   $(document).keydown(function(e){
     if (e.keyCode == 39) // Right arrow 
