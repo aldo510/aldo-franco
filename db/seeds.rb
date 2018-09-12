@@ -419,7 +419,7 @@ office.buildings << Building.create(name: 'winsor headquarters',
 
 
 
-office.buildings << Building.create(name: 'Abanca México',
+office.buildings << Building.create(name: 'Abanca Mexico',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -443,7 +443,7 @@ office.buildings << Building.create(name: 'Abanca México',
                             'buildingsorigin/Office/ABANCAMEXICO/abanca8.jpg'])
 
 
-office.buildings << Building.create(name: 'Jacobs México',
+office.buildings << Building.create(name: 'Jacobs Mexico',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
