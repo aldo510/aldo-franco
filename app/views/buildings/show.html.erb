@@ -19,6 +19,8 @@
 </section>
 <section id="main-slider">
   <%= image_tag "icons/expandir.svg", id: "expandir-icon", class: "full-slider" %>
+  <%= image_tag "static_pages/home/right_arrow.svg", id: "flecha-derecha" %>
+  <%= image_tag "static_pages/home/left_arrow.svg", id: "flecha-izquierda" %>
   <div class="slider-fullscreen">
 
     <% @building.images.each do |link| %>
@@ -26,7 +28,6 @@
       <%= image_tag link, class: 'slider-img ' %>
     </div>
     <% end %>
-
   </div>
 
   <div id="slider-text">
