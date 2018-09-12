@@ -70,12 +70,12 @@ $( document ).on('turbolinks:load', function() {
   $(document).keydown(function(e){
     if (e.keyCode == 39) // Right arrow 
     {
-      banerSlider.goToNextSlide();
+      $('.slider-fullscreen').slick('slickNext');
       return false;
     }
     else if (e.keyCode == 37) // left arrow
     {
-     banerSlider.goToPrevSlide();
+     $('.slider-fullscreen').slick('slickPrev');
      return false;
    }
  });
