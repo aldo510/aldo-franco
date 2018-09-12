@@ -209,6 +209,16 @@
       arrows: false
     });
 
+    $(document).keydown(function(e){
+      if (e.keyCode == 39) {
+        $('.banner-slider').slick('slickNext');
+        return false;
+      }else if (e.keyCode == 37) {
+        $('.banner-slider').slick('slickPrev');
+        return false;
+      }
+    });
+    
     $('#left-arrow').click(function() {
       $('.banner-slider').slick('slickPrev');
     });
