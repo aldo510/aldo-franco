@@ -1,5 +1,5 @@
 
-$( document ).on('turbolinks:load', function() {
+$(function () {
 
 	$('#click-here').click(function() {
 		$("#intro").hide();
