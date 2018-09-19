@@ -64,7 +64,7 @@
     <div class="col-8 mx-auto">
       <ul class="work-ul-2">
         <% @build_hash.keys.each do |key| %>
-          <%= link_to key.capitalize, buildings_path(target: "#{key}"), class: 'text-uppercase col sections-2 text-black', data: { target: "#{key[0..2]}-div" } %>
+          <%= link_to key.capitalize.singularize, buildings_path(target: "#{key}"), class: 'text-uppercase col sections-2 text-black', data: { target: "#{key[0..2]}-div" } %>
         <% end %>
       </ul>
     </div>
