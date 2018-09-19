@@ -52,7 +52,7 @@
     <div class="col-8 mx-auto">
       <ul class="work-ul">
         <% @build_hash.keys.each do |key| %>
-          <%= link_to key.capitalize.singularize, buildings_path(target: "#{key}"), class: 'text-uppercase col sections text-white', data: { target: "#{key[0..2]}-div" } %>
+          <%= link_to key.capitalize.singularize, buildings_path(target: "#{key}"), class: ' got-thi text-uppercase col sections text-white', data: { target: "#{key[0..2]}-div" } %>
         <% end %>
       </ul>
     </div>
@@ -62,7 +62,7 @@
         <div class="row">
           <% buildings.each do | b | %>
             <div class="col-3">
-              <%= link_to b.name.capitalize, building_path(b), class: "text-white menu-li text-capitalize" %>
+              <%= link_to b.name.capitalize, building_path(b), class: "text-white menu-li got-thi text-capitalize" %>
             </div>
           <% end %>
         </div>
