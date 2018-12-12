@@ -36,16 +36,16 @@
         <%= form_tag contact_path, method: :post do %>
           <div class="row border-bottom mar-top-15">
             <div class="col-md-6 border-ri">
-              <%= text_field_tag 'name', nil, class: 'form-control contact-inputs', placeholder: 'Name' %>
+              <%= text_field_tag 'name', nil, class: 'form-control contact-inputs', placeholder: 'Name', :required => true %>
             </div>
             <div class="col-md-6">
-              <%= text_field_tag 'email', nil, class: 'form-control contact-inputs', placeholder: 'Email' %>
+              <%= text_field_tag 'email', nil, class: 'form-control contact-inputs', placeholder: 'Email', :required => true %>
             </div>
           </div>
 
           <div class="row">
             <div class="col pad-top-5" style="padding-right: 0; padding-left: 0;">
-              <%= text_area_tag 'comments', nil, class: 'form-control contact-comments', placeholder: 'Comments' %>
+              <%= text_area_tag 'comments', nil, class: 'form-control contact-comments', placeholder: 'Comments', :required => true %>
             </div>
           </div>
           <div class="row">
