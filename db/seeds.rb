@@ -131,6 +131,29 @@ residential.buildings << Building.create(name: 'departamento ppg',
                             'buildingsorigin/Residential/DEPARTAMENTOPPG/PPG4.jpg',
                             'buildingsorigin/Residential/DEPARTAMENTOPPG/PPG5.jpg'])
 
+residential.buildings << Building.create(name: 'San Nicolás VV',
+                description: '',
+                year: '2019',
+                location: 'Valle de Bravo',
+                area: '22,000 sqm' ,
+                thumbnail: 'thumbnail/sannicolas.jpg',
+                images: ['buildings/SAN_NICOLAS/sannicolas1.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas2.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas3.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas4.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas5.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas6.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas7.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas8.jpg'],
+                imagesori: ['buildings/SAN_NICOLAS/sannicolas1.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas2.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas3.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas4.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas5.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas6.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas7.jpg',
+                         'buildings/SAN_NICOLAS/sannicolas8.jpg'])
+
 
 residential.buildings << Building.create(name: 'tamarindos 902',
                 description: '',
@@ -323,7 +346,25 @@ commercial.buildings << Building.create(name: 'plaza polanquito',
                             'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito3.jpg',
                             'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito5.jpg'])
 
+building = Building.create(name: 'Paddock interprotección',
+                description: '',
+                year: '2019',
+                location: 'Mexico City',
+                area: '640.00 sqm',
+                thumbnail: 'thumbnail/interproteccion.jpg',
+                images: ['buildings/INTERPROTECCION/inter1.jpg',
+                         'buildings/INTERPROTECCION/inter2.jpg',
+                         'buildings/INTERPROTECCION/inter3.jpg',
+                         'buildings/INTERPROTECCION/inter4.jpg',
+                         'buildings/INTERPROTECCION/inter5.jpg'],
+                imagesori: ['buildings/INTERPROTECCION/inter1.jpg',
+                         'buildings/INTERPROTECCION/inter2.jpg',
+                         'buildings/INTERPROTECCION/inter3.jpg',
+                         'buildings/INTERPROTECCION/inter4.jpg',
+                         'buildings/INTERPROTECCION/inter5.jpg'])
 
+commercial.buildings << building
+office.buildings << building
 
 
 # -----------------------------------------------------------------------------
