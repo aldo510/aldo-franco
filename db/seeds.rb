@@ -331,6 +331,27 @@ commercial.buildings << Building.create(name: 'in the mix',
                             'buildingsorigin/Commercial/INTHEMIX/inthemix5.jpg',
                             'buildingsorigin/Commercial/INTHEMIX/inthemix6.jpg'])
 
+commercial.buildings << Building.create(name: 'ARRIVALS',
+                description: '',
+                year: '2019',
+                location: 'Mexico City',
+                area: '150.00 sqm',
+                thumbnail: 'thumbnail/inthemix.jpg',
+                images: ['https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals1.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals2.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514178/Arrivals/arrivals3.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals4.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals5.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514175/Arrivals/arrivals6.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514176/Arrivals/arrivals7.jpg'],
+                imagesori: ['https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals1.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals2.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514178/Arrivals/arrivals3.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals4.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514179/Arrivals/arrivals5.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514175/Arrivals/arrivals6.jpg',
+                         'https://res.cloudinary.com/ablanco/image/upload/v1576514176/Arrivals/arrivals7.jpg'])
+
 commercial.buildings << Building.create(name: 'plaza polanquito',
                 description: '',
                 year: '2014',
@@ -484,7 +505,7 @@ office.buildings << Building.create(name: 'Abanca Mexico',
                             'buildingsorigin/Office/ABANCAMEXICO/abanca8.jpg'])
 
 
-office.buildings << Building.create(name: 'Jacobs Mexico',
+office.buildings << Building.create(name: 'Jacobs México',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
