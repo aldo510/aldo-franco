@@ -367,22 +367,22 @@ commercial.buildings << Building.create(name: 'plaza polanquito',
                             'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito3.jpg',
                             'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito5.jpg'])
 
-building = Building.create(name: 'Paddock interprotección',
+building = Building.create(name: 'Brokers Paddock',
                 description: '',
                 year: '2019',
                 location: 'Mexico City',
                 area: '640.00 sqm',
                 thumbnail: 'https://res.cloudinary.com/ablanco/image/upload/v1576101933/interproteccion.jpg',
                 images: ['https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter1.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter2.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter3.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter4.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter5.jpg'],
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897085/inter2c_mrisjo.jpg',
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897084/inter3c_oymdip.jpg',
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897085/inter4c_odyawi.jpg',
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897084/inter5c_vevmma.jpg'],
                 imagesori: ['https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter1.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter2.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter3.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter4.jpg',
-                         'https://res.cloudinary.com/ablanco/image/upload/v1576102319/interproteccion/inter5.jpg'])
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897085/inter2c_mrisjo.jpg',
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897084/inter3c_oymdip.jpg',
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897085/inter4c_odyawi.jpg',
+                         'https://res.cloudinary.com/joseantoniopyr/image/upload/v1591897084/inter5c_vevmma.jpg'])
 
 commercial.buildings << building
 office.buildings << building
