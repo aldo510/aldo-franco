@@ -54,7 +54,7 @@ residential.buildings << Building.create(name: 'Carso AP',
                 images: ['https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP1.jpg',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP2.jpg',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP3.jpg',
-                         'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP4.jpg'.
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP4.jpg',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP5.jpg',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP6.jpg',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/carso/CARSOAP7.jpg',
