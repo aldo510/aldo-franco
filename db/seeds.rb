@@ -313,6 +313,25 @@ commercial.buildings << Building.create(name: 'be concept store',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/be-concept-store/BECONCEPT8.jpg',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/be-concept-store/BECONCEPT9.jpg'])
 
+commercial.buildings << Building.create(name: 'Puma México',
+                description: '',
+                year: '2022
+                ',
+                location: 'Mexico City',
+                area: '1400 sqm' ,
+                thumbnail: 'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera001.jpg',
+                images: ['https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera001.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera002.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera003.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera005.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera006.jpg'],
+                imagesori: ['https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera001.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera002.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera003.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera005.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera006.jpg'])
+
+
 commercial.buildings << Building.create(name: 'raw republic',
                 description: '',
                 year: '2017',
@@ -489,6 +508,30 @@ building = Building.create(name: 'Elefantec Global',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/elefantec/elefantec2.png',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/elefantec/elefantec3.png',
                          'https://aldofranco.s3.amazonaws.com/projects/buildings/elefantec/elefantec4.png'])
+office.buildings << building
+
+building = Building.create(name: 'Metalitec',
+                description: '',
+                year: '2020',
+                location: 'Mexico City',
+                area: '1200 sqm',
+                thumbnail: 'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V1.PL.160520_Camera010-copia.jpg',
+                images: ['https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V1.PL.160520_Camera010-copia.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera001-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera002-copia-(3).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera002-copia-(3).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera003-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera004-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera011-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera012-copia-(2).jpg'],
+                imagesori: ['https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V1.PL.160520_Camera010-copia.jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera001-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera002-copia-(3).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera002-copia-(3).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera003-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera004-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera011-copia-(2).jpg',
+                         'https://aldofranco.s3.amazonaws.com/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera012-copia-(2).jpg'])
 office.buildings << building
 
 building = Building.create(name: '​max mix',

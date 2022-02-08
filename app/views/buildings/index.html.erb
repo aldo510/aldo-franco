@@ -42,7 +42,7 @@
             <% arr.each do |building| %>
               <div class="col-sm-4 col-12 img-build">
                 <%= link_to building_path(building) do %>
-                  <%= image_tag building.thumbnail, class: 'img-fluid w-100 img-build my-3' %>
+                  <%= image_tag building.thumbnail, class: 'img-fluid w-100 img-build my-3', loading: "lazy", alt: "aldo-franco-image" %>
                   <p class="build-text got-thi"><%= building.name.capitalize %></p>
                 <% end %>
               </div>
