@@ -9,23 +9,25 @@
       <div class="slider-fullscreen-2">
         <% @building.imagesori.each do |link| %>
         <div class="item-container">
-          <%= image_tag link, class: 'slider-img ', loading:"lazy" %>
+          <%#= image_tag link, class: 'slider-img '%>
+          <img src="http://d3tlw7q61ww5gp.cloudfront.net/<%=link%>" loading="lazy" class="slider-img" alt="Aldo Franco building">
         </div>
         <% end %>
       </div>
-      <%= image_tag "icons/close.svg", id: "icon-close", loading:"lazy" %>
+      <%= image_tag "icons/close.svg", id: "icon-close"%>
     </div>
   </div>
 </section>
 <section id="main-slider">
-  <%= image_tag "icons/expandir.svg", id: "expandir-icon", class: "full-slider", loading:"lazy" %>
-  <%= image_tag "static_pages/home/right_arrow.svg", id: "flecha-derecha", loading:"lazy" %>
-  <%= image_tag "static_pages/home/left_arrow.svg", id: "flecha-izquierda", loading:"lazy" %>
+  <%= image_tag "icons/expandir.svg", id: "expandir-icon", class: "full-slider"%>
+  <%= image_tag "static_pages/home/right_arrow.svg", id: "flecha-derecha"%>
+  <%= image_tag "static_pages/home/left_arrow.svg", id: "flecha-izquierda"%>
   <div class="slider-fullscreen">
 
-    <% @building.images.each do |link| %>
-    <div class="item-container">
-      <%= image_tag link, class: 'slider-img ', loading:"lazy" %>
+    <% @images_building.shuffle.each do |link| %>
+    <div class="item-container carousel-image">
+      <%#= image_tag link, class: 'slider-img' %>
+      <img src="http://d3tlw7q61ww5gp.cloudfront.net/<%=link%>" loading="lazy" class="slider-img" alt="Aldo Franco building">
     </div>
     <% end %>
   </div>
@@ -43,7 +45,7 @@
   <!-- <div id="mini-fotos" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
     <%# @building.images.each do |link| %>
     <div class="item-container">
-      <%#= image_tag link, class: 'img-fluid', loading:"lazy" %>
+      <%#= image_tag link, class: 'img-fluid'%>
     </div>
     <%# end %>
   </div> -->
@@ -73,7 +75,8 @@
           <% @similar.each do |building| %>
           <div class="col-sm-4 col-12 img-build mar-bot">
             <%= link_to building_path(building) do %>
-            <%= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-md-4', loading:"lazy" %>
+            <%#= image_tag building.thumbnail, class: 'img-fluid w-100 slider-img m-md-4'%>
+            <img src="http://d3tlw7q61ww5gp.cloudfront.net/<%=building.images.first%>" loading="lazy" class="slider-img m-md-4 img-fluid w-100" alt="Aldo Franco building">
             <p class="build-text got-thi"><%= building.name.capitalize %></p>
             <% end %>
           </div>
