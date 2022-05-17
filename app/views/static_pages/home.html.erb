@@ -6,38 +6,44 @@
   <%= render partial: 'layouts/navbar' %>
   <div class="banner-slider" id="home-slider">
     <div class="item-container">
-      <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid img-banner' , loading: "lazy" %>
+      <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid img-banner'  %>
       <%= link_to "Raw Republic", building_path(id: 16), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
-      <%= image_tag 'static_pages/home/3BosquedeCanelos.jpg', class: 'w-100 img-fluid img-banner' , loading: "lazy" %>
+      <%= image_tag 'http://d3tlw7q61ww5gp.cloudfront.net/projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera001-copia-(2).jpg', class: 'w-100 img-fluid img-banner'  %>
+      <%= link_to "Metalitec", building_path(id: 23), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
+      <%= image_tag 'static_pages/home/3BosquedeCanelos.jpg', class: 'w-100 img-fluid img-banner'  %>
       <%= link_to "Bosque de Canelos", building_path(id: 4), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
-      <%= image_tag 'http://d3tlw7q61ww5gp.cloudfront.net/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera003.jpg', class: 'w-100 img-fluid img-banner', loading: "lazy" %>
+      <%= image_tag 'http://d3tlw7q61ww5gp.cloudfront.net/projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera003.jpg', class: 'w-100 img-fluid img-banner' %>
       <%= link_to "Puma México ", building_path(id: 15), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
-      <%= image_tag 'static_pages/home/6CARSOAP.jpg', class: 'w-100 img-fluid img-banner' , loading: "lazy" %>
+      <%= image_tag 'static_pages/home/6CARSOAP.jpg', class: 'w-100 img-fluid img-banner'  %>
       <%= link_to "Carso AP", building_path(id: 3), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
     <div class="item-container">
-      <%= image_tag 'static_pages/home/jacobs.jpg', class: 'w-100 img-fluid' , loading: "lazy" %>
+      <%= image_tag 'static_pages/home/jacobs.jpg', class: 'w-100 img-fluid'  %>
       <%= link_to "Jacobs México", building_path(id: 27), class: "item-title" %>
       <div class="item-title-2">
       </div>
     </div>
   </div>
-  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows  d-lg-block' , loading: "lazy" %>
-  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows  d-lg-block' , loading: "lazy" %>
+  <%= image_tag 'static_pages/home/left_arrow.svg', id: 'left-arrow', class: 'slider-arrows  d-lg-block'  %>
+  <%= image_tag 'static_pages/home/right_arrow.svg', id: 'right-arrow', class: 'slider-arrows  d-lg-block'  %>
   <div id="dots-container" class="d-none d-lg-block">
     <ul id="dot-list">
     </ul>
@@ -58,7 +64,7 @@
       <div class="col-10 mx-auto">
         <div class="row pad-bot-5 d-none d-sm-block">
           <div class="col-5" id="logo-puntos">
-            <%= image_tag "static_pages/home/logopuntos.svg", class: "img-fluid" , loading: "lazy" %>
+            <%= image_tag "static_pages/home/logopuntos.svg", class: "img-fluid"  %>
           </div>
         </div>
         <div class="row">
@@ -96,7 +102,7 @@
             </div>
           </div>
           <div class="col-sm-7 col-5 d-none d-sm-block" id="img-about">
-            <%= image_tag "static_pages/home/OFFICE.jpg", class: "img-fluid", loading: "lazy" %>
+            <%= image_tag "static_pages/home/OFFICE.jpg", class: "img-fluid" %>
           </div>
         </div>
       </div>
