@@ -16,7 +16,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <p class="text-center text-green contact-texts">contacto@aldofranco.com</p>
+            <a href="mailto:contacto@aldofranco.com" class="text-center d-block text-green contact-texts">contacto@aldofranco.com</a>
           </div>
         </div>
         <div class="row redes-sociales mar-top-15">
@@ -24,7 +24,9 @@
             <%= image_tag 'icons/face.svg', class: 'contact-icons' %>
           </div>
           <div class="col-2">
+            <%= link_to "https://www.instagram.com/aldofrancoarquitectos/?hl=es", target: "_blank" do %>
             <%= image_tag 'icons/instagram.svg', class: 'contact-icons' %>
+            <% end %>
           </div>
           <div class="col-2">
             <%= image_tag 'icons/linkedin.svg', class: 'contact-icons' %>

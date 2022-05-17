@@ -24,10 +24,10 @@
   <%= image_tag "static_pages/home/left_arrow.svg", id: "flecha-izquierda"%>
   <div class="slider-fullscreen">
 
-    <% @images_building.shuffle.each do |link| %>
+    <% @images_building.each do |link| %>
     <div class="item-container carousel-image">
       <%#= image_tag link, class: 'slider-img' %>
-      <img src="http://d3tlw7q61ww5gp.cloudfront.net/<%=link%>" loading="lazy" class="slider-img" alt="Aldo Franco building">
+      <img src="http://d3tlw7q61ww5gp.cloudfront.net/<%=link%>" class="slider-img" alt="Aldo Franco building">
     </div>
     <% end %>
   </div>
