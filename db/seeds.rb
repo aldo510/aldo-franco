@@ -265,6 +265,7 @@ residential.buildings << Building.create(name: 'Alcazar de Toledo',
                          'projects/buildings/alcazar/alcazar6.jpg',
                          'projects/buildings/alcazar/alcazar7.jpg'])
 
+
 building = residential.buildings << Building.create(name: 'Norte 13',
                 description: '',
                 year: '2021',
@@ -279,7 +280,7 @@ building = residential.buildings << Building.create(name: 'Norte 13',
                          'projects/buildings/moctezuma/norte2.jpg',
                          'projects/buildings/moctezuma/norte3.jpg',
                          'projects/buildings/moctezuma/norte4.jpg'])
-commercial.buildings << building
+# commercial.buildings << building
 
 
 
@@ -469,7 +470,6 @@ building = Building.create(name: 'Brokers Paddock',
                          'projects/buildings/INTERPROTECCION/inter4.jpg',
                          'projects/buildings/INTERPROTECCION/inter5.jpg'])
 
-commercial.buildings << building
 office.buildings << building
 
 
@@ -550,7 +550,6 @@ building = Building.create(name: '​max mix',
                          'projects/buildings/max-mix/MAXMIX5.jpg'])
 
 office.buildings << building
-commercial.buildings << building
 
 
 
@@ -835,4 +834,23 @@ building = Building.create(name: 'toluca convention center',
                             'buildingsorigin/Public/TOLUCA/TOLUCACC8.jpg'])
 
 publics.buildings << building
-commercial.buildings << building
+# commercial.buildings << building
+
+residential.buildings << Building.create(name: 'Casa Origami',
+                description: '',
+                year: '2022',
+                location: 'Mexico City',
+                area: '830 sqm' ,
+                thumbnail: 'thumbnail/residential/casaorigami2.jpg',
+                imagesori: ['projects/buildings/CASA ORIGAMI/1313x876/casaorigami2.jpg',
+                         'projects/buildings/CASA ORIGAMI/1313x876/casaorigami1.jpg',
+                         'projects/buildings/CASA ORIGAMI/1313x876/casaorigami3.jpg',
+                         'projects/buildings/CASA ORIGAMI/1313x876/casaorimami4.jpg',
+                         'projects/buildings/CASA ORIGAMI/1313x876/casaorigami5.jpg',
+                         'projects/buildings/CASA ORIGAMI/1313x876/casaorigami5.jpg'],
+                images: ['projects/buildings/CASA ORIGAMI/190x1080/casaorigami2.jpg',
+                         'projects/buildings/CASA ORIGAMI/190x1080/casaorigami1.jpg',
+                         'projects/buildings/CASA ORIGAMI/190x1080/casaorigami3.jpg',
+                         'projects/buildings/CASA ORIGAMI/190x1080/casaorigami4.jpg',
+                         'projects/buildings/CASA ORIGAMI/190x1080/casaorigami5.jpg',
+                         'projects/buildings/CASA ORIGAMI/190x1080/casaorigami6.jpg'])

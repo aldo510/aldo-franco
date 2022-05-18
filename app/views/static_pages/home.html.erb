@@ -6,6 +6,12 @@
   <%= render partial: 'layouts/navbar' %>
   <div class="banner-slider" id="home-slider">
     <div class="item-container">
+      <%= image_tag 'https://aldofranco.s3.amazonaws.com/projects/buildings/CASA+ORIGAMI/190x1080/casaorigami2.jpg', class: 'w-100 img-fluid img-banner'  %>
+      <%= link_to "Casa Origami", building_path(id: 35), class: "item-title" %>
+      <div class="item-title-2">
+      </div>
+    </div>
+    <div class="item-container">
       <%= image_tag 'static_pages/home/1RawRepublic.jpg', class: 'w-100 img-fluid img-banner'  %>
       <%= link_to "Raw Republic", building_path(id: 16), class: "item-title" %>
       <div class="item-title-2">
