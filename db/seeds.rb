@@ -836,7 +836,7 @@ building = Building.create(name: 'toluca convention center',
 publics.buildings << building
 # commercial.buildings << building
 
-residential.buildings << Building.create(name: 'Casa Origami',
+residential.buildings << Building.create(name: 'Origami House',
                 description: '',
                 year: '2022',
                 location: 'Mexico City',

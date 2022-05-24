@@ -44,17 +44,20 @@
   <ul id="nav-social" class="d-none d-lg-flex">
     <li>
       <a href="">
-        <%= image_tag 'icons/facebookv.svg' %>
+        <%#= image_tag 'icons/facebookv.svg' %>
+        <%= image_tag 'icons/face.svg'%>
       </a>
     </li>
     <li>
-      <a href="">
-        <%= image_tag 'icons/instagramv.svg' %>
-      </a>
+      <%= link_to "https://www.instagram.com/aldofrancoarquitectos/?hl=es", target: "_blank" do %>
+            <%= image_tag 'icons/instagram.svg' %>
+            <% end %>
     </li>
     <li>
       <a href="">
-        <%= image_tag 'icons/linkedinv.svg' %>
+        <%#= image_tag 'icons/linkedinv.svg' %>
+        <%= image_tag 'icons/linkedin.svg' %>
+
       </a>
     </li>
   </ul>
