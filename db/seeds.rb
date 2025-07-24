@@ -1,4 +1,8 @@
-
+Admin.create!(
+    email: "aldo@mail.com",
+    password: BCrypt::Password.create("aldofranco123"),
+  password_digest: BCrypt::Password.create("aldofranco123")
+)
 puts 'Residential --> 0'
 residential = Kind.create(name: 'residential')
 commercial = Kind.create(name: 'commercial')

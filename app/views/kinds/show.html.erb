@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2><%= @kind.name %></h2>
+
+  <% if current_admin %>
+    <%= link_to "✏️ Editar", edit_kind_path(@kind), class: "btn btn-warning mb-3" %>
+  <% end %>
+
+  <h4>Desarrollos:</h4>
+  <ul class="list-group">
+    <% @kind.buildings.each do |b| %>
+      <li class="list-group-item">
+        <%= link_to b.name, building_path(b) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

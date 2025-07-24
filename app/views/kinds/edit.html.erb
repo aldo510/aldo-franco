@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h2>✏️ Editar Categoría</h2>
+
+  <%= form_with model: @kind, local: true, class: "card p-4 shadow" do |form| %>
+    <div class="mb-3">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <%= form.submit "Guardar cambios", class: "btn btn-primary" %>
+    <%= link_to "Cancelar", kind_path(@kind), class: "btn btn-secondary ms-2" %>
+  <% end %>
+</div>
