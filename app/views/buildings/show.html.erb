@@ -1,5 +1,9 @@
 <% content_for :head do %>
   <meta name="turbolinks-cache-control" content="no-cache">
+  <% first_project_image = @building.display_project_images.first %>
+  <% if first_project_image.present? %>
+    <link rel="preload" as="image" href="<%= building_image_url(first_project_image, resize_to_limit: [1400, 1400]) %>">
+  <% end %>
 <% end %>
 
 <%= render partial: 'layouts/navbar_transparent' %>
@@ -9,7 +13,7 @@
       <div class="slider-fullscreen-2">
         <% @building.display_fullscreen_images.each do |image| %>
         <div class="item-container">
-          <%= building_image_tag image, resize_to_limit: [2400, 2400], loading: "lazy", class: "slider-img", alt: "Aldo Franco building" %>
+          <img data-fullscreen-src="<%= building_image_url(image, resize_to_limit: [2200, 2200]) %>" class="slider-img" alt="Aldo Franco building">
         </div>
         <% end %>
       </div>
@@ -23,9 +27,13 @@
   <%= image_tag "static_pages/home/left_arrow.svg", id: "flecha-izquierda"%>
   <div class="slider-fullscreen">
 
-    <% @building.display_project_images.each do |image| %>
+    <% @building.display_project_images.each_with_index do |image, index| %>
     <div class="item-container carousel-image">
-      <%= building_image_tag image, resize_to_limit: [1800, 1800], class: "slider-img", alt: "Aldo Franco building" %>
+      <% if index.zero? %>
+        <%= building_image_tag image, resize_to_limit: [1400, 1400], loading: "eager", fetchpriority: "high", decoding: "async", class: "slider-img", alt: "Aldo Franco building" %>
+      <% else %>
+        <%= building_lazy_image_tag image, resize_to_limit: [1400, 1400], loading: "lazy", decoding: "async", class: "slider-img", alt: "Aldo Franco building" %>
+      <% end %>
     </div>
     <% end %>
   </div>
@@ -73,7 +81,7 @@
           <% @similar.each do |building| %>
           <div class="col-sm-4 col-12 img-build mar-bot">
             <%= link_to building_path(building) do %>
-            <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [900, 900], loading: "lazy", class: "slider-img m-md-4 img-fluid w-100", alt: "Aldo Franco building" %>
+            <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [600, 600], loading: "lazy", decoding: "async", class: "slider-img m-md-4 img-fluid w-100", alt: "Aldo Franco building" %>
             <p class="build-text got-thi"><%= building.name.capitalize %></p>
             <% end %>
           </div>

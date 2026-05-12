@@ -16,6 +16,14 @@ module BuildingsHelper
     )
   end
 
+  def building_lazy_image_tag(image, **options)
+    tag.img(
+      {
+        "data-lazy": building_image_url(image, resize_to_limit: options.delete(:resize_to_limit) || [1800, 1800])
+      }.merge(options)
+    )
+  end
+
   def active_storage_image?(image)
     image.respond_to?(:variant)
   end
@@ -32,7 +40,7 @@ module BuildingsHelper
   def active_storage_image_url(image, resize_to_limit:)
     return url_for(image) unless Gem.loaded_specs.key?("image_processing")
 
-    url_for(image.variant(resize_to_limit: resize_to_limit, saver: { quality: 82, strip: true }))
+    url_for(image.variant(resize_to_limit: resize_to_limit, saver: { quality: 78, strip: true }))
   rescue LoadError
     url_for(image)
   end

@@ -33,6 +33,7 @@ class BuildingsController < ApplicationController
 
     if @building.save
       @building.normalize_image_attachment_positions!
+      @building.warm_image_variants!
       redirect_to admins_path, notice: "Desarrollo creado correctamente"
     else
       @kinds = Kind.order(:name)
@@ -59,6 +60,7 @@ class BuildingsController < ApplicationController
     )
 
     if @building.update(building_params)
+      @building.warm_image_variants!
       redirect_to admins_path, notice: "Desarrollo actualizado correctamente"
     else
       @kinds = Kind.order(:name)
@@ -86,6 +88,7 @@ class BuildingsController < ApplicationController
 
   def migrate_images_to_s3
     count = @building.migrate_legacy_images_to_s3!
+    @building.warm_image_variants!
     redirect_to edit_building_path(@building), notice: "#{count} imagen(es) migrada(s) a S3"
   end
 

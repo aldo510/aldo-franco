@@ -58,6 +58,16 @@ class Building < ApplicationRecord
     normalize_attachment_positions!("fullscreen_images")
   end
 
+  def warm_image_variants!
+    return unless Gem.loaded_specs.key?("image_processing")
+
+    warm_variant(thumbnail_image, [900, 900]) if thumbnail_image.attached?
+    ordered_project_images.each { |image| warm_variant(image, [1400, 1400]) }
+    ordered_fullscreen_images.each { |image| warm_variant(image, [2200, 2200]) }
+  rescue StandardError => error
+    Rails.logger.warn("No se pudieron precalentar variantes para #{name}: #{error.message}")
+  end
+
   def ordered_project_images
     project_images.attachments.includes(:blob).order(:position, :id)
   end
@@ -117,6 +127,10 @@ class Building < ApplicationRecord
     if attachment.byte_size > 12.megabytes
       errors.add(:base, "Cada imagen debe pesar menos de 12 MB")
     end
+  end
+
+  def warm_variant(attachment, resize_to_limit)
+    attachment.variant(resize_to_limit: resize_to_limit, saver: { quality: 78, strip: true }).processed
   end
 
   def migrate_legacy_collection(paths, attachments, attachment_name)
