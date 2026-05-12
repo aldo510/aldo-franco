@@ -198,9 +198,6 @@ nav{
   right: 0;
 }
 
-@include media-breakpoint-down(sm){
-}
-
 .bx-wrapper{
   margin-bottom: 0;
 }
@@ -209,7 +206,7 @@ nav{
   background-color: white;
 
 }
-@include media-breakpoint-down(md) {
+@media (max-width: 991.98px) {
   nav#transparent-navbar{
     .navbar-brand{
       margin-right: 0;
@@ -1039,7 +1036,7 @@ nav#white-navbar{
 
 // media querys
 
-@include media-breakpoint-only(xs) {
+@media (max-width: 575.98px) {
   #banner{
     .slick-slide img {
       display: block;
@@ -1163,10 +1160,7 @@ nav#white-navbar{
     border-color: transparent!important;
   }
 }
-@include media-breakpoint-only(sm) {
-
-}
-@include media-breakpoint-only(md) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .derechos{
     font-size: 10px;
   }
@@ -1178,55 +1172,55 @@ nav#white-navbar{
 
   }
 }
-@include media-breakpoint-only(lg) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .derechos{
     font-size: 10px;
   }
   .direction-foo{
     font-size: 14px;
-    }#intro-video{
-      bottom:30%;
-    }
-    .redes-sociales{
-      padding-top:10%;
+  }
+  #intro-video{
+    bottom:30%;
+  }
+  .redes-sociales{
+    padding-top:10%;
+  }
+}
 
-    }
+@media (min-width: 1200px) {
+  .derechos{
+    font-size: 10px;
   }
-  @include media-breakpoint-only(xl) {
-    .derechos{
-      font-size: 10px;
-    }
-    #intro-video{
-      bottom:35%;
-    }
-    .redes-sociales{
-      padding-top:10%;
+  #intro-video{
+    bottom:35%;
+  }
+  .redes-sociales{
+    padding-top:10%;
+  }
+}
 
+@media (min-width: 576px){
+  #contact{
+    padding-top: 10%;
+  }
+  #main-slider-2{
+    .bx-wrapper img {
+      max-width: 100%;
+      display: block;
+      width: auto;
+      height: 100vh;
+      margin: 0 auto;
+    }
+    .bx-wrapper{
+      background-color: black!important;
+      border: 0!important;
+      box-shadow: none!important;
     }
   }
+}
 
-  @include media-breakpoint-up(sm){
-    #contact{
-      padding-top: 10%;
-    }
-    #main-slider-2{
-      .bx-wrapper img {
-        max-width: 100%;
-        display: block;
-        width: auto;
-        height: 100vh;
-        margin: 0 auto;
-      }
-      .bx-wrapper{
-        background-color: black!important;
-        border: 0!important;
-        box-shadow: none!important;
-      }
-    }
+@media (max-width: 991.98px){
+  .banner-slider{
+    margin-top: 60px;
   }
-  
-  @include media-breakpoint-down(md){
-    .banner-slider{
-      margin-top: 60px;
-    }
-  }
+}

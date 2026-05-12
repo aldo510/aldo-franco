@@ -58,8 +58,8 @@
 </section>
 
 <section id="building-mobile-text" class="d-block d-md-none">
-  <p class="mobile-slider-kind"><%= @building.kinds.map { |kind| kind.name.singularize }.join(' | ') %> | <%= @building.year %></p>
-  <h1 class="mobile-building-name"><%= @building.name %></h1>
+  <p class="mobile-slider-kind text-green"><%= @building.kinds.map { |kind| kind.name.singularize }.join(' | ') %> | <%= @building.year %></p>
+  <h1 class="mobile-building-name text-green"><%= @building.name %></h1>
   <p class="mobile-slider-description">
     <%= @building.description %>
     <%= @building.location %>
@@ -90,7 +90,7 @@
         <div class="row">
           <% @similar.each do |building| %>
           <div class="col-sm-4 col-12 img-build mar-bot">
-            <%= link_to building_path(building) do %>
+            <%= link_to building_path(building), class: "similar-project-link" do %>
             <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [600, 600], loading: "lazy", decoding: "async", class: "slider-img m-md-4 img-fluid w-100", alt: "Aldo Franco building" %>
             <p class="build-text got-thi"><%= building.name.capitalize %></p>
             <% end %>

@@ -187,6 +187,7 @@ $futura: Futura;
 
 #building-mobile-text {
   display: none;
+  background-color: #1A1A1A !important;
 }
 #categories-background{
   transition: all 0.2s linear;
@@ -212,14 +213,12 @@ $futura: Futura;
 #transparent-navbar{
   z-index: 2;
 }
-@include media-breakpoint-up(xs){
-  #back-to-all{
-    margin: 0 auto;
-    padding: 5px 10px;
-    margin-top: 15px;
-  }
+#back-to-all{
+  margin: 0 auto;
+  padding: 5px 10px;
+  margin-top: 15px;
 }
-@include media-breakpoint-only(xs){
+@media (max-width: 575.98px){
   #main-slider-2 {
     position: fixed;
     z-index: 13;
@@ -237,7 +236,7 @@ $futura: Futura;
 }
 
 
-@include media-breakpoint-up(md){
+@media (min-width: 768px){
   .img-build{
     &:hover{
       opacity: 0.6;
@@ -251,7 +250,7 @@ $futura: Futura;
   }  
 }
 
-@include media-breakpoint-down(md){
+@media (max-width: 991.98px){
   #transparent-navbar{
     background-color: white;
     position: static !important;
@@ -281,34 +280,87 @@ $futura: Futura;
   }
 
   #building-mobile-text {
-    display: block;
-    background: $gray;
-    color: white;
-    padding: 20px 22px 30px;
+    display: block !important;
+    background-color: #1A1A1A !important;
+    color: white !important;
+    padding: 22px 24px 34px;
     font-family: $got-thi;
+    overflow: hidden;
+    margin-bottom: 0 !important;
+
+    p,
+    h1 {
+      color: white !important;
+    }
 
     .mobile-slider-kind {
       font-size: 0.85rem;
       line-height: 1.25rem;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
       text-transform: uppercase;
+      color: white !important;
     }
 
     .mobile-building-name {
-      font-size: 1.25rem;
-      line-height: 1.45rem;
-      margin-bottom: 10px;
+      font-size: 1.35rem;
+      line-height: 1.55rem;
+      margin-bottom: 14px;
       text-transform: uppercase;
+      color: white !important;
+      font-family: $got-med;
+      font-weight: 700;
+      letter-spacing: 0;
     }
 
     .mobile-slider-description {
-      font-size: 0.95rem;
-      line-height: 1.55rem;
-      margin-bottom: 0;
+      color: white !important;
+      font-size: 0.95rem !important;
+      line-height: 1.55rem !important;
+      margin-bottom: 0 !important;
+      font-family: $got-thi;
     }
   }
 
   #similar-projects {
     padding-top: 8% !important;
+
+    .img-build {
+      position: relative;
+      margin-bottom: 28px;
+
+      .similar-project-link {
+        display: block !important;
+        position: relative !important;
+        overflow: hidden;
+        min-height: 1px;
+      }
+
+      .slider-img {
+        display: block;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .build-text {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: absolute !important;
+        top: auto !important;
+        bottom: 14px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 14px !important;
+        border-bottom: 0 !important;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        pointer-events: none;
+      }
+    }
   }
 }

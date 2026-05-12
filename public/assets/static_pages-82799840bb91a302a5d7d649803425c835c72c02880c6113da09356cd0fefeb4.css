@@ -1,0 +1,1439 @@
+@font-face {
+  font-family: Gotham-Medium;
+  src: url(/assets/Gotham-Medium-b17d195c8825c6c7727f7bedea2438885d809c8d49cf397d309878028d2e4b69.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Gotham-Thin;
+  src: url(/assets/Gotham-Thin-6c772563f7c9527649ab4acd089ccd531a8e100d8d615e80d0e7a28ac41f231d.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(/assets/Futura-Light-Regular-2dc9cb017077c52bdcae7cce93a65a16ea646a26ca6b98d33b745bfff4a705d7.otf) format("opentype");
+}
+
+/* line 24, app/assets/stylesheets/static_pages.scss */
+.navbar-toggler-icon {
+  background-image: url(/assets/icons/menu-button-1a5be02bcb8aa56678bcb2efc15a885c4a4f8db0934372f24e502aea2022e1b6.svg) !important;
+}
+
+/* line 27, app/assets/stylesheets/static_pages.scss */
+#mini-fotos {
+  position: absolute;
+  margin: 0;
+  bottom: 5%;
+  width: 30%;
+  right: 5%;
+  height: 35%;
+}
+
+/* line 35, app/assets/stylesheets/static_pages.scss */
+.nav-link {
+  cursor: pointer;
+}
+
+/* line 38, app/assets/stylesheets/static_pages.scss */
+#work-div-2 {
+  position: absolute;
+  z-index: 3;
+  top: 60px;
+  background-color: white !important;
+}
+
+/* line 45, app/assets/stylesheets/static_pages.scss */
+.back-black {
+  background-color: white !important;
+}
+
+/* line 48, app/assets/stylesheets/static_pages.scss */
+.btn-white {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  margin-bottom: 6%;
+}
+
+/* line 53, app/assets/stylesheets/static_pages.scss */
+.btn-white:hover {
+  text-decoration: none;
+  background-color: #dafa50;
+}
+
+/* line 58, app/assets/stylesheets/static_pages.scss */
+.sections, .sections-2 {
+  text-align: center;
+}
+
+/* line 60, app/assets/stylesheets/static_pages.scss */
+.sections:hover, .sections-2:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #dafa50;
+  padding-bottom: 5px;
+}
+
+/* line 67, app/assets/stylesheets/static_pages.scss */
+.item-title-2:after {
+  display: block;
+  position: relative;
+  margin-top: -470px;
+  height: 470px;
+  width: 100%;
+  content: '';
+  z-index: 1;
+}
+
+/* line 78, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+}
+
+/* line 81, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar .navbar-brand {
+  margin-right: 0;
+  margin-left: 5.5rem;
+}
+
+/* line 85, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar #logo-navbar {
+  width: 100px;
+  height: auto;
+}
+
+/* line 90, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar .nav-item {
+  border-bottom: thin solid white;
+  position: relative;
+  padding: 0 15px;
+}
+
+/* line 96, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar .nav-link {
+  color: white !important;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+/* line 103, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar .nav-link:hover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 5px;
+  border: thin solid #dafa50;
+}
+
+/* line 116, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar #nav-social {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+/* line 124, app/assets/stylesheets/static_pages.scss */
+#transparent-navbar #nav-social img {
+  width: 15px;
+  height: auto;
+  max-width: 15px;
+  max-height: 15px;
+  margin: 0 10px;
+}
+
+/* line 133, app/assets/stylesheets/static_pages.scss */
+nav {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+/* line 137, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* line 139, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar .navbar-brand {
+  margin-right: 0;
+  margin-left: 5.5rem;
+}
+
+/* line 143, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar #logo-navbar {
+  width: 150px;
+  height: auto;
+}
+
+/* line 148, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar .nav-item {
+  border-bottom: thin solid white;
+  position: relative;
+  padding: 0 15px;
+}
+
+/* line 154, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar .nav-link {
+  color: white !important;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* line 161, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar .nav-link:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 2px solid #dafa50;
+}
+
+/* line 172, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar #nav-social {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+/* line 180, app/assets/stylesheets/static_pages.scss */
+nav #transparent-navbar #nav-social img {
+  width: 15px;
+  height: auto;
+  max-width: 15px;
+  max-height: 15px;
+  margin: 0 10px;
+}
+
+/* line 190, app/assets/stylesheets/static_pages.scss */
+#work-div {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  top: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+/* line 201, app/assets/stylesheets/static_pages.scss */
+.bx-wrapper {
+  margin-bottom: 0;
+}
+
+/* line 204, app/assets/stylesheets/static_pages.scss */
+#work-div-2 a {
+  color: #666666 !important;
+  background-color: white;
+}
+
+@media (max-width: 991.98px) {
+  /* line 211, app/assets/stylesheets/static_pages.scss */
+  nav#transparent-navbar .navbar-brand {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* line 217, app/assets/stylesheets/static_pages.scss */
+  #logo-navbar {
+    width: 100px !important;
+    height: auto !important;
+  }
+  /* line 222, app/assets/stylesheets/static_pages.scss */
+  .navbar-brand {
+    margin-left: 0rem !important;
+  }
+  /* line 227, app/assets/stylesheets/static_pages.scss */
+  #banner .item-title {
+    font-size: 1rem !important;
+    bottom: 5% !important;
+  }
+  /* line 233, app/assets/stylesheets/static_pages.scss */
+  .abount-us-title {
+    font-size: 1rem;
+  }
+  /* line 237, app/assets/stylesheets/static_pages.scss */
+  .pad-top-5 {
+    padding-top: 10% !important;
+  }
+  /* line 241, app/assets/stylesheets/static_pages.scss */
+  .pad-bot-5 {
+    padding-bottom: 10% !important;
+  }
+  /* line 245, app/assets/stylesheets/static_pages.scss */
+  #about-title, #work-title, #contact-title, #similar-projects-title {
+    font-size: 1.2rem !important;
+  }
+  /* line 249, app/assets/stylesheets/static_pages.scss */
+  .about-text, #work-description {
+    font-size: 0.8rem !important;
+  }
+  /* line 253, app/assets/stylesheets/static_pages.scss */
+  #all-projects {
+    padding: 10px 15px !important;
+    font-size: 0.8rem;
+    margin-bottom: 10% !important;
+    margin-top: 5% !important;
+  }
+  /* line 260, app/assets/stylesheets/static_pages.scss */
+  #contact .border-ri:after {
+    display: none;
+  }
+  /* line 264, app/assets/stylesheets/static_pages.scss */
+  .direction-foo, .derechos {
+    font-size: 10px !important;
+  }
+  /* line 268, app/assets/stylesheets/static_pages.scss */
+  .derechos {
+    margin-bottom: 4%;
+  }
+  /* line 272, app/assets/stylesheets/static_pages.scss */
+  #kinds .kinds-titles {
+    margin-bottom: 5% !important;
+    font-size: 0.8rem !important;
+  }
+  /* line 277, app/assets/stylesheets/static_pages.scss */
+  #kinds .kinds-titles.active:after {
+    width: 50% !important;
+  }
+  /* line 285, app/assets/stylesheets/static_pages.scss */
+  #main-slider #slider-text p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  /* line 290, app/assets/stylesheets/static_pages.scss */
+  #main-slider #slider-text h1 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+/* line 295, app/assets/stylesheets/static_pages.scss */
+.text-green {
+  color: #dafa50;
+}
+
+/* line 298, app/assets/stylesheets/static_pages.scss */
+#logo-footer {
+  max-width: 62%;
+}
+
+/* line 302, app/assets/stylesheets/static_pages.scss */
+.item-title:hover {
+  text-decoration: none;
+  color: #dafa50 !important;
+}
+
+/* line 308, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar {
+  background-color: white !important;
+}
+
+/* line 311, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar .navbar-brand {
+  margin-right: 0;
+  margin-left: 4rem;
+}
+
+/* line 316, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar #logo-navbar {
+  width: 100px;
+  height: auto;
+}
+
+/* line 321, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar .nav-item {
+  border-bottom: thin solid #666666;
+  position: relative;
+  padding: 0 15px;
+}
+
+/* line 327, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar .nav-link {
+  color: #666666 !important;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* line 335, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar .nav-link:hover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 5px;
+  border: thin solid #dafa50;
+}
+
+/* line 348, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar #nav-social {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+/* line 356, app/assets/stylesheets/static_pages.scss */
+nav#white-navbar #nav-social img {
+  width: 15px;
+  height: auto;
+  max-width: 15px;
+  max-height: 15px;
+  margin: 0 10px;
+}
+
+/* line 365, app/assets/stylesheets/static_pages.scss */
+.work-ul {
+  display: inline-flex;
+  width: 100%;
+  list-style-type: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+}
+
+/* line 371, app/assets/stylesheets/static_pages.scss */
+.work-ul li {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 374, app/assets/stylesheets/static_pages.scss */
+.work-ul li:hover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 5px;
+  border: thin solid #00FF00;
+}
+
+/* line 388, app/assets/stylesheets/static_pages.scss */
+.footer-nav-link:hover {
+  color: #dafa50 !important;
+  text-decoration: none !important;
+}
+
+/* line 393, app/assets/stylesheets/static_pages.scss */
+.sections-content {
+  padding-bottom: 1%;
+}
+
+/* line 396, app/assets/stylesheets/static_pages.scss */
+.sections-content-2 {
+  padding-bottom: 1%;
+}
+
+/* line 399, app/assets/stylesheets/static_pages.scss */
+.sections {
+  font-size: 14px;
+}
+
+/* line 402, app/assets/stylesheets/static_pages.scss */
+.sections-2 {
+  font-size: 14px;
+}
+
+/* line 405, app/assets/stylesheets/static_pages.scss */
+.menu-li {
+  font-size: 14px;
+}
+
+/* line 407, app/assets/stylesheets/static_pages.scss */
+.menu-li:hover {
+  padding-bottom: 2%;
+  border-bottom: 1px solid #dafa50;
+  text-decoration: none;
+}
+
+/* line 413, app/assets/stylesheets/static_pages.scss */
+.work-ul-2 {
+  display: inline-flex;
+  width: 100%;
+  list-style-type: none;
+  border-bottom: 1px solid #666666 !important;
+  padding-bottom: 15px;
+}
+
+/* line 419, app/assets/stylesheets/static_pages.scss */
+.work-ul-2 li {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 422, app/assets/stylesheets/static_pages.scss */
+.work-ul-2 li:hover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 5px;
+  border: thin solid #00FF00;
+}
+
+/* line 435, app/assets/stylesheets/static_pages.scss */
+#banner-clic {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 13;
+  width: 100%;
+}
+
+/* line 441, app/assets/stylesheets/static_pages.scss */
+#banner-clic #close-arrow {
+  top: 10px;
+  right: 5%;
+  cursor: pointer;
+}
+
+/* line 446, app/assets/stylesheets/static_pages.scss */
+#banner-clic .slider-arrows {
+  position: absolute;
+  top: 45%;
+  width: 20px;
+  height: auto;
+}
+
+/* line 452, app/assets/stylesheets/static_pages.scss */
+#banner-clic #left-arrow-2 {
+  left: 10%;
+  cursor: pointer;
+}
+
+/* line 457, app/assets/stylesheets/static_pages.scss */
+#banner-clic #right-arrow-2 {
+  right: 10%;
+  cursor: pointer;
+}
+
+/* line 463, app/assets/stylesheets/static_pages.scss */
+#banner {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+/* line 468, app/assets/stylesheets/static_pages.scss */
+#banner .banner-slider div {
+  height: auto;
+}
+
+/* line 471, app/assets/stylesheets/static_pages.scss */
+#banner .banner-slider div .item-container {
+  position: relative;
+}
+
+/* line 474, app/assets/stylesheets/static_pages.scss */
+#banner .banner-slider div .item-container .item-title {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  z-index: 3;
+  color: white;
+  text-transform: uppercase;
+  font-family: Futura;
+  font-size: 2rem;
+  letter-spacing: 10px;
+}
+
+/* line 490, app/assets/stylesheets/static_pages.scss */
+#banner .slider-arrows {
+  position: absolute;
+  top: 45%;
+  width: 20px;
+  height: auto;
+}
+
+/* line 497, app/assets/stylesheets/static_pages.scss */
+#banner #left-arrow {
+  left: 10%;
+  cursor: pointer;
+}
+
+/* line 502, app/assets/stylesheets/static_pages.scss */
+#banner #right-arrow {
+  right: 10%;
+  cursor: pointer;
+}
+
+/* line 507, app/assets/stylesheets/static_pages.scss */
+#banner #dots-container {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+}
+
+/* line 513, app/assets/stylesheets/static_pages.scss */
+#banner #dots-container > ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* line 521, app/assets/stylesheets/static_pages.scss */
+#banner #dots-container .dot {
+  width: 5px;
+  height: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+/* line 528, app/assets/stylesheets/static_pages.scss */
+#banner #dots-container .dot.active {
+  background-color: #dafa50;
+  border: 1px solid #dafa50;
+}
+
+/* line 536, app/assets/stylesheets/static_pages.scss */
+#abount-us {
+  background-color: #1A1A1A;
+  margin-top: -10px;
+}
+
+/* line 540, app/assets/stylesheets/static_pages.scss */
+#abount-us .abount-us-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Gotham-Thin;
+}
+
+/* line 546, app/assets/stylesheets/static_pages.scss */
+#abount-us .abount-us-title > span {
+  font-family: Gotham-Medium;
+}
+
+/* line 552, app/assets/stylesheets/static_pages.scss */
+#abount-us #about-title {
+  font-family: Futura;
+}
+
+/* line 556, app/assets/stylesheets/static_pages.scss */
+#abount-us .about-text {
+  color: #666666;
+  font-family: Gotham-Thin;
+  height: 150px;
+}
+
+/* line 563, app/assets/stylesheets/static_pages.scss */
+#work {
+  background-color: #1A1A1A;
+}
+
+/* line 566, app/assets/stylesheets/static_pages.scss */
+#work #work-title {
+  text-align: center;
+  color: white;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+/* line 574, app/assets/stylesheets/static_pages.scss */
+#work #vertical-line {
+  width: 1px;
+  border-right: 1px solid white;
+  height: 25px;
+  margin: 5px auto;
+}
+
+/* line 581, app/assets/stylesheets/static_pages.scss */
+#work #work-description {
+  color: white;
+  text-align: center;
+  margin: 4% auto;
+  color: #666666;
+  font-size: 1.2rem;
+  font-family: Gotham-Thin;
+}
+
+/* line 589, app/assets/stylesheets/static_pages.scss */
+#work #work-description > span {
+  font-weight: bold;
+}
+
+/* line 594, app/assets/stylesheets/static_pages.scss */
+#work #all-projects {
+  background-color: white;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  margin: 2% auto;
+  width: fit-content;
+  display: block;
+  color: black;
+  font-family: Futura;
+}
+
+/* line 603, app/assets/stylesheets/static_pages.scss */
+#work #all-projects:hover {
+  text-decoration: none;
+}
+
+/* line 608, app/assets/stylesheets/static_pages.scss */
+#work #categories-background {
+  background-image: url(/assets/static_pages/home/main-background-340ed07661ad069b67502b613b656b554be781f675baa9e70c0f69ed690c8fd3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 614, app/assets/stylesheets/static_pages.scss */
+#work .category {
+  border: thin solid #ffffff30;
+}
+
+/* line 616, app/assets/stylesheets/static_pages.scss */
+#work .category a:hover {
+  text-decoration: none;
+}
+
+/* line 619, app/assets/stylesheets/static_pages.scss */
+#work .category h5 {
+  color: white;
+  text-align: center;
+  margin: 23% auto;
+  font-family: Futura;
+  font-size: 1.5rem;
+}
+
+/* line 630, app/assets/stylesheets/static_pages.scss */
+#contact {
+  background-color: #1A1A1A;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+/* line 635, app/assets/stylesheets/static_pages.scss */
+#contact .border-ri:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 70%;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid white;
+}
+
+/* line 646, app/assets/stylesheets/static_pages.scss */
+#contact #contact-title {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: Futura;
+  font-size: 2.5rem;
+  margin-bottom: 2%;
+}
+
+/* line 655, app/assets/stylesheets/static_pages.scss */
+#contact .contact-icons {
+  width: 20px;
+  height: auto;
+  max-width: 20px;
+  max-height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 664, app/assets/stylesheets/static_pages.scss */
+#contact .contact-texts {
+  font-family: Gotham-Thin;
+  margin-top: 1rem;
+}
+
+/* line 669, app/assets/stylesheets/static_pages.scss */
+#contact .contact-inputs {
+  background-color: #1A1A1A;
+  border: none;
+  border-radius: 0;
+  color: white;
+  font-family: Gotham-Thin;
+}
+
+/* line 677, app/assets/stylesheets/static_pages.scss */
+#contact .contact-comments {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: none;
+  border-radius: 0;
+  resize: none;
+  color: white;
+  font-family: Gotham-Thin;
+  margin-top: 15px;
+}
+
+/* line 687, app/assets/stylesheets/static_pages.scss */
+#contact .border-bottom {
+  border-bottom: thin solid white;
+}
+
+/* line 691, app/assets/stylesheets/static_pages.scss */
+#contact #send-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  float: right;
+  margin-top: 15px;
+}
+
+/* line 698, app/assets/stylesheets/static_pages.scss */
+#contact #send-button img {
+  width: 40px;
+  height: auto;
+}
+
+/* line 704, app/assets/stylesheets/static_pages.scss */
+.inherit {
+  height: inherit;
+}
+
+/* line 707, app/assets/stylesheets/static_pages.scss */
+#footer {
+  height: 20vh;
+  background-color: #1A1A1A;
+  -webkit-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* line 715, app/assets/stylesheets/static_pages.scss */
+#footer .footer-menu p:hover {
+  color: #dafa50;
+}
+
+/* line 719, app/assets/stylesheets/static_pages.scss */
+#footer * {
+  color: #666666;
+  font-family: Gotham-Thin;
+}
+
+/* line 725, app/assets/stylesheets/static_pages.scss */
+#intro {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #1d1a1d;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 736, app/assets/stylesheets/static_pages.scss */
+#intro #intro-video {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 22%;
+}
+
+/* line 747, app/assets/stylesheets/static_pages.scss */
+#intro #click-here {
+  position: absolute;
+  margin: auto;
+  bottom: 18%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #dafa50;
+  height: fit-content;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: Gotham-Thin;
+}
+
+/* line 761, app/assets/stylesheets/static_pages.scss */
+#intro #click-icon {
+  position: absolute;
+  margin: auto;
+  top: 54%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: auto;
+}
+
+/* line 773, app/assets/stylesheets/static_pages.scss */
+#logo-about {
+  padding: 15% 0;
+  position: relative;
+  background-color: #1A1A1A;
+}
+
+/* line 778, app/assets/stylesheets/static_pages.scss */
+#logo-about #mega-logo {
+  position: absolute;
+  width: 28%;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 790, app/assets/stylesheets/static_pages.scss */
+#about-description {
+  background-color: #1A1A1A;
+}
+
+/* line 794, app/assets/stylesheets/static_pages.scss */
+#about-description #about-description-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Futura;
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+}
+
+/* line 803, app/assets/stylesheets/static_pages.scss */
+#about-description .line {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+/* line 808, app/assets/stylesheets/static_pages.scss */
+#about-description .line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #666666;
+  height: 20px;
+  margin: auto;
+}
+
+/* line 822, app/assets/stylesheets/static_pages.scss */
+#about-description #about-description-text {
+  color: #666666;
+  text-align: center;
+  font-family: Gotham-Thin;
+  line-height: 1.7rem;
+  font-size: 1rem;
+}
+
+/* line 830, app/assets/stylesheets/static_pages.scss */
+.pad-top-10 {
+  padding-top: 10%;
+}
+
+/* line 833, app/assets/stylesheets/static_pages.scss */
+.pad-top-5 {
+  padding-top: 5%;
+}
+
+/* line 836, app/assets/stylesheets/static_pages.scss */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* line 840, app/assets/stylesheets/static_pages.scss */
+.pad-bot-5 {
+  padding-bottom: 5%;
+}
+
+/* line 843, app/assets/stylesheets/static_pages.scss */
+#img-about {
+  position: relative;
+  top: -20%;
+}
+
+/* line 847, app/assets/stylesheets/static_pages.scss */
+.active-item-li {
+  background-color: white;
+  color: black;
+}
+
+/* line 851, app/assets/stylesheets/static_pages.scss */
+.lista {
+  list-style: none;
+  display: inline-flex;
+}
+
+/* line 854, app/assets/stylesheets/static_pages.scss */
+.lista li {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #666666;
+  font-family: Gotham-Thin;
+}
+
+/* line 860, app/assets/stylesheets/static_pages.scss */
+.lista li:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* line 867, app/assets/stylesheets/static_pages.scss */
+#logo-puntos {
+  position: relative;
+}
+
+/* line 869, app/assets/stylesheets/static_pages.scss */
+#logo-puntos:after {
+  content: " ";
+  display: block;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  position: absolute;
+  bottom: -29px;
+  left: 190px;
+}
+
+/* line 881, app/assets/stylesheets/static_pages.scss */
+#img-about {
+  position: relative;
+  top: -70px;
+}
+
+/* line 884, app/assets/stylesheets/static_pages.scss */
+#img-about img {
+  z-index: 3;
+  position: relative;
+}
+
+/* line 888, app/assets/stylesheets/static_pages.scss */
+#img-about:after {
+  z-index: 1;
+  content: " ";
+  display: block;
+  height: 100%;
+  width: 90%;
+  border: 10px solid #80808075;
+  position: absolute;
+  bottom: -29px;
+  left: 90px;
+}
+
+/* line 901, app/assets/stylesheets/static_pages.scss */
+.cat-1:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 906, app/assets/stylesheets/static_pages.scss */
+.cat-2:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 911, app/assets/stylesheets/static_pages.scss */
+.cat-3:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 916, app/assets/stylesheets/static_pages.scss */
+.cat-4:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 921, app/assets/stylesheets/static_pages.scss */
+.cat-5:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 926, app/assets/stylesheets/static_pages.scss */
+.cat-6:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 931, app/assets/stylesheets/static_pages.scss */
+.cat-7:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 936, app/assets/stylesheets/static_pages.scss */
+.cat-8:hover #work #categories-background {
+  content: url(/assets/static_pages/home/RESIDENCIAL-6dfca4641fe38676f86ef485c553dee0c3fb4b2011cfed2ef12cb57226b021d7.jpg) !important;
+}
+
+/* line 940, app/assets/stylesheets/static_pages.scss */
+#aldo {
+  background-color: #1A1A1A;
+  padding-top: 5%;
+}
+
+/* line 944, app/assets/stylesheets/static_pages.scss */
+#aldo #aldo-franco-name {
+  color: white;
+  font-family: Gotham-Medium;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+/* line 952, app/assets/stylesheets/static_pages.scss */
+#aldo #aldo-franco-name:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #dafa50;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 963, app/assets/stylesheets/static_pages.scss */
+#aldo #aldo-description {
+  color: #666666;
+  font-family: Gotham-Thin;
+}
+
+/* line 969, app/assets/stylesheets/static_pages.scss */
+#team {
+  background-color: #1A1A1A;
+  padding-top: 5%;
+}
+
+/* line 973, app/assets/stylesheets/static_pages.scss */
+#team .line {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+/* line 978, app/assets/stylesheets/static_pages.scss */
+#team .line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #666666;
+  height: 20px;
+  margin: auto;
+}
+
+/* line 992, app/assets/stylesheets/static_pages.scss */
+#team #team-title {
+  color: white;
+  text-align: center;
+  text-trnasform: uppercase;
+  font-family: Futura;
+}
+
+/* line 999, app/assets/stylesheets/static_pages.scss */
+#team #team-description {
+  color: #666666;
+  text-align: center;
+  font-family: Gotham-Thin;
+  line-height: 1.7rem;
+  font-size: 1rem;
+}
+
+/* line 1007, app/assets/stylesheets/static_pages.scss */
+#team .arch-name {
+  color: #666666;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Gotham-Medium;
+}
+
+/* line 1014, app/assets/stylesheets/static_pages.scss */
+#team .arch-title {
+  color: #666666;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Gotham-Thin;
+}
+
+/* line 1021, app/assets/stylesheets/static_pages.scss */
+#team .arch-col {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 1026, app/assets/stylesheets/static_pages.scss */
+.direction-foo {
+  font-size: 14px;
+}
+
+/* line 1029, app/assets/stylesheets/static_pages.scss */
+.text-black {
+  color: #1A1A1A !important;
+  font-family: Gotham-Thin;
+}
+
+/* line 1033, app/assets/stylesheets/static_pages.scss */
+.gray {
+  color: #666666 !important;
+}
+
+@media (max-width: 575.98px) {
+  /* line 1041, app/assets/stylesheets/static_pages.scss */
+  #banner .slick-slide img {
+    display: block;
+  }
+  /* line 1046, app/assets/stylesheets/static_pages.scss */
+  #abount-us, #work {
+    padding-top: 10%;
+  }
+  /* line 1049, app/assets/stylesheets/static_pages.scss */
+  #banner {
+    padding-top: 5%;
+  }
+  /* line 1052, app/assets/stylesheets/static_pages.scss */
+  #contact {
+    background-color: #1A1A1A;
+    padding-top: 20%;
+    padding-bottom: 10%;
+  }
+  /* line 1057, app/assets/stylesheets/static_pages.scss */
+  #aldo #aldo-franco-name, #team #team-title {
+    font-size: 1.2rem;
+  }
+  /* line 1060, app/assets/stylesheets/static_pages.scss */
+  #aldo #aldo-description {
+    font-size: 14px;
+    text-align: left !important;
+    line-height: 1.3rem;
+    text-align: left;
+  }
+  /* line 1066, app/assets/stylesheets/static_pages.scss */
+  #navbarNav {
+    margin-top: 15%;
+    text-align: center;
+  }
+  /* line 1070, app/assets/stylesheets/static_pages.scss */
+  .navbar-nav {
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 15%;
+  }
+  /* line 1075, app/assets/stylesheets/static_pages.scss */
+  #logo-about {
+    margin-top: 15%;
+  }
+  /* line 1078, app/assets/stylesheets/static_pages.scss */
+  #projects-description #all-projects-title {
+    margin-top: 30%;
+  }
+  /* line 1081, app/assets/stylesheets/static_pages.scss */
+  nav#white-navbar .nav-item {
+    border-bottom: thin solid #6666661f;
+  }
+  /* line 1084, app/assets/stylesheets/static_pages.scss */
+  #about-description #about-description-title {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+  }
+  /* line 1088, app/assets/stylesheets/static_pages.scss */
+  #about-description #about-description-text {
+    text-align: left;
+    padding-top: 15%;
+    line-height: 1.3rem;
+    font-size: 14px;
+  }
+  /* line 1094, app/assets/stylesheets/static_pages.scss */
+  #kinds .kinds-titles.active:after {
+    bottom: -4px !important;
+  }
+  /* line 1097, app/assets/stylesheets/static_pages.scss */
+  #projects-description #all-projects-title {
+    font-size: 1.2rem;
+  }
+  /* line 1100, app/assets/stylesheets/static_pages.scss */
+  #footer {
+    height: auto;
+    padding-top: 5%;
+  }
+  /* line 1104, app/assets/stylesheets/static_pages.scss */
+  .item-title-2:after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(0, 0, 0, 0.83) 250%);
+  }
+  /* line 1107, app/assets/stylesheets/static_pages.scss */
+  #abount-us .about-text {
+    color: #666666;
+    font-family: Gotham-Thin;
+    height: 200px;
+  }
+  /* line 1112, app/assets/stylesheets/static_pages.scss */
+  .build-text {
+    display: flex !important;
+    border-bottom: 0 !important;
+    text-transform: uppercase;
+  }
+  /* line 1117, app/assets/stylesheets/static_pages.scss */
+  .img-build {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+  /* line 1121, app/assets/stylesheets/static_pages.scss */
+  .btn-white {
+    margin-top: 4%;
+  }
+  /* line 1124, app/assets/stylesheets/static_pages.scss */
+  .mar-bot {
+    margin-bottom: 3%;
+  }
+  /* line 1127, app/assets/stylesheets/static_pages.scss */
+  #main-slider #slider-text {
+    bottom: -40% !important;
+  }
+  /* line 1130, app/assets/stylesheets/static_pages.scss */
+  #similar-projects {
+    background-color: #1A1A1A;
+    padding: 2% 0;
+    padding-top: 35% !important;
+  }
+  /* line 1135, app/assets/stylesheets/static_pages.scss */
+  #similar-projects #similar-projects-title {
+    margin-top: 15%;
+    margin-bottom: 15% !important;
+  }
+  /* line 1139, app/assets/stylesheets/static_pages.scss */
+  #main-slider #slider-text {
+    background: none !important;
+  }
+  /* line 1142, app/assets/stylesheets/static_pages.scss */
+  .mar-top-15 {
+    margin-top: 15%;
+  }
+  /* line 1145, app/assets/stylesheets/static_pages.scss */
+  #contact .border-bottom {
+    border-bottom: 1px solid #dee2e61a !important;
+    padding-bottom: 15%;
+  }
+  /* line 1149, app/assets/stylesheets/static_pages.scss */
+  #contact .contact-comments {
+    margin-top: 0;
+  }
+  /* line 1152, app/assets/stylesheets/static_pages.scss */
+  #contact .pad-top-5 {
+    padding-top: 0 !important;
+  }
+  /* line 1155, app/assets/stylesheets/static_pages.scss */
+  #contact .contact-inputs {
+    text-align: center;
+  }
+  /* line 1159, app/assets/stylesheets/static_pages.scss */
+  .navbar-light .navbar-toggler {
+    border-color: transparent !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* line 1164, app/assets/stylesheets/static_pages.scss */
+  .derechos {
+    font-size: 10px;
+  }
+  /* line 1167, app/assets/stylesheets/static_pages.scss */
+  .direction-foo {
+    font-size: 14px;
+  }
+  /* line 1170, app/assets/stylesheets/static_pages.scss */
+  .redes-sociales {
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* line 1176, app/assets/stylesheets/static_pages.scss */
+  .derechos {
+    font-size: 10px;
+  }
+  /* line 1179, app/assets/stylesheets/static_pages.scss */
+  .direction-foo {
+    font-size: 14px;
+  }
+  /* line 1182, app/assets/stylesheets/static_pages.scss */
+  #intro-video {
+    bottom: 30%;
+  }
+  /* line 1185, app/assets/stylesheets/static_pages.scss */
+  .redes-sociales {
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 1191, app/assets/stylesheets/static_pages.scss */
+  .derechos {
+    font-size: 10px;
+  }
+  /* line 1194, app/assets/stylesheets/static_pages.scss */
+  #intro-video {
+    bottom: 35%;
+  }
+  /* line 1197, app/assets/stylesheets/static_pages.scss */
+  .redes-sociales {
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 576px) {
+  /* line 1203, app/assets/stylesheets/static_pages.scss */
+  #contact {
+    padding-top: 10%;
+  }
+  /* line 1207, app/assets/stylesheets/static_pages.scss */
+  #main-slider-2 .bx-wrapper img {
+    max-width: 100%;
+    display: block;
+    width: auto;
+    height: 100vh;
+    margin: 0 auto;
+  }
+  /* line 1214, app/assets/stylesheets/static_pages.scss */
+  #main-slider-2 .bx-wrapper {
+    background-color: black !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 1223, app/assets/stylesheets/static_pages.scss */
+  .banner-slider {
+    margin-top: 60px;
+  }
+}

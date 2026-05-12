@@ -1,0 +1,397 @@
+@font-face {
+  font-family: Gotham-Medium;
+  src: url(/assets/Gotham-Medium-b17d195c8825c6c7727f7bedea2438885d809c8d49cf397d309878028d2e4b69.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Gotham-Thin;
+  src: url(/assets/Gotham-Thin-6c772563f7c9527649ab4acd089ccd531a8e100d8d615e80d0e7a28ac41f231d.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(/assets/Futura-Light-Regular-2dc9cb017077c52bdcae7cce93a65a16ea646a26ca6b98d33b745bfff4a705d7.otf) format("opentype");
+}
+
+/* line 24, app/assets/stylesheets/buildings.scss */
+#projects-description {
+  background-color: #1A1A1A;
+  padding-top: 8%;
+  padding-bottom: 4%;
+}
+
+/* line 29, app/assets/stylesheets/buildings.scss */
+#projects-description #all-projects-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Futura;
+}
+
+/* line 36, app/assets/stylesheets/buildings.scss */
+#projects-description #all-projects-description {
+  color: white;
+  text-align: center;
+  font-family: Gotham-Thin;
+}
+
+/* line 42, app/assets/stylesheets/buildings.scss */
+#projects-description .vertical-line {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+/* line 47, app/assets/stylesheets/buildings.scss */
+#projects-description .vertical-line:before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  height: 30px;
+  width: 1px;
+  background-color: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 61, app/assets/stylesheets/buildings.scss */
+#expandir-icon {
+  max-width: 25px;
+  position: absolute;
+  right: 5%;
+  top: 8%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* line 69, app/assets/stylesheets/buildings.scss */
+#flecha-derecha, #flecha-izquierda {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  height: auto;
+  width: 25px;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* line 79, app/assets/stylesheets/buildings.scss */
+#flecha-derecha {
+  right: 5%;
+}
+
+/* line 82, app/assets/stylesheets/buildings.scss */
+#flecha-izquierda {
+  left: 5%;
+}
+
+/* line 86, app/assets/stylesheets/buildings.scss */
+#kinds {
+  background-color: #1A1A1A;
+}
+
+/* line 89, app/assets/stylesheets/buildings.scss */
+#kinds .kinds-titles {
+  color: #666666;
+  text-transform: uppercase;
+  margin-bottom: 20%;
+  font-size: 1.2rem;
+  position: relative;
+  cursor: pointer;
+  font-family: Gotham-Thin;
+}
+
+/* line 98, app/assets/stylesheets/buildings.scss */
+#kinds .kinds-titles.active:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 3px;
+  border: thin solid #dafa50;
+}
+
+/* line 114, app/assets/stylesheets/buildings.scss */
+#main-slider {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #1A1A1A;
+}
+
+/* line 120, app/assets/stylesheets/buildings.scss */
+#main-slider .bx-viewport {
+  background-color: #1A1A1A;
+}
+
+/* line 124, app/assets/stylesheets/buildings.scss */
+#main-slider #slider-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  z-index: 20;
+  padding-left: 3%;
+  font-family: Gotham-Thin;
+}
+
+/* line 136, app/assets/stylesheets/buildings.scss */
+#main-slider #slider-text p, #main-slider #slider-text h1 {
+  color: white;
+}
+
+/* line 141, app/assets/stylesheets/buildings.scss */
+#main-slider #slider-description {
+  margin-bottom: 5%;
+}
+
+/* line 145, app/assets/stylesheets/buildings.scss */
+#main-slider .bx-wrapper {
+  border: 0;
+  box-shadow: none;
+}
+
+/* line 150, app/assets/stylesheets/buildings.scss */
+#main-slider .slider-img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100dvh !important;
+}
+
+/* line 157, app/assets/stylesheets/buildings.scss */
+#similar-projects {
+  background-color: #1A1A1A;
+  padding: 2% 0;
+}
+
+/* line 161, app/assets/stylesheets/buildings.scss */
+#similar-projects #similar-projects-title {
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 3%;
+  font-size: 1rem;
+  font-family: Gotham-Thin;
+  font-size: 1.3rem;
+}
+
+/* line 171, app/assets/stylesheets/buildings.scss */
+.build-text {
+  display: none;
+  position: absolute;
+  top: 45%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  color: white;
+  padding: 10px;
+  border-bottom: 2px solid;
+}
+
+/* line 184, app/assets/stylesheets/buildings.scss */
+#building-name, #slider-kind {
+  text-transform: uppercase;
+}
+
+/* line 188, app/assets/stylesheets/buildings.scss */
+#building-mobile-text {
+  display: none;
+  background-color: #1A1A1A !important;
+}
+
+/* line 192, app/assets/stylesheets/buildings.scss */
+#categories-background {
+  transition: all 0.2s linear;
+}
+
+/* line 195, app/assets/stylesheets/buildings.scss */
+#main-slider-2 {
+  position: fixed;
+  z-index: 13;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 201, app/assets/stylesheets/buildings.scss */
+#main-slider-2 #icon-close {
+  position: absolute;
+  z-index: 13;
+  top: 5%;
+  right: 5%;
+  max-width: 20px;
+  cursor: pointer;
+}
+
+/* line 210, app/assets/stylesheets/buildings.scss */
+#main-slider {
+  z-index: 1;
+}
+
+/* line 213, app/assets/stylesheets/buildings.scss */
+#transparent-navbar {
+  z-index: 2;
+}
+
+/* line 216, app/assets/stylesheets/buildings.scss */
+#back-to-all {
+  margin: 0 auto;
+  padding: 5px 10px;
+  margin-top: 15px;
+}
+
+@media (max-width: 575.98px) {
+  /* line 222, app/assets/stylesheets/buildings.scss */
+  #main-slider-2 {
+    position: fixed;
+    z-index: 13;
+    height: 105vh;
+    background-color: black;
+    padding-top: 5%;
+    width: 100%;
+    margin-top: -20%;
+  }
+  /* line 230, app/assets/stylesheets/buildings.scss */
+  #main-slider-2 .bx-wrapper {
+    border: 5px solid black !important;
+    box-shadow: none;
+    background: black;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 241, app/assets/stylesheets/buildings.scss */
+  .img-build:hover {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+  /* line 244, app/assets/stylesheets/buildings.scss */
+  .img-build:hover .build-text {
+    opacity: 1;
+    display: flex;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 254, app/assets/stylesheets/buildings.scss */
+  #transparent-navbar {
+    background-color: white;
+    position: static !important;
+  }
+  /* line 258, app/assets/stylesheets/buildings.scss */
+  #transparent-navbar #logo-navbar {
+    content: url(/assets/logo-black-7fc853f4277ef087c8fb435057b1f5a69dc94b7f938d187ba68b5e82ae07148f.svg);
+  }
+  /* line 262, app/assets/stylesheets/buildings.scss */
+  #transparent-navbar .nav-link {
+    color: #666666 !important;
+  }
+  /* line 266, app/assets/stylesheets/buildings.scss */
+  #transparent-navbar .nav-item {
+    border-bottom: thin solid #666666;
+  }
+  /* line 272, app/assets/stylesheets/buildings.scss */
+  #main-slider #slider-text {
+    display: none !important;
+  }
+  /* line 276, app/assets/stylesheets/buildings.scss */
+  #main-slider .slider-img {
+    max-height: 58vh !important;
+    object-fit: cover;
+  }
+  /* line 282, app/assets/stylesheets/buildings.scss */
+  #building-mobile-text {
+    display: block !important;
+    background-color: #1A1A1A !important;
+    color: white !important;
+    padding: 22px 24px 34px;
+    font-family: Gotham-Thin;
+    overflow: hidden;
+    margin-bottom: 0 !important;
+  }
+  /* line 291, app/assets/stylesheets/buildings.scss */
+  #building-mobile-text p,
+#building-mobile-text h1 {
+    color: white !important;
+  }
+  /* line 296, app/assets/stylesheets/buildings.scss */
+  #building-mobile-text .mobile-slider-kind {
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color: white !important;
+  }
+  /* line 304, app/assets/stylesheets/buildings.scss */
+  #building-mobile-text .mobile-building-name {
+    font-size: 1.35rem;
+    line-height: 1.55rem;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    color: white !important;
+    font-family: Gotham-Medium;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  /* line 315, app/assets/stylesheets/buildings.scss */
+  #building-mobile-text .mobile-slider-description {
+    color: white !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55rem !important;
+    margin-bottom: 0 !important;
+    font-family: Gotham-Thin;
+  }
+  /* line 324, app/assets/stylesheets/buildings.scss */
+  #similar-projects {
+    padding-top: 8% !important;
+  }
+  /* line 327, app/assets/stylesheets/buildings.scss */
+  #similar-projects .img-build {
+    position: relative;
+    margin-bottom: 28px;
+  }
+  /* line 331, app/assets/stylesheets/buildings.scss */
+  #similar-projects .img-build .similar-project-link {
+    display: block !important;
+    position: relative !important;
+    overflow: hidden;
+    min-height: 1px;
+  }
+  /* line 338, app/assets/stylesheets/buildings.scss */
+  #similar-projects .img-build .slider-img {
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  /* line 344, app/assets/stylesheets/buildings.scss */
+  #similar-projects .img-build .build-text {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute !important;
+    top: auto !important;
+    bottom: 14px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 14px !important;
+    border-bottom: 0 !important;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    pointer-events: none;
+  }
+}
