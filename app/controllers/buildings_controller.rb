@@ -36,8 +36,15 @@ class BuildingsController < ApplicationController
       redirect_to admins_path, notice: "Desarrollo creado correctamente"
     else
       @kinds = Kind.order(:name)
-      render :new
+      flash.now[:alert] = @building.errors.full_messages.to_sentence
+      render :new, status: :unprocessable_entity
     end
+  rescue StandardError => error
+    raise unless image_upload_error?(error)
+
+    @kinds = Kind.order(:name)
+    flash.now[:alert] = "No se pudieron subir las imagenes: #{error.message}"
+    render :new, status: :unprocessable_entity
   end
 
   def edit
@@ -55,8 +62,15 @@ class BuildingsController < ApplicationController
       redirect_to admins_path, notice: "Desarrollo actualizado correctamente"
     else
       @kinds = Kind.order(:name)
-      render :edit
+      flash.now[:alert] = @building.errors.full_messages.to_sentence
+      render :edit, status: :unprocessable_entity
     end
+  rescue StandardError => error
+    raise unless image_upload_error?(error)
+
+    @kinds = Kind.order(:name)
+    flash.now[:alert] = "No se pudieron subir las imagenes: #{error.message}"
+    render :edit, status: :unprocessable_entity
   end
 
   def destroy
@@ -108,6 +122,10 @@ class BuildingsController < ApplicationController
 
   def lines_from(value)
     value.to_s.lines.map(&:strip).reject(&:blank?)
+  end
+
+  def image_upload_error?(error)
+    error.is_a?(ActiveStorage::IntegrityError) || error.class.name.start_with?("Aws::S3::Errors")
   end
 
 end

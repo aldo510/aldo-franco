@@ -76,6 +76,7 @@ class Building < ApplicationRecord
 
   def migrate_legacy_images_to_s3!
     migrated = 0
+    migrated += migrate_legacy_thumbnail_to_s3
     migrated += migrate_legacy_collection(images, project_images, "project_images")
     migrated += migrate_legacy_collection(imagesori, fullscreen_images, "fullscreen_images")
     migrated
@@ -84,16 +85,18 @@ class Building < ApplicationRecord
   private
 
   def validate_attached_images
-    [thumbnail_image, project_images, fullscreen_images].each do |attachments|
-      attachments.each do |attachment|
-        unless attachment.content_type.in?(%w[image/jpeg image/png image/webp])
-          errors.add(:base, "Las imagenes deben ser JPG, PNG o WebP")
-        end
+    validate_image_attachment(thumbnail_image.attachment) if thumbnail_image.attached?
+    project_images.attachments.each { |attachment| validate_image_attachment(attachment) }
+    fullscreen_images.attachments.each { |attachment| validate_image_attachment(attachment) }
+  end
 
-        if attachment.byte_size > 12.megabytes
-          errors.add(:base, "Cada imagen debe pesar menos de 12 MB")
-        end
-      end
+  def validate_image_attachment(attachment)
+    unless attachment.content_type.in?(%w[image/jpeg image/png image/webp])
+      errors.add(:base, "Las imagenes deben ser JPG, PNG o WebP")
+    end
+
+    if attachment.byte_size > 12.megabytes
+      errors.add(:base, "Cada imagen debe pesar menos de 12 MB")
     end
   end
 
@@ -101,6 +104,22 @@ class Building < ApplicationRecord
     Array(paths).sum do |path|
       attach_legacy_image(path, attachments, attachment_name) ? 1 : 0
     end
+  end
+
+  def migrate_legacy_thumbnail_to_s3
+    return 0 if thumbnail.blank? || thumbnail_image.attached?
+
+    source = legacy_image_source(thumbnail)
+    return 0 unless source
+
+    thumbnail_image.attach(
+      io: source[:io],
+      filename: File.basename(thumbnail.to_s),
+      content_type: source[:content_type]
+    )
+    1
+  ensure
+    source&.dig(:io)&.close
   end
 
   def attach_legacy_image(path, attachments, attachment_name)

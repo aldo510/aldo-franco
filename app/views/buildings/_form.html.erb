@@ -40,7 +40,7 @@
     <%= form.file_field :thumbnail_image, accept: "image/jpeg,image/png,image/webp", class: "form-control" %>
   </div>
 
-  <% if building.thumbnail_image.attached? %>
+  <% if building.persisted? && building.thumbnail_image.attached? %>
     <div class="mb-4">
       <p class="form-label">Thumbnail en S3</p>
       <%= image_tag building_image_url(building.thumbnail_image, resize_to_limit: [400, 300]), class: "img-fluid border", style: "max-width: 240px;" %>
@@ -75,7 +75,7 @@
     <%= form.file_field :project_images, multiple: true, accept: "image/jpeg,image/png,image/webp", class: "form-control" %>
   </div>
 
-  <% if building.project_images.attached? %>
+  <% if building.persisted? && building.project_images.attached? %>
     <%= render "attachment_sorter", building: building, attachment_name: "project_images", title: "Imagenes en S3 para slider" %>
   <% end %>
 
@@ -89,7 +89,7 @@
     <%= form.file_field :fullscreen_images, multiple: true, accept: "image/jpeg,image/png,image/webp", class: "form-control" %>
   </div>
 
-  <% if building.fullscreen_images.attached? %>
+  <% if building.persisted? && building.fullscreen_images.attached? %>
     <%= render "attachment_sorter", building: building, attachment_name: "fullscreen_images", title: "Imagenes fullscreen en S3" %>
   <% end %>
 
