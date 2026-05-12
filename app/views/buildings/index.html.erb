@@ -38,8 +38,8 @@
               <tr>
                 <td><%= check_box_tag "building_ids[]", building.id, false, id: "building_ids_#{building.id}" %></td>
                 <td>
-                  <% if building.display_project_images.first.present? %>
-                    <%= building_image_tag building.display_project_images.first, resize_to_limit: [160, 120], loading: "lazy", class: "img-fluid rounded", style: "width: 72px; height: 54px; object-fit: cover;", alt: building.name %>
+                  <% if building.display_thumbnail_image.present? %>
+                    <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [160, 120], loading: "lazy", class: "img-fluid rounded", style: "width: 72px; height: 54px; object-fit: cover;", alt: building.name %>
                   <% end %>
                 </td>
                 <td><%= link_to building.name, building_path(building) %></td>
@@ -103,7 +103,7 @@
             <% arr.each do |building| %>
               <div class="col-sm-4 col-12 img-build">
                 <%= link_to building_path(building) do %>
-                  <%= building_image_tag building.display_project_images.first, resize_to_limit: [900, 900], loading: "lazy", class: "img-fluid w-100 img-build my-3", alt: "Aldo Franco building" %>
+                  <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [900, 900], loading: "lazy", class: "img-fluid w-100 img-build my-3", alt: "Aldo Franco building" %>
                   <p class="build-text got-thi"><%= building.name.capitalize %></p>
                 <% end %>
               </div>

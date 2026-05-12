@@ -38,8 +38,8 @@
                   <span class="d-flex justify-content-between align-items-center w-100 pe-3">
                     <span class="d-flex align-items-center gap-3">
                       <% first_building = kind.buildings.order(:name).first %>
-                      <% if first_building&.display_project_images&.first.present? %>
-                        <%= building_image_tag first_building.display_project_images.first, resize_to_limit: [160, 120], loading: "lazy", class: "rounded", style: "width: 64px; height: 48px; object-fit: cover;", alt: kind.name %>
+                      <% if first_building&.display_thumbnail_image.present? %>
+                        <%= building_image_tag first_building.display_thumbnail_image, resize_to_limit: [160, 120], loading: "lazy", class: "rounded", style: "width: 64px; height: 48px; object-fit: cover;", alt: kind.name %>
                       <% end %>
                       <strong><%= kind.name.capitalize %></strong>
                     </span>
@@ -77,8 +77,8 @@
                         <% kind.buildings.order(:name).each do |building| %>
                           <tr>
                             <td>
-                              <% if building.display_project_images.first.present? %>
-                                <%= building_image_tag building.display_project_images.first, resize_to_limit: [160, 120], loading: "lazy", class: "img-fluid rounded", style: "width: 72px; height: 54px; object-fit: cover;", alt: building.name %>
+                              <% if building.display_thumbnail_image.present? %>
+                                <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [160, 120], loading: "lazy", class: "img-fluid rounded", style: "width: 72px; height: 54px; object-fit: cover;", alt: building.name %>
                               <% end %>
                             </td>
                             <td><%= link_to building.name, building_path(building) %></td>

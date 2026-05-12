@@ -6,6 +6,7 @@ class Building < ApplicationRecord
   # enum kind: [:residential, :commercial, :office, :health, :education, :cultural, :publics]
   has_and_belongs_to_many :kinds
   before_destroy { kinds.clear }
+  has_one_attached :thumbnail_image
   has_many_attached :project_images
   has_many_attached :fullscreen_images
 
@@ -31,14 +32,19 @@ class Building < ApplicationRecord
     project_images.attached? ? ordered_project_images : images
   end
 
+  def display_thumbnail_image
+    thumbnail_image.attached? ? thumbnail_image : thumbnail.presence || display_project_images.first
+  end
+
   def display_fullscreen_images
     fullscreen_images.attached? ? ordered_fullscreen_images : imagesori
   end
 
-  def attach_uploaded_images(project_uploads: [], fullscreen_uploads: [])
+  def attach_uploaded_images(thumbnail_upload: nil, project_uploads: [], fullscreen_uploads: [])
     project_uploads = Array(project_uploads).reject(&:blank?)
     fullscreen_uploads = Array(fullscreen_uploads).reject(&:blank?)
 
+    thumbnail_image.attach(thumbnail_upload) if thumbnail_upload.present?
     project_images.attach(project_uploads) if project_uploads.any?
     fullscreen_images.attach(fullscreen_uploads) if fullscreen_uploads.any?
     normalize_attachment_positions!("project_images")

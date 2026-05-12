@@ -73,7 +73,7 @@
           <% @similar.each do |building| %>
           <div class="col-sm-4 col-12 img-build mar-bot">
             <%= link_to building_path(building) do %>
-            <%= building_image_tag building.display_project_images.first, resize_to_limit: [900, 900], loading: "lazy", class: "slider-img m-md-4 img-fluid w-100", alt: "Aldo Franco building" %>
+            <%= building_image_tag building.display_thumbnail_image, resize_to_limit: [900, 900], loading: "lazy", class: "slider-img m-md-4 img-fluid w-100", alt: "Aldo Franco building" %>
             <p class="build-text got-thi"><%= building.name.capitalize %></p>
             <% end %>
           </div>

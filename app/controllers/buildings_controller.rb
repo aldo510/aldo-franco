@@ -26,6 +26,7 @@ class BuildingsController < ApplicationController
   def create
     @building = Building.new(building_params)
     @building.attach_uploaded_images(
+      thumbnail_upload: params.dig(:building, :thumbnail_image),
       project_uploads: params.dig(:building, :project_images),
       fullscreen_uploads: params.dig(:building, :fullscreen_images)
     )
@@ -44,6 +45,7 @@ class BuildingsController < ApplicationController
 
   def update
     @building.attach_uploaded_images(
+      thumbnail_upload: params.dig(:building, :thumbnail_image),
       project_uploads: params.dig(:building, :project_images),
       fullscreen_uploads: params.dig(:building, :fullscreen_images)
     )

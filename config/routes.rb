@@ -32,5 +32,6 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
+  get 'admin', to: 'admins#index', as: 'admin'
   resources :admins, only: [:index, :new, :create]
 end

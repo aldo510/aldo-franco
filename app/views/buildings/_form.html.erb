@@ -31,9 +31,24 @@
   </div>
 
   <div class="mb-3">
-    <%= form.label :thumbnail, "Thumbnail", class: "form-label" %>
+    <%= form.label :thumbnail, "Thumbnail por ruta", class: "form-label" %>
     <%= form.text_field :thumbnail, class: "form-control" %>
   </div>
+
+  <div class="mb-3">
+    <%= form.label :thumbnail_image, "Subir thumbnail a S3", class: "form-label" %>
+    <%= form.file_field :thumbnail_image, accept: "image/jpeg,image/png,image/webp", class: "form-control" %>
+  </div>
+
+  <% if building.thumbnail_image.attached? %>
+    <div class="mb-4">
+      <p class="form-label">Thumbnail en S3</p>
+      <%= image_tag building_image_url(building.thumbnail_image, resize_to_limit: [400, 300]), class: "img-fluid border", style: "max-width: 240px;" %>
+      <div class="mt-2">
+        <%= link_to "Eliminar thumbnail", attachment_building_path(building, building.thumbnail_image.attachment), method: :delete, data: { confirm: "Eliminar este thumbnail?" }, class: "btn btn-sm btn-outline-danger" %>
+      </div>
+    </div>
+  <% end %>
 
   <div class="mb-3">
     <label class="form-label">Categorias</label>
