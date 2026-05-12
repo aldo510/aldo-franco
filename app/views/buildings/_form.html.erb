@@ -175,7 +175,7 @@
     })();
   </script>
 
-  <% if building.persisted? %>
+  <% if building.persisted? && building.needs_s3_migration? %>
     <div class="mb-4">
       <%= link_to "Subir imagenes actuales a S3", migrate_images_to_s3_building_path(building), method: :post, data: { confirm: "Buscar imagenes locales y en CloudFront para subirlas a S3?" }, class: "btn btn-outline-secondary" %>
     </div>

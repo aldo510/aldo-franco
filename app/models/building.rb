@@ -33,7 +33,10 @@ class Building < ApplicationRecord
   end
 
   def display_thumbnail_image
-    thumbnail_image.attached? ? thumbnail_image : thumbnail.presence || display_project_images.first
+    return thumbnail_image if thumbnail_image.attached?
+    return ordered_project_images.first if project_images.attached?
+
+    thumbnail.presence || images.first
   end
 
   def display_fullscreen_images
@@ -80,6 +83,22 @@ class Building < ApplicationRecord
     migrated += migrate_legacy_collection(images, project_images, "project_images")
     migrated += migrate_legacy_collection(imagesori, fullscreen_images, "fullscreen_images")
     migrated
+  end
+
+  def needs_s3_migration?
+    legacy_thumbnail_pending? || legacy_project_images_pending? || legacy_fullscreen_images_pending?
+  end
+
+  def legacy_thumbnail_pending?
+    thumbnail.present? && !thumbnail_image.attached?
+  end
+
+  def legacy_project_images_pending?
+    images.any? && !project_images.attached?
+  end
+
+  def legacy_fullscreen_images_pending?
+    imagesori.any? && !fullscreen_images.attached?
   end
 
   private

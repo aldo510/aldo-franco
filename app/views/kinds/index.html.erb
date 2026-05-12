@@ -86,7 +86,9 @@
                             <td><%= building.location %></td>
                             <td class="text-end">
                               <%= link_to "Editar", edit_building_path(building), class: "btn btn-sm btn-outline-primary" %>
-                              <%= link_to "Subir a S3", migrate_images_to_s3_building_path(building), method: :post, data: { confirm: "Subir imagenes actuales de este desarrollo a S3?" }, class: "btn btn-sm btn-outline-secondary" %>
+                              <% if building.needs_s3_migration? %>
+                                <%= link_to "Subir a S3", migrate_images_to_s3_building_path(building), method: :post, data: { confirm: "Subir imagenes actuales de este desarrollo a S3?" }, class: "btn btn-sm btn-outline-secondary" %>
+                              <% end %>
                             </td>
                           </tr>
                         <% end %>
