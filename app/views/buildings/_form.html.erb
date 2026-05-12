@@ -1,0 +1,173 @@
+<% if building.errors.any? %>
+  <div class="alert alert-danger">
+    <%= building.errors.full_messages.join(", ") %>
+  </div>
+<% end %>
+
+<%= form_with model: building, local: true, class: "card p-4 shadow-sm" do |form| %>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <%= form.label :name, "Nombre", class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div class="col-md-3 mb-3">
+      <%= form.label :year, "Ano", class: "form-label" %>
+      <%= form.text_field :year, class: "form-control" %>
+    </div>
+    <div class="col-md-3 mb-3">
+      <%= form.label :area, "Area", class: "form-label" %>
+      <%= form.text_field :area, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :location, "Ubicacion", class: "form-label" %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, "Descripcion", class: "form-label" %>
+    <%= form.text_area :description, rows: 3, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :thumbnail, "Thumbnail", class: "form-label" %>
+    <%= form.text_field :thumbnail, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Categorias</label>
+    <%= hidden_field_tag "building[kind_ids][]", "" %>
+    <div class="row">
+      <% @kinds.each do |kind| %>
+        <div class="col-md-4">
+          <div class="form-check">
+            <%= check_box_tag "building[kind_ids][]", kind.id, building.kind_ids.include?(kind.id), id: "building_kind_#{kind.id}", class: "form-check-input" %>
+            <%= label_tag "building_kind_#{kind.id}", kind.name, class: "form-check-label" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :images_text, "Imagenes para slider, una ruta por linea", class: "form-label" %>
+    <%= form.text_area :images_text, rows: 8, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :project_images, "Subir imagenes para slider a S3", class: "form-label" %>
+    <%= form.file_field :project_images, multiple: true, accept: "image/jpeg,image/png,image/webp", class: "form-control" %>
+  </div>
+
+  <% if building.project_images.attached? %>
+    <%= render "attachment_sorter", building: building, attachment_name: "project_images", title: "Imagenes en S3 para slider" %>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :imagesori_text, "Imagenes fullscreen, una ruta por linea", class: "form-label" %>
+    <%= form.text_area :imagesori_text, rows: 8, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :fullscreen_images, "Subir imagenes fullscreen a S3", class: "form-label" %>
+    <%= form.file_field :fullscreen_images, multiple: true, accept: "image/jpeg,image/png,image/webp", class: "form-control" %>
+  </div>
+
+  <% if building.fullscreen_images.attached? %>
+    <%= render "attachment_sorter", building: building, attachment_name: "fullscreen_images", title: "Imagenes fullscreen en S3" %>
+  <% end %>
+
+  <script>
+    (function () {
+      if (window.aldoAttachmentSorterReady) return;
+      window.aldoAttachmentSorterReady = true;
+
+      var draggedItem = null;
+
+      document.addEventListener("dragstart", function (event) {
+        var item = event.target.closest(".sortable-attachment");
+        if (!item) return;
+
+        draggedItem = item;
+        item.classList.add("sortable-attachment-dragging");
+        event.dataTransfer.effectAllowed = "move";
+        event.dataTransfer.setData("text/plain", item.dataset.attachmentId);
+      });
+
+      document.addEventListener("dragover", function (event) {
+        var container = event.target.closest(".sortable-attachments");
+        var target = event.target.closest(".sortable-attachment");
+        if (!container || !target || !draggedItem || target === draggedItem) return;
+
+        event.preventDefault();
+        container.classList.add("sortable-attachments-active");
+
+        var rect = target.getBoundingClientRect();
+        var after = event.clientY > rect.top + rect.height / 2;
+        if (Math.abs(event.clientY - (rect.top + rect.height / 2)) < rect.height / 2) {
+          after = event.clientX > rect.left + rect.width / 2;
+        }
+        container.insertBefore(draggedItem, after ? target.nextSibling : target);
+      });
+
+      document.addEventListener("drop", function (event) {
+        var container = event.target.closest(".sortable-attachments");
+        if (!container || !draggedItem) return;
+
+        event.preventDefault();
+        saveAttachmentOrder(container);
+      });
+
+      document.addEventListener("dragend", function () {
+        if (draggedItem) draggedItem.classList.remove("sortable-attachment-dragging");
+        document.querySelectorAll(".sortable-attachments-active").forEach(function (container) {
+          container.classList.remove("sortable-attachments-active");
+        });
+        draggedItem = null;
+      });
+
+      function saveAttachmentOrder(container) {
+        var sorter = container.closest(".attachment-sorter");
+        var status = sorter && sorter.querySelector(".attachment-sorter-status");
+        var tokenElement = document.querySelector("meta[name='csrf-token']");
+        var ids = Array.from(container.querySelectorAll(".sortable-attachment")).map(function (item) {
+          return item.dataset.attachmentId;
+        });
+
+        if (status) status.textContent = "Guardando orden...";
+
+        fetch(container.dataset.reorderUrl, {
+          method: "PATCH",
+          headers: {
+            "Accept": "text/html",
+            "Content-Type": "application/json",
+            "X-CSRF-Token": tokenElement && tokenElement.getAttribute("content")
+          },
+          body: JSON.stringify({
+            attachment_name: container.dataset.attachmentName,
+            attachment_ids: ids
+          })
+        }).then(function (response) {
+          if (!response.ok) throw new Error("No se pudo guardar el orden");
+          return response.text();
+        }).then(function (html) {
+          if (sorter) sorter.outerHTML = html;
+        }).catch(function () {
+          if (status) status.textContent = "No se pudo guardar el orden.";
+        });
+      }
+    })();
+  </script>
+
+  <% if building.persisted? %>
+    <div class="mb-4">
+      <%= link_to "Subir imagenes actuales a S3", migrate_images_to_s3_building_path(building), method: :post, data: { confirm: "Buscar imagenes locales y en CloudFront para subirlas a S3?" }, class: "btn btn-outline-secondary" %>
+    </div>
+  <% end %>
+
+  <div class="d-flex gap-2">
+    <%= form.submit "Guardar", class: "btn btn-primary" %>
+    <%= link_to "Cancelar", admins_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

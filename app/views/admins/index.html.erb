@@ -1,67 +1,39 @@
-<div class="container mt-5">
-  <h2 class="mb-4">Administradores</h2>
+<div class="container my-5">
+  <% if notice.present? %>
+    <div class="alert alert-success"><%= notice %></div>
+  <% end %>
+  <% if alert.present? %>
+    <div class="alert alert-warning"><%= alert %></div>
+  <% end %>
 
-  <%= link_to "Agregar nuevo admin", new_admin_path, class: "btn btn-success mb-3" %>
-
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @admins.each do |admin| %>
-        <tr>
-          <td><%= admin.email %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <div class="container mt-5">
-  <h2 class="mb-4">📊 Panel de Administración</h2>
-
-  <div class="accordion" id="kindsAccordion">
-    <% @kinds.uniq { |k| k.name.downcase.strip }.each_with_index do |kind, index| %>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading-<%= kind.id %>">
-          <button class="accordion-button collapsed" type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse-<%= kind.id %>"
-                  aria-expanded="false"
-                  aria-controls="collapse-<%= kind.id %>">
-            <div class="d-flex justify-content-between w-100">
-              <span><strong><%= kind.name.capitalize %></strong></span>
-              <span class="badge bg-primary"><%= kind.buildings.count %> proyecto<%= 's' if kind.buildings.count != 1 %></span>
-            </div>
-          </button>
-        </h2>
-        <div id="collapse-<%= kind.id %>" class="accordion-collapse collapse"
-             aria-labelledby="heading-<%= kind.id %>"
-             data-bs-parent="#kindsAccordion">
-          <div class="accordion-body">
-            <div class="mb-3 text-end">
-              <%= link_to "Editar categoría", edit_kind_path(kind), class: "btn btn-sm btn-warning" %>
-            </div>
-
-            <% if kind.buildings.any? %>
-              <ul class="list-group">
-                <% kind.buildings.each do |building| %>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <%= link_to building.name, building_path(building), class: "text-decoration-none" %>
-                    <span class="badge bg-secondary"><%= building.year %></span>
-                  </li>
-                <% end %>
-              </ul>
-            <% else %>
-              <p class="text-muted">No hay desarrollos en esta categoría.</p>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h1 class="h3 mb-1">Panel de administracion</h1>
+      <p class="text-muted mb-0"><%= current_admin.email %></p>
+    </div>
+    <%= link_to "Cerrar sesion", logout_path, method: :delete, class: "btn btn-outline-danger" %>
   </div>
-</div>
 
-  <%= link_to "Cerrar sesión", logout_path, method: :delete, class: "btn btn-outline-danger mt-3" %>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <%= link_to buildings_path, class: "btn btn-outline-dark w-100 p-4 text-start h-100 d-block text-wrap" do %>
+        <strong class="d-block h5 mb-2">Desarrollos</strong>
+        <span class="text-muted d-block small lh-base">Crear, editar, subir imagenes a S3 y eliminar proyectos.</span>
+      <% end %>
+    </div>
+
+    <div class="col-md-4">
+      <%= link_to kinds_path, class: "btn btn-outline-dark w-100 p-4 text-start h-100 d-block text-wrap" do %>
+        <strong class="d-block h5 mb-2">Categorias</strong>
+        <span class="text-muted d-block small lh-base">Administrar categorias y revisar sus desarrollos.</span>
+      <% end %>
+    </div>
+
+    <div class="col-md-4">
+      <%= link_to collaborators_path, class: "btn btn-outline-dark w-100 p-4 text-start h-100 d-block text-wrap" do %>
+        <strong class="d-block h5 mb-2">Colaboradores</strong>
+        <span class="text-muted d-block small lh-base">Editar los colaboradores que aparecen en /about.</span>
+      <% end %>
+    </div>
+  </div>
 </div>

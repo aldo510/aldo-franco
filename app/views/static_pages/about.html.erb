@@ -71,96 +71,14 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">Arq. Carlos Valenzuela</p>
-        <p class="arch-title">senior architect</p>
+    <% @collaborators.each do |collaborator| %>
+      <div class="row">
+        <div class="col arch-col">
+          <p class="arch-name"><%= collaborator.name %></p>
+          <p class="arch-title"><%= collaborator.title %></p>
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">ARQ. ERICK TOMAS GUTIÉRREZ</p>
-        <p class="arch-title">senior architect</p>
-      </div>
-    </div>
-
-    <div class="row" >
-      <div class="col arch-col">
-        <p class="arch-name">arq. martin de la rosa</p>
-        <p class="arch-title">senior architect</p>
-      </div>
-    </div>
-
-    <div class="row" >
-      <div class="col arch-col">
-        <p class="arch-name">arq. miguel ángel martínez</p>
-        <p class="arch-title">senior architect</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">arq. juan ponce de león</p>
-        <p class="arch-title">senior architect</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">Arq. eduardo reyes</p>
-        <p class="arch-title">senior architect</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">Arq. Joel Lara Meixueiro</p>
-        <p class="arch-title">Project Manager</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">arq. nayeli espetia</p>
-        <p class="arch-title">junior architect - interior designer</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">Arq. Yennifer Gonzalez</p>
-        <p class="arch-title">interior designer</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">arq. bryan moreno</p>
-        <p class="arch-title">junior architect</p>
-      </div>
-    </div>
-
-   <%#  <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">Arq Gabriel Porras</p>
-        <p class="arch-title">junior architect</p>
-      </div>
-    </div> %>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">ing. césar marín</p>
-        <p class="arch-title">structural engineer</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col arch-col">
-        <p class="arch-name">joel barroso</p>
-        <p class="arch-title" style="padding-bottom: 5%;">acountant</p>
-      </div>
-    </div>
+    <% end %>
   </div>
 </section>
 

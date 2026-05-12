@@ -1,0 +1,50 @@
+<div class="container my-5">
+  <% if notice.present? %>
+    <div class="alert alert-success"><%= notice %></div>
+  <% end %>
+  <% if alert.present? %>
+    <div class="alert alert-warning"><%= alert %></div>
+  <% end %>
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h1 class="h3 mb-1">Colaboradores</h1>
+      <%= link_to "Volver al panel", admins_path, class: "btn btn-link p-0" %>
+    </div>
+    <%= link_to "Nuevo colaborador", new_collaborator_path, class: "btn btn-primary" %>
+  </div>
+
+  <%= form_with(url: bulk_destroy_collaborators_path, method: :delete, local: true) do %>
+    <div class="d-flex justify-content-end mb-2">
+      <%= submit_tag "Eliminar seleccionados", class: "btn btn-outline-danger btn-sm", data: { confirm: "Eliminar los colaboradores seleccionados?" } %>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle">
+        <thead>
+          <tr>
+            <th style="width: 48px;"></th>
+            <th>Orden</th>
+            <th>Nombre</th>
+            <th>Titulo</th>
+            <th class="text-end">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @collaborators.each do |collaborator| %>
+            <tr>
+              <td><%= check_box_tag "collaborator_ids[]", collaborator.id, false, id: "collaborator_ids_#{collaborator.id}" %></td>
+              <td><%= collaborator.position %></td>
+              <td><%= collaborator.name %></td>
+              <td><%= collaborator.title %></td>
+              <td class="text-end">
+                <%= link_to "Editar", edit_collaborator_path(collaborator), class: "btn btn-sm btn-outline-primary" %>
+                <%= link_to "Eliminar", collaborator_path(collaborator), method: :delete, data: { confirm: "Eliminar este colaborador?" }, class: "btn btn-sm btn-outline-danger" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

@@ -1,3 +1,26 @@
+$gray: #1A1A1A;
+$text-gray: #666666;
+$green: #dafa50;
+$blue: #3B5D8D;
+
+@font-face {
+  font-family: Gotham-Medium;
+  src: asset-url("Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Gotham-Thin;
+  src: asset-url("Gotham-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Futura;
+  src: asset-url("Futura-Light-Regular.otf") format("opentype");
+}
+
+$got-med: Gotham-Medium;
+$got-thi: Gotham-Thin;
+$futura: Futura;
 .navbar-toggler-icon{
   background-image: image-url('icons/menu-button.svg') !important;
 }
@@ -844,7 +867,7 @@ nav#white-navbar{
     }
   }
 }
-#logo-puntos{:
+#logo-puntos{
   position: relative;
   &:after{
     content: " ";

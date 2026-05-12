@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
 
   def about    
     @build_hash = Kind.all_by_kinds
+    @collaborators = Collaborator.ordered
   end
 
   def contact

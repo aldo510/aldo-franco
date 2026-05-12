@@ -1,3 +1,64 @@
+<% if current_admin %>
+  <div class="container my-5">
+    <% if notice.present? %>
+      <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert alert-warning"><%= alert %></div>
+    <% end %>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h1 class="h3 mb-1">Desarrollos</h1>
+        <%= link_to "Volver al panel", admins_path, class: "btn btn-link p-0" %>
+      </div>
+      <%= link_to "Nuevo desarrollo", new_building_path, class: "btn btn-primary" %>
+    </div>
+
+    <%= form_with(url: bulk_destroy_buildings_path, method: :delete, local: true) do %>
+      <div class="d-flex justify-content-end mb-2">
+        <%= submit_tag "Eliminar seleccionados", class: "btn btn-outline-danger btn-sm", data: { confirm: "Eliminar los desarrollos seleccionados?" } %>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle">
+          <thead>
+            <tr>
+              <th style="width: 48px;"></th>
+              <th style="width: 96px;">Imagen</th>
+              <th>Nombre</th>
+              <th>Categorias</th>
+              <th>Ano</th>
+              <th>Ubicacion</th>
+              <th class="text-end">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @buildings.each do |building| %>
+              <tr>
+                <td><%= check_box_tag "building_ids[]", building.id, false, id: "building_ids_#{building.id}" %></td>
+                <td>
+                  <% if building.display_project_images.first.present? %>
+                    <%= building_image_tag building.display_project_images.first, resize_to_limit: [160, 120], loading: "lazy", class: "img-fluid rounded", style: "width: 72px; height: 54px; object-fit: cover;", alt: building.name %>
+                  <% end %>
+                </td>
+                <td><%= link_to building.name, building_path(building) %></td>
+                <td><%= building.kinds.map(&:name).join(", ") %></td>
+                <td><%= building.year %></td>
+                <td><%= building.location %></td>
+                <td class="text-end">
+                  <%= link_to "Editar", edit_building_path(building), class: "btn btn-sm btn-outline-primary" %>
+                  <%= link_to "Subir a S3", migrate_images_to_s3_building_path(building), method: :post, data: { confirm: "Subir imagenes actuales de este desarrollo a S3?" }, class: "btn btn-sm btn-outline-secondary" %>
+                  <%= link_to "Eliminar", building_path(building), method: :delete, data: { confirm: "Eliminar este desarrollo?" }, class: "btn btn-sm btn-outline-danger" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </div>
+<% else %>
 <%= render partial: 'layouts/navbar' %>
 
 <section id="projects-description">
@@ -42,8 +103,7 @@
             <% arr.each do |building| %>
               <div class="col-sm-4 col-12 img-build">
                 <%= link_to building_path(building) do %>
-                  <%#= image_tag building.thumbnail, class: 'img-fluid w-100 img-build my-3', loading: "lazy", alt: "aldo-franco-image" %>
-                  <img src="http://d3tlw7q61ww5gp.cloudfront.net/<%=building.images.first%>" loading="lazy" class="img-fluid w-100 img-build my-3" alt="Aldo Franco building">
+                  <%= building_image_tag building.display_project_images.first, resize_to_limit: [900, 900], loading: "lazy", class: "img-fluid w-100 img-build my-3", alt: "Aldo Franco building" %>
                   <p class="build-text got-thi"><%= building.name.capitalize %></p>
                 <% end %>
               </div>
@@ -56,4 +116,4 @@
 </section>
 
 <%= render partial: 'layouts/contact' %>
-
+<% end %>

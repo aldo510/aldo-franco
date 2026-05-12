@@ -1,19 +1,39 @@
-Admin.create!(
-    email: "aldo@mail.com",
-    password: BCrypt::Password.create("aldofranco123"),
-  password_digest: BCrypt::Password.create("aldofranco123")
-)
+admin_email = "afranco@aldofranco.com"
+Admin.where.not(email: admin_email).delete_all
+admin = Admin.where(email: admin_email).order(:id).first_or_initialize
+Admin.where(email: admin_email).where.not(id: admin.id).delete_all if admin.persisted?
+admin.password = "afranco17!"
+admin.password_confirmation = "afranco17!"
+admin.save!
+
+def seed_building(attributes)
+  building = Building.find_or_initialize_by(name: attributes.fetch(:name))
+  building.update!(attributes)
+  building
+end
+
+def remove_duplicate_records(model, unique_column)
+  model.order(:id).group_by { |record| record.public_send(unique_column).to_s.strip.downcase }.each_value do |records|
+    records.drop(1).each(&:destroy)
+  end
+end
+
+ActiveRecord::Base.connection.execute("DELETE FROM buildings_kinds")
+remove_duplicate_records(Kind, :name)
+remove_duplicate_records(Building, :name)
+remove_duplicate_records(Collaborator, :name) if defined?(Collaborator)
+
 puts 'Residential --> 0'
-residential = Kind.create(name: 'residential')
-commercial = Kind.create(name: 'commercial')
-office = Kind.create(name: 'office')
+residential = Kind.find_or_create_by!(name: 'residential')
+commercial = Kind.find_or_create_by!(name: 'commercial')
+office = Kind.find_or_create_by!(name: 'office')
 # health = Kind.create(name: 'health')
-education = Kind.create(name: 'education')
-cultural = Kind.create(name: 'cultural')
-publics = Kind.create(name: 'publics')
+education = Kind.find_or_create_by!(name: 'education')
+cultural = Kind.find_or_create_by!(name: 'cultural')
+publics = Kind.find_or_create_by!(name: 'publics')
 
 
-residential.buildings << Building.create(name: 'ahuehuetes 2105',
+residential.buildings << seed_building(name: 'ahuehuetes 2105',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -33,7 +53,7 @@ residential.buildings << Building.create(name: 'ahuehuetes 2105',
                          'projects/buildings/ahuehuetes-2105/ahuehuetes6.jpg'])
 
 
-residential.buildings << Building.create(name: 'Sauces 902',
+residential.buildings << seed_building(name: 'Sauces 902',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -49,7 +69,7 @@ residential.buildings << Building.create(name: 'Sauces 902',
                          'projects/buildings/sauces/SAUSES4.jpg'])
 
 
-residential.buildings << Building.create(name: 'Carso AP',
+residential.buildings << seed_building(name: 'Carso AP',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -84,7 +104,7 @@ residential.buildings << Building.create(name: 'Carso AP',
                          'projects/buildings/carso/CARSOAP14.jpg',
                          'projects/buildings/carso/CARSOAP15.jpg'])
 
-residential.buildings << Building.create(name: 'bosque de canelos',
+residential.buildings << seed_building(name: 'bosque de canelos',
                 description: '',
                 year: '2015',
                 location: 'Mexico City',
@@ -116,7 +136,7 @@ residential.buildings << Building.create(name: 'bosque de canelos',
                          'projects/buildings/bosque-de-canelos/CANELOS12.jpg'])
 
 
-residential.buildings << Building.create(name: 'departamento ppg',
+residential.buildings << seed_building(name: 'departamento ppg',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
@@ -133,7 +153,7 @@ residential.buildings << Building.create(name: 'departamento ppg',
                          'projects/buildings/departamento-ppg/departamentoppg4.jpg',
                          'projects/buildings/departamento-ppg/departamentoppg5.jpg'])
 
-residential.buildings << Building.create(name: 'San Nicolás VV',
+residential.buildings << seed_building(name: 'San Nicolás VV',
                 description: '',
                 year: '2019',
                 location: 'Valle de Bravo',
@@ -157,7 +177,7 @@ residential.buildings << Building.create(name: 'San Nicolás VV',
                          'projects/buildings/SAN_NICOLAS/sannicolas8.jpg'])
 
 
-residential.buildings << Building.create(name: 'tamarindos 902',
+residential.buildings << seed_building(name: 'tamarindos 902',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -176,7 +196,7 @@ residential.buildings << Building.create(name: 'tamarindos 902',
 
 
 
-residential.buildings << Building.create(name: 'u house',
+residential.buildings << seed_building(name: 'u house',
                 description: '',
                 year: '2017',
                 location: 'Valle de Bravo',
@@ -195,7 +215,7 @@ residential.buildings << Building.create(name: 'u house',
                          'projects/buildings/u-house-bosque-de-canelos/uhouse5.jpg',
                          'projects/buildings/u-house-bosque-de-canelos/uhouse6.jpg'])
 
-residential.buildings << Building.create(name: 're 32 house',
+residential.buildings << seed_building(name: 're 32 house',
                 description: '',
                 year: '2012',
                 location: 'Mexico City',
@@ -216,7 +236,7 @@ residential.buildings << Building.create(name: 're 32 house',
                          'projects/buildings/RE32HOUSE/rehouse6.jpg',
                          'projects/buildings/RE32HOUSE/rehouse7.jpg'])
 
-residential.buildings << Building.create(name: 'Avandaro',
+residential.buildings << seed_building(name: 'Avandaro',
                 description: '',
                 year: '2021',
                 location: 'Mexico City',
@@ -231,7 +251,7 @@ residential.buildings << Building.create(name: 'Avandaro',
                          'projects/buildings/avandaro/avandaro3.jpg',
                          'projects/buildings/avandaro/avandaro4.jpg'])
 
-residential.buildings << Building.create(name: 'Paseo de Laureles',
+residential.buildings << seed_building(name: 'Paseo de Laureles',
                 description: '',
                 year: '2021',
                 location: 'Mexico City',
@@ -248,7 +268,7 @@ residential.buildings << Building.create(name: 'Paseo de Laureles',
                          'projects/buildings/laureles/laureles4.png',
                          'projects/buildings/laureles/laureles5.png'])
 
-residential.buildings << Building.create(name: 'Alcazar de Toledo',
+residential.buildings << seed_building(name: 'Alcazar de Toledo',
                 description: '',
                 year: '2021',
                 location: 'Mexico City',
@@ -270,7 +290,7 @@ residential.buildings << Building.create(name: 'Alcazar de Toledo',
                          'projects/buildings/alcazar/alcazar7.jpg'])
 
 
-building = residential.buildings << Building.create(name: 'Norte 13',
+building = seed_building(name: 'Norte 13',
                 description: '',
                 year: '2021',
                 location: 'Mexico City',
@@ -284,6 +304,7 @@ building = residential.buildings << Building.create(name: 'Norte 13',
                          'projects/buildings/moctezuma/norte2.jpg',
                          'projects/buildings/moctezuma/norte3.jpg',
                          'projects/buildings/moctezuma/norte4.jpg'])
+residential.buildings << building
 # commercial.buildings << building
 
 
@@ -291,7 +312,7 @@ building = residential.buildings << Building.create(name: 'Norte 13',
 
 # -----------------------------------------------------------------------------
 puts 'Commercial --> 1'
-commercial.buildings << Building.create(name: 'be concept store',
+commercial.buildings << seed_building(name: 'be concept store',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -316,7 +337,7 @@ commercial.buildings << Building.create(name: 'be concept store',
                          'projects/buildings/be-concept-store/BECONCEPT8.jpg',
                          'projects/buildings/be-concept-store/BECONCEPT9.jpg'])
 
-commercial.buildings << Building.create(name: 'Puma México',
+commercial.buildings << seed_building(name: 'Puma México',
                 description: '',
                 year: '2022
                 ',
@@ -335,7 +356,7 @@ commercial.buildings << Building.create(name: 'Puma México',
                          'projects/buildings/PUMA/PUMASTORE.V2.PL.010122_PhysCamera006.jpg'])
 
 
-commercial.buildings << Building.create(name: 'raw republic',
+commercial.buildings << seed_building(name: 'raw republic',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -371,7 +392,7 @@ commercial.buildings << Building.create(name: 'raw republic',
                          'projects/buildings/raw-republic/RAWREPUBLIC8.jpg'])
 
 
-commercial.buildings << Building.create(name: 'ten tei',
+commercial.buildings << seed_building(name: 'ten tei',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
@@ -402,7 +423,7 @@ commercial.buildings << Building.create(name: 'ten tei',
                          'projects/buildings/ten-tei/TENTEI8.jpg',
                          'projects/buildings/ten-tei/TENTEI9.jpg'])
 
-commercial.buildings << Building.create(name: 'in the mix',
+commercial.buildings << seed_building(name: 'in the mix',
                 description: '',
                 year: '2016',
                 location: 'Mexico City',
@@ -421,7 +442,7 @@ commercial.buildings << Building.create(name: 'in the mix',
                          'projects/buildings/in-the-mix/INTHEMIX5.jpg',
                          'projects/buildings/in-the-mix/INTHEMIX6.jpg'])
 
-# commercial.buildings << Building.create(name: 'ARRIVALS',
+# commercial.buildings << seed_building(name: 'ARRIVALS',
 #                 description: '',
 #                 year: '2019',
 #                 location: 'Mexico City',
@@ -442,7 +463,7 @@ commercial.buildings << Building.create(name: 'in the mix',
 #                          'https://res.cloudinary.com/ablanco/image/upload/v1576514175/Arrivals/arrivals6.jpg',
 #                          'https://res.cloudinary.com/ablanco/image/upload/v1576514176/Arrivals/arrivals7.jpg'])
 
-commercial.buildings << Building.create(name: 'plaza polanquito',
+commercial.buildings << seed_building(name: 'plaza polanquito',
                 description: '',
                 year: '2014',
                 location: 'Mexico City',
@@ -457,7 +478,7 @@ commercial.buildings << Building.create(name: 'plaza polanquito',
                             'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito3.jpg',
                             'buildingsorigin/Commercial/PLAZAPOLANQUITO/polanquito5.jpg'])
 
-building = Building.create(name: 'Brokers Paddock',
+building = seed_building(name: 'Brokers Paddock',
                 description: '',
                 year: '2019',
                 location: 'Mexico City',
@@ -479,7 +500,7 @@ office.buildings << building
 
 # -----------------------------------------------------------------------------
 puts 'office --> 2'
-office.buildings << Building.create(name: '​jz offices',
+office.buildings << seed_building(name: '​jz offices',
                 description: '',
                 year: '2015',
                 location: 'Mexico City',
@@ -496,7 +517,7 @@ office.buildings << Building.create(name: '​jz offices',
                          'projects/buildings/jz-offices/jz4.jpg',
                          'projects/buildings/jz-offices/jz5.jpg'])
 
-building = Building.create(name: 'Elefantec Global',
+building = seed_building(name: 'Elefantec Global',
                 description: '',
                 year: '2021',
                 location: 'Mexico City',
@@ -512,7 +533,7 @@ building = Building.create(name: 'Elefantec Global',
                          'projects/buildings/elefantec/elefantec4.png'])
 office.buildings << building
 
-building = Building.create(name: 'Metalitec',
+building = seed_building(name: 'Metalitec',
                 description: '',
                 year: '2020',
                 location: 'Mexico City',
@@ -536,7 +557,7 @@ building = Building.create(name: 'Metalitec',
                          'projects/buildings/METALITEC/OFICINAS.SANISIDRO.V12.PL.170620_Camera012-copia-(2).jpg'])
 office.buildings << building
 
-building = Building.create(name: '​max mix',
+building = seed_building(name: '​max mix',
                 description: '',
                 year: '2012',
                 location: 'Mexico City',
@@ -557,7 +578,7 @@ office.buildings << building
 
 
 
-# building = Building.create(name: 'reforma 341',
+# building = seed_building(name: 'reforma 341',
 #                 description: '',
 #                 year: '2008',
 #                 location: 'Mexico City',
@@ -575,7 +596,7 @@ office.buildings << building
 
 
 
-office.buildings << Building.create(name: 'winsor headquarters',
+office.buildings << seed_building(name: 'winsor headquarters',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -608,7 +629,7 @@ office.buildings << Building.create(name: 'winsor headquarters',
 
 
 
-office.buildings << Building.create(name: 'Abanca Mexico',
+office.buildings << seed_building(name: 'Abanca Mexico',
                 description: '',
                 year: '2017',
                 location: 'Mexico City',
@@ -632,7 +653,7 @@ office.buildings << Building.create(name: 'Abanca Mexico',
                          'projects/buildings/ABANCAMEXICO/abanca8.jpg'])
 
 
-office.buildings << Building.create(name: 'Jacobs México',
+office.buildings << seed_building(name: 'Jacobs México',
                 description: '',
                 year: '2018',
                 location: 'Mexico City',
@@ -661,7 +682,7 @@ office.buildings << Building.create(name: 'Jacobs México',
 
 
 
-office.buildings << Building.create(name: 'Ethan gas oil',
+office.buildings << seed_building(name: 'Ethan gas oil',
                 description: '',
                 year: '2014',
                 location: 'Mexico City',
@@ -677,7 +698,7 @@ office.buildings << Building.create(name: 'Ethan gas oil',
                          'projects/buildings/ETHAN/ethan4.jpg'])
 
 
-office.buildings << Building.create(name: 'eg headquarters',
+office.buildings << seed_building(name: 'eg headquarters',
                 description: '',
                 year: '2014',
                 location: 'Mexico City',
@@ -724,7 +745,7 @@ puts 'health --> 3'
 
 # -----------------------------------------------------------------------------
 puts 'education --> 4'
-education.buildings << Building.create(name: 'cuajimalpa community center',
+education.buildings << seed_building(name: 'cuajimalpa community center',
                 description: '',
                 year: '2011',
                 location: 'Mexico City',
@@ -744,7 +765,7 @@ education.buildings << Building.create(name: 'cuajimalpa community center',
                             'buildingsorigin/Education/CUAJIMALPA/CUAJIMALPACC6.jpg'])
 
 
-education.buildings << Building.create(name: 'Vasconcelos Elementary',
+education.buildings << seed_building(name: 'Vasconcelos Elementary',
                 description: '',
                 year: '2011',
                 location: 'Mexico City',
@@ -769,7 +790,7 @@ education.buildings << Building.create(name: 'Vasconcelos Elementary',
 
 # -----------------------------------------------------------------------------
 puts 'cultural --> 5'
-building = Building.create(name: 'chapultepec library',
+building = seed_building(name: 'chapultepec library',
                 description: '',
                 year: '2010',
                 location: 'Mexico City',
@@ -792,7 +813,7 @@ cultural.buildings << building
 publics.buildings << building
 
 
-building = Building.create(name: 'minm museum',
+building = seed_building(name: 'minm museum',
                 description: '',
                 year: '2009',
                 location: 'Mexico City',
@@ -814,7 +835,7 @@ publics.buildings << building
 
 # -----------------------------------------------------------------------------
 puts 'publics --> 6'
-building = Building.create(name: 'toluca convention center',
+building = seed_building(name: 'toluca convention center',
                 description: '',
                 year: '2012',
                 location: 'Toluca, Estado de Mexico',
@@ -840,7 +861,7 @@ building = Building.create(name: 'toluca convention center',
 publics.buildings << building
 # commercial.buildings << building
 
-residential.buildings << Building.create(name: 'Origami House',
+residential.buildings << seed_building(name: 'Origami House',
                 description: '',
                 year: '2022',
                 location: 'Mexico City',
@@ -858,3 +879,21 @@ residential.buildings << Building.create(name: 'Origami House',
                          'projects/buildings/CASA ORIGAMI/190x1080/casaorigami4.jpg',
                          'projects/buildings/CASA ORIGAMI/190x1080/casaorigami5.jpg',
                          'projects/buildings/CASA ORIGAMI/190x1080/casaorigami6.jpg'])
+
+[
+  ["Arq. Carlos Valenzuela", "senior architect"],
+  ["ARQ. ERICK TOMAS GUTIERREZ", "senior architect"],
+  ["arq. martin de la rosa", "senior architect"],
+  ["arq. miguel angel martinez", "senior architect"],
+  ["arq. juan ponce de leon", "senior architect"],
+  ["Arq. eduardo reyes", "senior architect"],
+  ["Arq. Joel Lara Meixueiro", "Project Manager"],
+  ["arq. nayeli espetia", "junior architect - interior designer"],
+  ["Arq. Yennifer Gonzalez", "interior designer"],
+  ["arq. bryan moreno", "junior architect"],
+  ["ing. cesar marin", "structural engineer"],
+  ["joel barroso", "acountant"]
+].each_with_index do |(name, title), index|
+  collaborator = Collaborator.find_or_initialize_by(name: name)
+  collaborator.update!(title: title, position: index + 1)
+end

@@ -1,5 +1,108 @@
-<div class="container mt-5">
-  <h2>Tipos de proyectos</h2>
+<div class="container my-5">
+  <% if notice.present? %>
+    <div class="alert alert-success"><%= notice %></div>
+  <% end %>
+  <% if alert.present? %>
+    <div class="alert alert-warning"><%= alert %></div>
+  <% end %>
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h1 class="h3 mb-1">Categorias</h1>
+      <% if current_admin %>
+        <%= link_to "Volver al panel", admins_path, class: "btn btn-link p-0" %>
+      <% end %>
+    </div>
+    <% if current_admin %>
+      <%= link_to "Nueva categoria", new_kind_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <% if current_admin %>
+    <%= form_with(url: bulk_destroy_kinds_path, method: :delete, local: true) do %>
+      <div class="d-flex justify-content-end mb-2">
+        <%= submit_tag "Eliminar seleccionadas", class: "btn btn-outline-danger btn-sm", data: { confirm: "Eliminar las categorias seleccionadas?" } %>
+      </div>
+
+      <div class="accordion" id="adminCategories">
+        <% @kinds.each do |kind| %>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="category-heading-<%= kind.id %>">
+              <div class="accordion-button collapsed">
+                <%= check_box_tag "kind_ids[]", kind.id, false, id: "kind_ids_#{kind.id}", class: "form-check-input me-3" %>
+                <button class="btn btn-link text-decoration-none text-reset p-0 flex-grow-1 text-start" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#category-collapse-<%= kind.id %>"
+                        aria-expanded="false"
+                        aria-controls="category-collapse-<%= kind.id %>">
+                  <span class="d-flex justify-content-between align-items-center w-100 pe-3">
+                    <span class="d-flex align-items-center gap-3">
+                      <% first_building = kind.buildings.order(:name).first %>
+                      <% if first_building&.display_project_images&.first.present? %>
+                        <%= building_image_tag first_building.display_project_images.first, resize_to_limit: [160, 120], loading: "lazy", class: "rounded", style: "width: 64px; height: 48px; object-fit: cover;", alt: kind.name %>
+                      <% end %>
+                      <strong><%= kind.name.capitalize %></strong>
+                    </span>
+                    <span class="badge bg-secondary">
+                      <%= kind.buildings.count %> desarrollo<%= "s" if kind.buildings.count != 1 %>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </h3>
+
+            <div id="category-collapse-<%= kind.id %>"
+                 class="accordion-collapse collapse"
+                 aria-labelledby="category-heading-<%= kind.id %>"
+                 data-bs-parent="#adminCategories">
+              <div class="accordion-body">
+                <div class="d-flex justify-content-end gap-2 mb-3">
+                  <%= link_to "Editar categoria", edit_kind_path(kind), class: "btn btn-sm btn-outline-primary" %>
+                  <%= link_to "Eliminar", kind_path(kind), method: :delete, data: { confirm: "Eliminar esta categoria?" }, class: "btn btn-sm btn-outline-danger" %>
+                </div>
+
+                <% if kind.buildings.any? %>
+                  <div class="table-responsive">
+                    <table class="table table-sm table-bordered align-middle mb-0">
+                      <thead>
+                        <tr>
+                          <th style="width: 96px;">Imagen</th>
+                          <th>Desarrollo</th>
+                          <th>Ano</th>
+                          <th>Ubicacion</th>
+                          <th class="text-end">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% kind.buildings.order(:name).each do |building| %>
+                          <tr>
+                            <td>
+                              <% if building.display_project_images.first.present? %>
+                                <%= building_image_tag building.display_project_images.first, resize_to_limit: [160, 120], loading: "lazy", class: "img-fluid rounded", style: "width: 72px; height: 54px; object-fit: cover;", alt: building.name %>
+                              <% end %>
+                            </td>
+                            <td><%= link_to building.name, building_path(building) %></td>
+                            <td><%= building.year %></td>
+                            <td><%= building.location %></td>
+                            <td class="text-end">
+                              <%= link_to "Editar", edit_building_path(building), class: "btn btn-sm btn-outline-primary" %>
+                              <%= link_to "Subir a S3", migrate_images_to_s3_building_path(building), method: :post, data: { confirm: "Subir imagenes actuales de este desarrollo a S3?" }, class: "btn btn-sm btn-outline-secondary" %>
+                            </td>
+                          </tr>
+                        <% end %>
+                      </tbody>
+                    </table>
+                  </div>
+                <% else %>
+                  <p class="text-muted mb-0">No hay desarrollos en esta categoria.</p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
   <ul class="list-group">
     <% @kinds.each do |kind| %>
       <li class="list-group-item">
@@ -7,4 +110,5 @@
       </li>
     <% end %>
   </ul>
+  <% end %>
 </div>

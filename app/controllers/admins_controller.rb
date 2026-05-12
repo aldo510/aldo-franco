@@ -2,15 +2,17 @@ class AdminsController < ApplicationController
   before_action :require_admin
 
   def index
-    @admins = Admin.all
-    @kinds = Kind.includes(:buildings).all
   end
 
   def new
+    redirect_to admins_path, alert: "Ya existe un administrador" and return if Admin.exists?
+
     @admin = Admin.new
   end
 
   def create
+    redirect_to admins_path, alert: "Ya existe un administrador" and return if Admin.exists?
+
     @admin = Admin.new(admin_params)
     if @admin.save
       redirect_to admins_path, notice: "Admin creado exitosamente"

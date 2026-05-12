@@ -13,6 +13,8 @@ gem 'puma', '~> 6.0'
 gem 'sassc-rails' # reemplazo de sass-rails para compatibilidad con Rails 7
 gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
+gem 'aws-sdk-s3', require: false
+gem 'image_processing', '~> 1.13'
 
 # Front-end Assets
 gem 'bootstrap', '~> 5.3'

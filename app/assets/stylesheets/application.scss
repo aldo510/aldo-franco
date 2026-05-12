@@ -48,3 +48,51 @@ $futura: Futura;
 @import 'animate';
 @import "static_pages";
 @import "buildings";
+
+.sortable-attachments {
+  transition: background-color 160ms ease, outline-color 160ms ease;
+}
+
+.sortable-attachments-active {
+  background-color: rgba(0, 0, 0, 0.03);
+  outline: 1px dashed #888;
+  outline-offset: 8px;
+}
+
+.sortable-attachment {
+  cursor: grab;
+  touch-action: none;
+  transition: opacity 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.sortable-drag-handle {
+  cursor: grab;
+  user-select: none;
+  text-decoration: underline;
+}
+
+.sortable-drag-handle:active {
+  cursor: grabbing;
+}
+
+.sortable-attachment-dragging {
+  opacity: 0.45;
+  transform: scale(0.97);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+.sortable-attachment img {
+  pointer-events: none;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.sortable-attachments-error {
+  outline-color: #dc3545;
+}
+
+.sortable-attachment-no-select {
+  user-select: none;
+}

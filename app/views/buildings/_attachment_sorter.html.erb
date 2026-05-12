@@ -1,0 +1,20 @@
+<% attachments = building.public_send("ordered_#{attachment_name}") %>
+
+<div class="attachment-sorter mb-4" id="<%= attachment_name %>_sorter">
+  <p class="form-label"><%= title %></p>
+  <p class="attachment-sorter-status text-muted small mb-2">Arrastra una imagen, sueltala en la nueva posicion y se guardara automaticamente.</p>
+
+  <div class="row g-3 sortable-attachments"
+       data-reorder-url="<%= reorder_attachments_building_path(building) %>"
+       data-attachment-name="<%= attachment_name %>">
+    <% attachments.each do |image| %>
+      <div class="col-md-3 sortable-attachment" draggable="true" data-attachment-id="<%= image.id %>">
+        <%= image_tag building_image_url(image, resize_to_limit: [400, 400]), class: "img-fluid border" %>
+        <div class="mt-2 d-flex justify-content-between align-items-center">
+          <span class="text-muted small sortable-drag-handle">Arrastrar</span>
+          <%= link_to "Eliminar", attachment_building_path(building, image), method: :delete, data: { confirm: "Eliminar esta imagen?" }, class: "btn btn-sm btn-outline-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
