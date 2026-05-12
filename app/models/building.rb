@@ -47,6 +47,10 @@ class Building < ApplicationRecord
     thumbnail_image.attach(thumbnail_upload) if thumbnail_upload.present?
     project_images.attach(project_uploads) if project_uploads.any?
     fullscreen_images.attach(fullscreen_uploads) if fullscreen_uploads.any?
+    normalize_image_attachment_positions! if persisted?
+  end
+
+  def normalize_image_attachment_positions!
     normalize_attachment_positions!("project_images")
     normalize_attachment_positions!("fullscreen_images")
   end
@@ -80,7 +84,7 @@ class Building < ApplicationRecord
   private
 
   def validate_attached_images
-    [project_images, fullscreen_images].each do |attachments|
+    [thumbnail_image, project_images, fullscreen_images].each do |attachments|
       attachments.each do |attachment|
         unless attachment.content_type.in?(%w[image/jpeg image/png image/webp])
           errors.add(:base, "Las imagenes deben ser JPG, PNG o WebP")
@@ -156,6 +160,8 @@ class Building < ApplicationRecord
   end
 
   def normalize_attachment_positions!(attachment_name)
+    return unless persisted?
+
     attachments = public_send(attachment_name).attachments.order(:position, :id)
     attachments.each_with_index do |attachment, index|
       attachment.update_column(:position, index) if attachment.position != index

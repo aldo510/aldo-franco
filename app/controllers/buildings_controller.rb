@@ -32,6 +32,7 @@ class BuildingsController < ApplicationController
     )
 
     if @building.save
+      @building.normalize_image_attachment_positions!
       redirect_to admins_path, notice: "Desarrollo creado correctamente"
     else
       @kinds = Kind.order(:name)
