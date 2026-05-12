@@ -38,7 +38,7 @@
     <% end %>
   </div>
 
-  <div id="slider-text">
+  <div id="slider-text" class="d-none d-md-block">
     <p id="slider-kind"><%= @building.kinds.map { |kind| kind.name.singularize }.join(' | ') %> | <%= @building.year %></p>
     <h1 id="building-name"><%= @building.name %></h1>
     <p id="slider-description">
@@ -55,6 +55,16 @@
     </div>
     <%# end %>
   </div> -->
+</section>
+
+<section id="building-mobile-text" class="d-block d-md-none">
+  <p class="mobile-slider-kind"><%= @building.kinds.map { |kind| kind.name.singularize }.join(' | ') %> | <%= @building.year %></p>
+  <h1 class="mobile-building-name"><%= @building.name %></h1>
+  <p class="mobile-slider-description">
+    <%= @building.description %>
+    <%= @building.location %>
+    <%= @building.area %>
+  </p>
 </section>
 
 <section id="similar-projects">

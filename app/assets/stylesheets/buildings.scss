@@ -184,6 +184,10 @@ $futura: Futura;
 #building-name, #slider-kind{
   text-transform: uppercase;
 }
+
+#building-mobile-text {
+  display: none;
+}
 #categories-background{
   transition: all 0.2s linear;
 }
@@ -266,39 +270,41 @@ $futura: Futura;
   }
 
   #main-slider {
-    display: flex;
-    flex-direction: column;
-
     #slider-text {
-      position: static !important;
-      bottom: auto !important;
-      z-index: 1;
-      background: $gray !important;
-      padding: 18px 22px 28px;
-      width: 100%;
-    }
-
-    #slider-kind {
-      font-size: 0.85rem;
-      line-height: 1.25rem;
-      margin-bottom: 4px;
-    }
-
-    #building-name {
-      font-size: 1.25rem;
-      line-height: 1.45rem;
-      margin-bottom: 10px;
-    }
-
-    #slider-description {
-      font-size: 0.95rem;
-      line-height: 1.55rem;
-      margin-bottom: 0;
+      display: none !important;
     }
 
     .slider-img {
       max-height: 58vh !important;
       object-fit: cover;
+    }
+  }
+
+  #building-mobile-text {
+    display: block;
+    background: $gray;
+    color: white;
+    padding: 20px 22px 30px;
+    font-family: $got-thi;
+
+    .mobile-slider-kind {
+      font-size: 0.85rem;
+      line-height: 1.25rem;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .mobile-building-name {
+      font-size: 1.25rem;
+      line-height: 1.45rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .mobile-slider-description {
+      font-size: 0.95rem;
+      line-height: 1.55rem;
+      margin-bottom: 0;
     }
   }
 
