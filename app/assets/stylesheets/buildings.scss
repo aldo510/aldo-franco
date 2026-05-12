@@ -264,4 +264,45 @@ $futura: Futura;
       border-bottom: thin solid $text-gray;
     }
   }
+
+  #main-slider {
+    display: flex;
+    flex-direction: column;
+
+    #slider-text {
+      position: static !important;
+      bottom: auto !important;
+      z-index: 1;
+      background: $gray !important;
+      padding: 18px 22px 28px;
+      width: 100%;
+    }
+
+    #slider-kind {
+      font-size: 0.85rem;
+      line-height: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    #building-name {
+      font-size: 1.25rem;
+      line-height: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    #slider-description {
+      font-size: 0.95rem;
+      line-height: 1.55rem;
+      margin-bottom: 0;
+    }
+
+    .slider-img {
+      max-height: 58vh !important;
+      object-fit: cover;
+    }
+  }
+
+  #similar-projects {
+    padding-top: 8% !important;
+  }
 }
