@@ -29,8 +29,7 @@
   window.banerSlider = $('.slider-fullscreen').slick({
     arrows: false,
     adaptiveHeight: true, 
-    dots: false,
-    lazyLoad: 'ondemand'
+    dots: false
     // onSliderResize: function() {
     //   // adjustSliderHeight();      
     // }

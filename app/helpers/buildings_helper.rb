@@ -38,10 +38,10 @@ module BuildingsHelper
   private
 
   def active_storage_image_url(image, resize_to_limit:)
-    return url_for(image) unless Gem.loaded_specs.key?("image_processing")
+    return image.url unless Gem.loaded_specs.key?("image_processing")
 
-    url_for(image.variant(resize_to_limit: resize_to_limit, saver: { quality: 78, strip: true }))
+    image.variant(resize_to_limit: resize_to_limit, saver: { quality: 78, strip: true }).processed.url
   rescue LoadError
-    url_for(image)
+    image.url
   end
 end

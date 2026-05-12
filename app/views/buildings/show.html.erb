@@ -32,7 +32,7 @@
       <% if index.zero? %>
         <%= building_image_tag image, resize_to_limit: [1400, 1400], loading: "eager", fetchpriority: "high", decoding: "async", class: "slider-img", alt: "Aldo Franco building" %>
       <% else %>
-        <%= building_lazy_image_tag image, resize_to_limit: [1400, 1400], loading: "lazy", decoding: "async", class: "slider-img", alt: "Aldo Franco building" %>
+        <%= building_image_tag image, resize_to_limit: [1400, 1400], loading: "lazy", decoding: "async", class: "slider-img", alt: "Aldo Franco building" %>
       <% end %>
     </div>
     <% end %>
